@@ -4,16 +4,17 @@ Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/
 
 ## Setup
 
-- `pnpm` is recommended: https://pnpm.io/installation
+- `pnpm` is required (even when not used as the package manager): https://pnpm.io/installation
 - Customize [AGENTS.MD](https://agents.md/) to describe the overall project.
 - Add MCP servers to your IDE
   - Figma: https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server
   - shadcn/ui: https://ui.shadcn.com/docs/mcp
+  - Vercel: https://vercel.com/docs/mcp/vercel-mcp#vs-code-with-copilot
 
 ## Customize
 
 - Apply DS tokens to shadcn/ui and Tailwind themes
-
+- Customize Figma DS: https://ui.shadcn.com/docs/figma
 ---
 
 ## Deploy Your Own
