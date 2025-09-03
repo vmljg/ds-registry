@@ -25,3 +25,7 @@ trigger: always_on
 
 # Backend & Database
 Use Prisma for database access.
+
+# shadcn/ui `registry.json`
+
+Replace/update content in the file. Do not attempt to recreate it.
