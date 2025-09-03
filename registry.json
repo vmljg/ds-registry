@@ -4,6 +4,37 @@
   "homepage": "https://registry-starter.vercel.app",
   "items": [
     {
+      "name": "weather-widget",
+      "type": "registry:component",
+      "title": "Weather Widget",
+      "description": "A weather widget that displays current weather conditions for a specified location",
+      "registryDependencies": [
+        "card",
+        "input",
+        "button",
+        "skeleton",
+        "toggle",
+        "alert",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/weather-widget.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "src/layouts/minimal-layout.tsx",
+          "type": "registry:file",
+          "target": "app/layout.tsx"
+        },
+        {
+          "path": "src/app/demo/[name]/blocks/blank-page.tsx",
+          "type": "registry:page",
+          "target": "app/page.tsx"
+        }
+      ]
+    },
+    {
       "name": "theme",
       "type": "registry:theme",
       "title": "Nature Theme",
