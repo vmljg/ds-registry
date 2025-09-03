@@ -15,6 +15,110 @@ Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/
 
 - Apply DS tokens to shadcn/ui and Tailwind themes
 - Customize Figma DS: https://ui.shadcn.com/docs/figma
+
+## AI First-Steps
+
+Try the following prompts to get started. Include the workflow name trigger in the prompts.
+
+<details>
+<summary>Weather Widget (Gherkin)</summary>
+
+<blockquote>
+<h3>Feature: Weather Widget Display</h3>
+
+<ul>
+  <li><strong>As a user,</strong>
+    <ul>
+      <li>I want to see the current weather conditions for a specified location,</li>
+      <li>So that I can quickly get weather information.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>Scenario: Displaying weather for a default location</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>Then</strong> I should see the current temperature</li>
+  <li><strong>And</strong> I should see the current weather condition (e.g., "Sunny", "Cloudy")</li>
+  <li><strong>And</strong> I should see the location (e.g., "London, UK")</li>
+  <li><strong>And</strong> I should see an icon representing the weather condition</li>
+</ul>
+
+<h4>Scenario: Displaying weather for a user-specified location</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>When</strong> I enter "New York" into the location input field</li>
+  <li><strong>And</strong> I click the "Search" button</li>
+  <li><strong>Then</strong> I should see the current temperature for "New York"</li>
+  <li><strong>And</strong> I should see the current weather condition for "New York"</li>
+  <li><strong>And</strong> I should see "New York, US" as the location</li>
+  <li><strong>And</strong> I should see an icon representing the weather condition for "New York"</li>
+</ul>
+
+<h4>Scenario: Handling invalid location input</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>When</strong> I enter "asdfghjkl" into the location input field</li>
+  <li><strong>And</strong> I click the "Search" button</li>
+  <li><strong>Then</strong> I should see an error message indicating "Location not found"</li>
+  <li><strong>And</strong> the weather information should remain unchanged or display a default state</li>
+</ul>
+
+<h4>Scenario: Displaying loading state</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>When</strong> I enter "Paris" into the location input field</li>
+  <li><strong>And</strong> I click the "Search" button</li>
+  <li><strong>Then</strong> I should see a "Loading..." indicator</li>
+  <li><strong>And</strong> after a short delay, I should see the weather information for "Paris"</li>
+</ul>
+
+<h4>Scenario: Displaying weather for a location with no specific country</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>When</strong> I enter "Tokyo" into the location input field</li>
+  <li><strong>And</strong> I click the "Search" button</li>
+  <li><strong>Then</strong> I should see the current temperature for "Tokyo"</li>
+  <li><strong>And</strong> I should see the current weather condition for "Tokyo"</li>
+  <li><strong>And</strong> I should see "Tokyo, JP" as the location</li>
+  <li><strong>And</strong> I should see an icon representing the weather condition for "Tokyo"</li>
+</ul>
+
+<h4>Scenario: Displaying temperature in different units</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>And</strong> the current temperature is displayed in Celsius</li>
+  <li><strong>When</strong> I click the "Toggle Units" button</li>
+  <li><strong>Then</strong> I should see the current temperature displayed in Fahrenheit</li>
+  <li><strong>When</strong> I click the "Toggle Units" button again</li>
+  <li><strong>Then</strong> I should see the current temperature displayed in Celsius</li>
+</ul>
+
+<h4>Scenario: Refreshing weather data</h4>
+<ul>
+  <li><strong>Given</strong> I am on the homepage</li>
+  <li><strong>And</strong> the weather widget is displayed</li>
+  <li><strong>And</strong> the weather data was last updated at [timestamp]</li>
+  <li><strong>When</strong> I click the "Refresh" button</li>
+  <li><strong>Then</strong> the weather data should be updated to the current conditions</li>
+  <li><strong>And</strong> the "last updated" timestamp should reflect the new update time</li>
+</ul>
+
+  [/ask-clarifying-questions](.windsurf/workflows/ask-clarifying-questions.md) [/create-component](.windsurf/workflows/create-component.md)
+  </blockquote>
+
+  ### Optional:
+  When a Figma design is available:
+
+  > [/reference-figma](.windsurf/workflows/reference-figma.md): `https://www.figma.com/design/...?node-id=...`
+</details>
+
 ---
 
 ## Deploy Your Own
