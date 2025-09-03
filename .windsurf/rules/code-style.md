@@ -44,6 +44,7 @@ trigger: always_on
 3. Prefer JSX elements over functional components.
 4. Prefer Fragments over classless `<div>` for JSX element wrappers.
 5. Use types imported from React to help add Typescript types to HTML events.
+6. Utilize suspense and lazy loading for components that depend on other components.
 
 ### Node.js/Backend JavaScript/TypeScript
 1. Always use ES modules instead of CommonJS.

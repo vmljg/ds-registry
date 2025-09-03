@@ -78,7 +78,14 @@ DO NOT: Use ad-hoc gradients
 1. Prefer masks, clip-paths and `shape:` over creating "fake" shapes with CSS hacks. (i.e. Borders for triangles; Border radius for circles.)
 2. Prompt for SVG or image input for especially complex masks.
 
+## Logic
+1. For complex state, logic, or functions, create a React hook and place it in `src/hooks`
+2. For reuable logic, helper functions, library functions, etc., place the code in `src/lib` in a new or existing, related file.
+3. Tests do not need to be written, unless specified, but library functions should be written in a easy-to-test manner.
+4. Always include DocBlocks on functions and hooks.
+
 # Subtasks:
 1. Add new components to `src/components`
 2. Add any new design tokens to `global.css`, as well as document them in a block like `color-block.tsx` or `font-block.tsx`, etc.
 3. Add a demo for the new component to the `src/app/demo/[name]/components` directory.
+4. Run `pnpm registry:build` upon completion. Stop if any errors occur and ask about how to proceed.
