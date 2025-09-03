@@ -1,22 +1,20 @@
-<a href="https://registry-starter.vercel.app/">
-  <h1 align="center">Registry Starter</h1>
-</a>
+# AI DS Registry
 
-<p align="center">
-    Registry Starter is a free, open-source template built with Next.js and Shadcn/ui Registry to accelerate your AI-Native Design System.
-</p>
+Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/registry-starter)
 
-<p align="center">
-  <a href="#deploy-your-own"><strong>Deploy Your Own</strong></a> ·
-  <a href="#open-in-v0"><strong>Open in v0</strong></a> ·
-  <a href="#theming"><strong>Theming</strong></a> ·
-  <a href="#mcp"><strong>MCP</strong></a> ·
-  <a href="#authentication"><strong>Authentication</strong></a> ·
-  <a href="#running-locally"><strong>Running Locally</strong></a> ·
-  <a href="#file-structure"><strong>File Structure</strong></a> ·
-  <a href="https://ui.shadcn.com/docs/registry"><strong>Read Docs</strong></a>
-</p>
-<br/>
+## Setup
+
+- `pnpm` is recommended: https://pnpm.io/installation
+- Customize [AGENTS.MD](https://agents.md/) to describe the overall project.
+- Add MCP servers to your IDE
+  - Figma: https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server
+  - shadcn/ui: https://ui.shadcn.com/docs/mcp
+
+## Customize
+
+- Apply DS tokens to shadcn/ui and Tailwind themes
+
+---
 
 ## Deploy Your Own
 

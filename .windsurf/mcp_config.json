@@ -1,0 +1,41 @@
+{
+    "mcpServers": {
+        "mcp-playwright": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@playwright/mcp@latest"
+            ],
+            "env": {},
+            "disabled": false,
+            "disabledTools": [
+                "browser_install"
+            ]
+        },
+        "fetch": {
+            "command": "uvx",
+            "args": [
+                "mcp-server-fetch"
+            ],
+            "env": {}
+        },
+        "figma-dev-mode-mcp-server": {
+            "command": "npx",
+            "args": [
+                "mcp-remote",
+                "http://127.0.0.1:3845/sse"
+            ],
+            "env": {},
+            "disabled": false
+        },
+        "shadcn-ui": {
+            "command": "npx",
+            "args": [
+                "shadcn-ui",
+                "mcp"
+            ],
+            "env": {},
+            "disabled": false
+        }
+    }
+}
