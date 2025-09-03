@@ -799,6 +799,12 @@
           "target": "app/layout.tsx"
         }
       ]
+    },
+    {
+      "name": "weather-widget",
+      "type": "registry:component",
+      "title": "Weather Widget",
+      "description": "Displays current weather for a location with search, units toggle, and refresh."
     }
   ]
 }
