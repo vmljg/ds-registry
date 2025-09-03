@@ -23,6 +23,8 @@ Try the following prompts to get started. Include the workflow name trigger in t
 <details>
 <summary>Weather Widget (Gherkin)</summary>
 
+_**PAR**: 5 user prompts_
+
 <blockquote>
 <h3>Feature: Weather Widget Display</h3>
 
