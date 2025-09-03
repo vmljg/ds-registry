@@ -10,3 +10,4 @@ This project is a shadcn/ui registry template.
 ## Dev Setup
 
 - Prefer `pnpm` over `npm`
+- Use Conventional Commits for git commit messages
