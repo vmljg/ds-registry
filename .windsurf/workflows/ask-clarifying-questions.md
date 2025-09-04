@@ -1,6 +1,6 @@
 ---
 description: Ask Clarifying Questions to Improve Output
-auto_execution_mode: 3
+auto_execution_mode: 1
 ---
 
 # Ask Clarifying Questions Workflow

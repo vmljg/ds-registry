@@ -135,6 +135,7 @@ When a Figma design is available:
 
 <details>
 <summary>Interactive Comments Section</summary>
+
 _**PAR**: 10 user prompts_
 
 > ### Feature: Interactive Comments Section
