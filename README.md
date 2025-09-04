@@ -45,10 +45,12 @@ Run one of the following workflows in your IDE to get started as a designer or d
 Try the following prompts to get started. Include the workflow name trigger in the prompts.
 
 <details>
-<summary>Weather Widget (Gherkin)</summary>
+<summary>Weather Widget</summary>
 
-_**PAR**: 5 user prompts_
+_**PAR**: 5 user prompts_\
+Examples: [Claude 3.7 Sonnet](https://github.com/vmljg/ds-registry/blob/demo/weather-widget-claude/.windsurf/trajectories/weather-widget/claude-3.7-sonnet.md) ❌ (Failed) | [GPT-5 (low reasoning)](https://github.com/vmljg/ds-registry/blob/demo/weather-widget-gpt-5-low-reasoning/.windsurf/trajectories/weather-widget/gpt-5-low-reasoning.md) ✅ (Passed)
 
+#### Gherkin Prompt
 > ### Feature: Weather Widget Display
 > 
 > - **As a user,**
