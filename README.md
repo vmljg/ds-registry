@@ -48,7 +48,7 @@ Try the following prompts to get started. Include the workflow name trigger in t
 <summary>Weather Widget</summary>
 
 _**PAR**: 5 user prompts_\
-Examples: [Claude 3.7 Sonnet](https://github.com/vmljg/ds-registry/blob/demo/weather-widget-claude/.windsurf/trajectories/weather-widget/claude-3.7-sonnet.md) ❌ (Failed) | [GPT-5 (low reasoning)](https://github.com/vmljg/ds-registry/blob/demo/weather-widget-gpt-5-low-reasoning/.windsurf/trajectories/weather-widget/gpt-5-low-reasoning.md) ✅ (Passed)
+Examples: [Claude 3.7 Sonnet](https://github.com/vmljg/ds-registry/blob/demo/weather-widget-claude/.windsurf/trajectories/weather-widget/claude-3.7-sonnet.md) ❌ ([Failed](https://ds-registry-n1m6z4rxk-vmljg-f16eb6a3.vercel.app/registry/weather-widget)) | [GPT-5 (low reasoning)](https://github.com/vmljg/ds-registry/blob/demo/weather-widget-gpt-5-low-reasoning/.windsurf/trajectories/weather-widget/gpt-5-low-reasoning.md) ✅ ([Passed](https://ds-registry-orrr55cgq-vmljg-f16eb6a3.vercel.app/registry/weather-widget))
 
 #### Gherkin Feature
 > ### Feature: Weather Widget Display
