@@ -1,10 +1,16 @@
 # Design System Registry
 
-Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/registry-starter)
+###### Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/registry-starter)
+
+> [This is not a component library. __It is how you build your component library.__](https://ui.shadcn.com/docs#:~:text=This%20is%20not%20a%20component%20library.%20It%20is%20how%20you%20build%20your%20component%20library.)
 
 ## Setup
 
+### Required
 - `pnpm` is required (even when not used as the package manager): https://pnpm.io/installation
+- [Windsurf](https://windsurf.com/) or [VS Code](https://code.visualstudio.com/)
+
+### Recommended
 - Add MCP servers to your IDE
   - Figma: https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server
   - shadcn/ui: https://ui.shadcn.com/docs/mcp
@@ -20,12 +26,19 @@ Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/
 
 ### Onboarding Workflows
 
-Run one of the following Windsurf workflows to get started as a designer or developer.
+Run one of the following workflows in your IDE to get started as a designer or developer.
+
+#### Windsurf
 
 > Recommended models: `Claude 3.7 Sonnet`, `GPT-5 (low reasoning)`
 
 - [/designer-onboarding](.windsurf/workflows/designer-onboarding.md)
 - [/developer-onboarding](.windsurf/workflows/developer-onboarding.md)
+
+#### VS Code
+
+- [/designer-onboarding](.github/prompts/designer-onboarding.prompt.md)
+- [/developer-onboarding](.github/prompts/developer-onboarding.prompt.md)
 
 ### Test Prompts
 
