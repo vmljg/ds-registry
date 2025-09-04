@@ -1,6 +1,6 @@
 ---
 description: Developer Onboarding
-auto_execution_mode: 3
+auto_execution_mode: 1
 ---
 
 1. Create a `.env.local` file based on the `.env.example` template, if the file does not yet exist. Never read from the `.env.local` file or accept environment variable changes through prompting.
