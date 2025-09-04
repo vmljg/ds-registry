@@ -1,4 +1,4 @@
-# AI DS Registry
+# Design System Registry
 
 Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/registry-starter)
 
