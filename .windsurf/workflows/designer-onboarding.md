@@ -8,8 +8,9 @@ auto_execution_mode: 1
 3. Run `pnpm dev` and offer to open http://localhost:3000/
 4. If successful, continue by validating if the CSS values in `src/app/globals.css`:
  - Report the current values for both light and dark mode.
- - Ask if any values need to change and make edits accordingly. Restrict edits to `@theme {}`, `:root {}`, and `.dark {}` scopes.
+ - Ask if any values need to change and make edits accordingly. Offer to extract colors and styles from screenshots, files, or websites to populate the required values. Restrict edits to `@theme {}`, `:root {}`, and `.dark {}` scopes.
 5. Ask if custom fonts need to be added.
  - Use fonts from `next/font/google` or add `@font-face` CSS rules to `src/app/globals.css`. Do not add the rules to a layer.
  - If you use @font-face, ensure you modify globals.css tailwind configuration to map your custom font variables to Tailwind fonts: https://tailwindcss.com/docs/font-family#customizing-your-theme
 6. If edits are made and successful, ask to make a git commit on a new feature branch.
+7. Ask for brand assets like logos and media to complete registry branding.
