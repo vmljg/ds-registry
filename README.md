@@ -7,20 +7,20 @@
 ## Setup
 
 ### Required
-- `pnpm` is required (even when not used as the package manager): https://pnpm.io/installation
+- [`pnpm`](https://pnpm.io/installation) is required (even when not used as the package manager).
 - [Windsurf](https://windsurf.com/) or [VS Code](https://code.visualstudio.com/)
 
 ### Recommended
 - Add MCP servers to your IDE
-  - Figma: https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server
-  - shadcn/ui: https://ui.shadcn.com/docs/mcp
-  - Vercel: https://vercel.com/docs/mcp/vercel-mcp#vs-code-with-copilot
+  - [Figma](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server)
+  - [shadcn/ui](https://ui.shadcn.com/docs/mcp)
+  - [Vercel](https://vercel.com/docs/mcp/vercel-mcp#vs-code-with-copilot)
 
 ## Customize
 
 - Customize [AGENTS.MD](https://agents.md/) to describe the overall project.
 - Apply DS tokens to shadcn/ui and Tailwind themes
-- Customize Figma DS: https://ui.shadcn.com/docs/figma
+- Customize [Figma DS](https://ui.shadcn.com/docs/figma)
 
 ## AI First-Steps
 
