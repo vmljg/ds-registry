@@ -59,9 +59,7 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
       <TabsContent value="windsurf">
         <p className="text-muted-foreground text-sm">
           Copy and paste the code into{" "}
-          <code className="inline text-sm tabular-nums">
-            .codeium/windsurf/mcp_config.json
-          </code>
+          <code className="inline text-sm tabular-nums">.codeium/windsurf/mcp_config.json</code>
         </p>
       </TabsContent>
 
@@ -83,8 +81,8 @@ export function MCPTabs({ rootUrl }: { rootUrl: string }) {
           </Button>
         </div>
 
-        <pre className="mt-16 overflow-x-auto rounded-lg border bg-muted p-1 sm:mt-0">
-          <code className="relative rounded bg-transparent p-1 font-mono text-muted-foreground text-sm">
+        <pre className="bg-muted mt-16 overflow-x-auto rounded-lg border p-1 sm:mt-0">
+          <code className="text-muted-foreground relative rounded bg-transparent p-1 font-mono text-sm">
             {mcpServer}
           </code>
         </pre>

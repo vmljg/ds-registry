@@ -1,24 +1,24 @@
-import type { Preview } from '@storybook/nextjs-vite'
-import '../src/app/globals.css'
+import type { Preview } from "@storybook/nextjs-vite";
+import "../src/app/globals.css";
 
 const preview: Preview = {
   parameters: {
     controls: {
       matchers: {
-       color: /(background|color)$/i,
-       date: /Date$/i,
+        color: /(background|color)$/i,
+        date: /Date$/i,
       },
     },
     backgrounds: {
-      default: 'light',
+      default: "light",
       values: [
         {
-          name: 'light',
-          value: '#ffffff',
+          name: "light",
+          value: "#ffffff",
         },
         {
-          name: 'dark',
-          value: '#0a0a0a',
+          name: "dark",
+          value: "#0a0a0a",
         },
       ],
     },
@@ -26,17 +26,17 @@ const preview: Preview = {
       // 'todo' - show a11y violations in the test UI only
       // 'error' - fail CI on a11y violations
       // 'off' - skip a11y checks entirely
-      test: 'todo'
-    }
+      test: "todo",
+    },
   },
   globalTypes: {
     theme: {
-      description: 'Global theme for components',
-      defaultValue: 'light',
+      description: "Global theme for components",
+      defaultValue: "light",
       toolbar: {
-        title: 'Theme',
-        icon: 'circlehollow',
-        items: ['light', 'dark'],
+        title: "Theme",
+        icon: "circlehollow",
+        items: ["light", "dark"],
         dynamicTitle: true,
       },
     },

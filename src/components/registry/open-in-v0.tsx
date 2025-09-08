@@ -37,8 +37,7 @@ export function OpenInV0Button({
       if (process.env.NODE_ENV === "development") {
         e.preventDefault();
         toast.warning("You're on localhost", {
-          description:
-            "Open in v0 does not work in development mode, please deploy first.",
+          description: "Open in v0 does not work in development mode, please deploy first.",
         });
       } else {
         window.open(url, "_blank", "noopener,noreferrer");

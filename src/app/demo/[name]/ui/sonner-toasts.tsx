@@ -18,10 +18,7 @@ export function SuccessfulSonner() {
 
 export function WarningSonner() {
   return (
-    <Button
-      variant="outline"
-      onClick={() => toast.warning("This is a warning")}
-    >
+    <Button variant="outline" onClick={() => toast.warning("This is a warning")}>
       Warning Toast
     </Button>
   );
@@ -29,10 +26,7 @@ export function WarningSonner() {
 
 export function ErrorSonner() {
   return (
-    <Button
-      variant="destructive"
-      onClick={() => toast.error("There was an error")}
-    >
+    <Button variant="destructive" onClick={() => toast.error("There was an error")}>
       Error Toast
     </Button>
   );

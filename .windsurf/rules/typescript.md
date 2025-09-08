@@ -4,6 +4,7 @@ globs: src/**/*.ts
 ---
 
 # General Code Style & Formatting
+
 - Use English for all code and documentation.
 - Always declare the type of each variable and function (parameters and return value).
 - Avoid using any.
@@ -13,6 +14,7 @@ globs: src/**/*.ts
 - One export per file.
 
 # Naming Conventions
+
 - Use PascalCase for classes.
 - Use camelCase for variables, functions, and methods.
 - Use kebab-case for file and directory names.
@@ -20,6 +22,7 @@ globs: src/**/*.ts
 - Avoid magic numbers and define constants.
 
 # Functions & Logic
+
 - Keep functions short and single-purpose (<20 lines).
 - Avoid deeply nested blocks by:
 - Using early returns.
@@ -30,6 +33,7 @@ globs: src/**/*.ts
 - Use RO-RO (Receive Object, Return Object) for passing and returning multiple parameters.
 
 # Data Handling
+
 - Avoid excessive use of primitive types; encapsulate data in composite types.
 - Avoid placing validation inside functions—use classes with internal validation instead.
 - Prefer immutability for data:

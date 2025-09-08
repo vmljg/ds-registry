@@ -1,0 +1,10 @@
+node_modules
+playwright-report
+.next
+.vercel
+.idea
+public/r
+components/ui
+dist
+build
+storybook-static

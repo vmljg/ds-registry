@@ -11,11 +11,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function DemoPage({
-  params,
-}: {
-  params: Promise<{ name: string }>;
-}) {
+export default async function DemoPage({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
 
   const component = getRegistryItem(name);
@@ -27,7 +23,7 @@ export default async function DemoPage({
   const { components } = demos[name];
 
   return (
-    <div className="flex h-[100vh] w-full flex-col gap-4 bg-card">
+    <div className="bg-card flex h-[100vh] w-full flex-col gap-4">
       {components &&
         Object.entries(components).map(([key, node]) => (
           <div className="relative w-full" key={key}>

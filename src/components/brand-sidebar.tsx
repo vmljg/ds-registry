@@ -47,11 +47,7 @@ interface SidebarProps {
   className?: string;
 }
 
-export function BrandSidebar({
-  collapsed = false,
-  onToggle,
-  className,
-}: SidebarProps) {
+export function BrandSidebar({ collapsed = false, onToggle, className }: SidebarProps) {
   const pathname = usePathname();
   const { state } = useSidebar();
   const isCollapsed = state === "collapsed";
@@ -133,10 +129,7 @@ export function BrandSidebar({
                 <SidebarMenuItem key={item.href}>
                   <SidebarMenuButton
                     asChild
-                    isActive={
-                      pathname === item.href ||
-                      (pathname === "" && item.href === "/")
-                    }
+                    isActive={pathname === item.href || (pathname === "" && item.href === "/")}
                     tooltip={item.title}
                   >
                     <Link href={item.href}>
@@ -144,9 +137,7 @@ export function BrandSidebar({
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
-                  {item.badge && (
-                    <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>
-                  )}
+                  {item.badge && <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>
@@ -161,19 +152,13 @@ export function BrandSidebar({
             <SidebarMenu>
               {toolsNavItems.map((item) => (
                 <SidebarMenuItem key={item.href}>
-                  <SidebarMenuButton
-                    asChild
-                    isActive={pathname === item.href}
-                    tooltip={item.title}
-                  >
+                  <SidebarMenuButton asChild isActive={pathname === item.href} tooltip={item.title}>
                     <Link href={item.href}>
                       {item.icon}
                       <span>{item.title}</span>
                     </Link>
                   </SidebarMenuButton>
-                  {item.badge && (
-                    <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>
-                  )}
+                  {item.badge && <SidebarMenuBadge>{item.badge.text}</SidebarMenuBadge>}
                 </SidebarMenuItem>
               ))}
             </SidebarMenu>

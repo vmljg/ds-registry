@@ -17,7 +17,7 @@ export function BrandHeader() {
   const isCollapsed = state === "collapsed";
 
   return (
-    <header className="fixed z-50 w-full border-border border-b bg-background">
+    <header className="border-border bg-background fixed z-50 w-full border-b">
       <div className="flex h-16 items-center justify-between px-2">
         <div className="flex items-center space-x-4">
           <Button
@@ -26,19 +26,10 @@ export function BrandHeader() {
             className="hidden size-8 md:flex"
             onClick={toggleSidebar}
           >
-            {isCollapsed ? (
-              <Menu className="size-4" />
-            ) : (
-              <X className="size-4" />
-            )}
+            {isCollapsed ? <Menu className="size-4" /> : <X className="size-4" />}
           </Button>
 
-          <Button
-            variant="ghost"
-            size="icon"
-            className="size-8 md:hidden"
-            onClick={toggleSidebar}
-          >
+          <Button variant="ghost" size="icon" className="size-8 md:hidden" onClick={toggleSidebar}>
             <Menu className="size-4" />
           </Button>
 
@@ -57,7 +48,7 @@ export function BrandHeader() {
                 autoFocus
                 onBlur={() => setIsSearchOpen(false)}
               />
-              <Search className="absolute top-2.5 left-3 size-4 text-foreground" />
+              <Search className="text-foreground absolute top-2.5 left-3 size-4" />
             </div>
           ) : (
             <Button

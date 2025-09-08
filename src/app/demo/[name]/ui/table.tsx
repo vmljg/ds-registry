@@ -74,9 +74,7 @@ export const table = {
               <TableCell className="font-medium">{invoice.invoice}</TableCell>
               <TableCell>{invoice.paymentStatus}</TableCell>
               <TableCell>{invoice.paymentMethod}</TableCell>
-              <TableCell className="text-right">
-                {invoice.totalAmount}
-              </TableCell>
+              <TableCell className="text-right">{invoice.totalAmount}</TableCell>
             </TableRow>
           ))}
         </TableBody>

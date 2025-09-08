@@ -11,7 +11,10 @@ import type { Product } from "@/lib/products";
 export default function ProductGrid({
   categories,
   products,
-}: { categories: string[]; products: Product[] }) {
+}: {
+  categories: string[];
+  products: Product[];
+}) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const filteredProducts = selectedCategory
@@ -51,9 +54,7 @@ export default function ProductGrid({
             <CardContent className="p-4">
               <Link href={`/products/${product.id}`}>
                 <h3 className="font-semibold">{product.name}</h3>
-                <p className="line-clamp-2 text-gray-500 text-sm">
-                  {product.description}
-                </p>
+                <p className="line-clamp-2 text-sm text-gray-500">{product.description}</p>
               </Link>
             </CardContent>
 

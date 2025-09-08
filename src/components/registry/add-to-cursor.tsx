@@ -2,11 +2,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 
-export function AddToCursor({
-  mcp,
-}: {
-  mcp: { command: string; env: { [key: string]: string } };
-}) {
+export function AddToCursor({ mcp }: { mcp: { command: string; env: { [key: string]: string } } }) {
   function generateCursorDeeplink() {
     const name = "shadcn";
     const config = btoa(JSON.stringify(mcp));

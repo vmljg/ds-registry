@@ -15,9 +15,7 @@ export const card = {
       <Card className="w-[350px]">
         <CardHeader>
           <CardTitle>Create project</CardTitle>
-          <CardDescription>
-            Deploy your new project in one-click.
-          </CardDescription>
+          <CardDescription>Deploy your new project in one-click.</CardDescription>
         </CardHeader>
         <CardContent>
           <p>This is the content of a card!</p>
