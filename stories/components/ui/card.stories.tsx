@@ -48,20 +48,20 @@ export const Complete: Story = {
           This is a description that provides additional context about the card content.
         </CardDescription>
         <CardAction>
-          <button className="rounded bg-primary px-3 py-1 text-primary-foreground text-sm">
+          <button className="bg-primary text-primary-foreground rounded px-3 py-1 text-sm">
             Action
           </button>
         </CardAction>
       </CardHeader>
       <CardContent>
         <p>
-          This is the main content area of the card. It can contain any type of content
-          including text, images, forms, or other components.
+          This is the main content area of the card. It can contain any type of content including
+          text, images, forms, or other components.
         </p>
       </CardContent>
       <CardFooter>
         <button className="rounded border px-4 py-2 text-sm">Cancel</button>
-        <button className="ml-auto rounded bg-primary px-4 py-2 text-primary-foreground text-sm">
+        <button className="bg-primary text-primary-foreground ml-auto rounded px-4 py-2 text-sm">
           Save
         </button>
       </CardFooter>
@@ -97,13 +97,8 @@ export const WithHeaderAction: Story = {
         <CardTitle>Settings</CardTitle>
         <CardDescription>Manage your account settings and preferences.</CardDescription>
         <CardAction>
-          <button className="rounded-full p-2 hover:bg-muted">
-            <svg
-              className="h-4 w-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
+          <button className="hover:bg-muted rounded-full p-2">
+            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -146,10 +141,8 @@ export const WithFooter: Story = {
         </p>
       </CardContent>
       <CardFooter>
-        <button className="rounded border px-4 py-2 text-sm hover:bg-muted">
-          Cancel
-        </button>
-        <button className="ml-auto rounded bg-destructive px-4 py-2 text-destructive-foreground text-sm hover:bg-destructive/90">
+        <button className="hover:bg-muted rounded border px-4 py-2 text-sm">Cancel</button>
+        <button className="bg-destructive text-destructive-foreground hover:bg-destructive/90 ml-auto rounded px-4 py-2 text-sm">
           Delete
         </button>
       </CardFooter>
@@ -161,9 +154,7 @@ export const WithFooter: Story = {
 export const ContentOnly: Story = {
   render: () => (
     <Card className="w-64 p-4">
-      <p className="text-center">
-        A minimal card with just content and custom padding.
-      </p>
+      <p className="text-center">A minimal card with just content and custom padding.</p>
     </Card>
   ),
 };
@@ -171,7 +162,7 @@ export const ContentOnly: Story = {
 // Card with custom styling
 export const CustomStyling: Story = {
   render: () => (
-    <Card className="w-80 border-2 border-dashed border-primary bg-primary/5">
+    <Card className="border-primary bg-primary/5 w-80 border-2 border-dashed">
       <CardHeader>
         <CardTitle className="text-primary">Custom Styled Card</CardTitle>
         <CardDescription>

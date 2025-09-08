@@ -1,53 +1,35 @@
 {
-    "mcpServers": {
-        "mcp-playwright": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@playwright/mcp@latest"
-            ],
-            "env": {},
-            "disabled": false,
-            "disabledTools": [
-                "browser_install"
-            ]
-        },
-        "fetch": {
-            "command": "uvx",
-            "args": [
-                "mcp-server-fetch"
-            ],
-            "env": {}
-        },
-        "figma-dev-mode-mcp-server": {
-            "command": "npx",
-            "args": [
-                "mcp-remote",
-                "http://127.0.0.1:3845/sse"
-            ],
-            "env": {},
-            "disabled": false
-        },
-        "shadcn-ui": {
-            "command": "npx",
-            "args": [
-                "shadcn-ui",
-                "mcp"
-            ],
-            "env": {},
-            "disabled": false
-        },
-        "vercel": {
-            "serverUrl": "https://mcp.vercel.com"
-        },
-        "context7": {
-            "command": "npx",
-            "args": [
-                "-y",
-                "@upstash/context7-mcp",
-                "--api-key",
-                "YOUR_API_KEY"
-            ]
-        }
+  "mcpServers": {
+    "mcp-playwright": {
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp@latest"],
+      "env": {},
+      "disabled": false,
+      "disabledTools": ["browser_install"]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
+      "env": {}
+    },
+    "figma-dev-mode-mcp-server": {
+      "command": "npx",
+      "args": ["mcp-remote", "http://127.0.0.1:3845/sse"],
+      "env": {},
+      "disabled": false
+    },
+    "shadcn-ui": {
+      "command": "npx",
+      "args": ["shadcn-ui", "mcp"],
+      "env": {},
+      "disabled": false
+    },
+    "vercel": {
+      "serverUrl": "https://mcp.vercel.com"
+    },
+    "context7": {
+      "command": "npx",
+      "args": ["-y", "@upstash/context7-mcp", "--api-key", "YOUR_API_KEY"]
     }
+  }
 }

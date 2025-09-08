@@ -3,6 +3,7 @@ trigger: always_on
 ---
 
 ### General Code Style
+
 1. When writing conditional logic, avoid using `else` in favor of early returns.
 2. Use English for all code and documentation.
 3. Use UPPERCASE for naming constants and macros.
@@ -14,8 +15,9 @@ trigger: always_on
 9. Prefer array functions over for loops.
 
 ### CSS
-1. When writing CSS, prefer using logical (`inline-start` / `inline-end` / `block-start` / `block-end`) properties instead of `left`, `right`, `top` and `bottom`. Sort all properties alphabetically. 
-2. Never use `!important`. 
+
+1. When writing CSS, prefer using logical (`inline-start` / `inline-end` / `block-start` / `block-end`) properties instead of `left`, `right`, `top` and `bottom`. Sort all properties alphabetically.
+2. Never use `!important`.
 3. Use `@layer` for scoping styles.
 4. The latest CSS features should be used, but experimental features should be wrapped in `@supports`.
 5. Prefer using CSS variables and always include `@property` for custom properties.
@@ -23,14 +25,17 @@ trigger: always_on
 7. Prefer using CSS Grid over Flexbox when possible.
 
 #### Tailwind CSS
+
 1. Use `@apply` to ensure DRY code.
 2. Utilize Tailwind v4 features, functions and directives.
 
 ### HTML
+
 1. When writing HTML, prefer using semantic elements instead of generic `div` elements.
 2. Always include proper ARIA roles and attributes.
 
 ### Frontend and General JavaScript/TypeScript
+
 1. Always use `const` by default, and only use `let` if you need to reassign the variable when writing JavaScript or TypeScript.
 2. When writing TypeScript, always use type annotations instead of `any`. Prefer interfaces for object types and enums for constants.
 3. Use JSDoc to document public classes and methods.
@@ -39,6 +44,7 @@ trigger: always_on
 6. Use arrow functions sparingly. Prefer named functions to improve code readability.
 
 #### React
+
 1. Utilize memoization best practices
 2. DO use third-party libraries for complex state management and features.
 3. Prefer JSX elements over functional components.
@@ -47,6 +53,7 @@ trigger: always_on
 6. Utilize suspense and lazy loading for components that depend on other components.
 
 ### Node.js/Backend JavaScript/TypeScript
+
 1. Always use ES modules instead of CommonJS.
 2. Place non-lazy loading `imports` at top of file.
 

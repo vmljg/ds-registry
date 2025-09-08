@@ -9,16 +9,20 @@ Create a Storybook story for a given shadcn/ui registry component by analyzing i
 
 1. Locate and import the component from the registry.json.
 2. Read the component’s TypeScript props interface to:
-  - Identify prop names, types, and default values.
-  - Determine appropriate Storybook controls (text, boolean, number, select, color, etc.).
-  - For union types (e.g., "default" | "outline"), create a select control with those options.
+
+- Identify prop names, types, and default values.
+- Determine appropriate Storybook controls (text, boolean, number, select, color, etc.).
+- For union types (e.g., "default" | "outline"), create a select control with those options.
+
 3. Write the story in TypeScript using Storybook CSF 3 format:
-  - Import `Meta` and `StoryObj` from @storybook/react.
-  - Define `Meta` with `title`, `component`, and `argTypes` (generated from props).
-  - Create:
-    - A __Default__ story with minimal props.
-    - At least two variant stories showing different prop combinations.
-  - Use `args` to set default values for each story.
+
+- Import `Meta` and `StoryObj` from @storybook/react.
+- Define `Meta` with `title`, `component`, and `argTypes` (generated from props).
+- Create:
+  - A **Default** story with minimal props.
+  - At least two variant stories showing different prop combinations.
+- Use `args` to set default values for each story.
+
 4. Add inline comments explaining key parts of the code.
 5. Ensure the story is self-contained and runnable without external dependencies beyond registry and Storybook.
 

@@ -13,10 +13,7 @@ export const toggleGroup = {
         <ToggleGroupItem value="italic" aria-label="Toggle italic">
           <Italic className="h-4 w-4" />
         </ToggleGroupItem>
-        <ToggleGroupItem
-          value="strikethrough"
-          aria-label="Toggle strikethrough"
-        >
+        <ToggleGroupItem value="strikethrough" aria-label="Toggle strikethrough">
           <Underline className="h-4 w-4" />
         </ToggleGroupItem>
       </ToggleGroup>

@@ -2,13 +2,7 @@
 
 import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import {
   type ChartConfig,
   ChartContainer,
@@ -54,11 +48,7 @@ export function BarChartComponent() {
         <ChartContainer config={chartConfig}>
           <BarChart accessibilityLayer data={chartData}>
             <CartesianGrid vertical={false} />
-            <XAxis
-              dataKey="month"
-              tickMargin={10}
-              tickFormatter={(value) => value.slice(0, 3)}
-            />
+            <XAxis dataKey="month" tickMargin={10} tickFormatter={(value) => value.slice(0, 3)} />
             <ChartTooltip content={<ChartTooltipContent />} />
             <ChartLegend content={<ChartLegendContent />} />
             <Bar dataKey="desktop" fill="var(--color-desktop)" radius={4} />

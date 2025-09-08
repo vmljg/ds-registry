@@ -15,11 +15,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function RegistryItemPage({
-  params,
-}: {
-  params: Promise<{ name: string }>;
-}) {
+export default async function RegistryItemPage({ params }: { params: Promise<{ name: string }> }) {
   const { name } = await params;
   const component = getRegistryItem(name);
 
@@ -37,9 +33,7 @@ export default async function RegistryItemPage({
               Back to Home
             </Link>
           </Button>
-          <h1 className="font-bold text-3xl tracking-tight">
-            {component.title}
-          </h1>
+          <h1 className="text-3xl font-bold tracking-tight">{component.title}</h1>
         </div>
       </div>
 

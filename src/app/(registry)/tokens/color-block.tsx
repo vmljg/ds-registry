@@ -11,9 +11,7 @@ export function ColorBlock({ name, className }: SimpleColorBlockProps) {
       <div className={cn("size-12 rounded border", className)} />
       <div>
         <div className="font-medium">{name}</div>
-        <code className="font-mono text-muted-foreground text-sm">
-          --{className.slice(3)}
-        </code>
+        <code className="text-muted-foreground font-mono text-sm">--{className.slice(3)}</code>
       </div>
     </div>
   );

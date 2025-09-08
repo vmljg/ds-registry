@@ -70,7 +70,7 @@ function LoginForm() {
                   <FormLabel>Password</FormLabel>
                   <Link
                     href="#forgot-password"
-                    className="text-muted-foreground text-xs hover:text-primary"
+                    className="text-muted-foreground hover:text-primary text-xs"
                   >
                     Forgot password?
                   </Link>
@@ -93,9 +93,7 @@ function LoginForm() {
           <Separator className="w-full" />
         </div>
         <div className="relative flex justify-center text-xs uppercase">
-          <span className="bg-background px-2 text-muted-foreground">
-            Or continue with
-          </span>
+          <span className="bg-background text-muted-foreground px-2">Or continue with</span>
         </div>
       </div>
 
@@ -120,17 +118,16 @@ function LoginForm() {
 
 export function Login() {
   return (
-    <div className="container relative flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
-      <div className="relative hidden h-full flex-col bg-foreground/10 p-10 text-foreground lg:flex dark:border-r">
-        <div className="relative z-20 flex items-center font-medium text-lg">
+    <div className="relative container flex-col items-center justify-center md:grid lg:max-w-none lg:grid-cols-2 lg:px-0">
+      <div className="bg-foreground/10 text-foreground relative hidden h-full flex-col p-10 lg:flex dark:border-r">
+        <div className="relative z-20 flex items-center text-lg font-medium">
           <Logo />
         </div>
 
         <div className="relative z-20 mt-auto">
           <blockquote className="space-y-2">
             <p className="text-lg">
-              &ldquo;Tbh @shadcn really cooked with @shadcn. Keeps passing the
-              test of time.&rdquo;
+              &ldquo;Tbh @shadcn really cooked with @shadcn. Keeps passing the test of time.&rdquo;
             </p>
             <footer className="text-sm">Guillermo Rauch, CEO of Vercel</footer>
           </blockquote>
@@ -140,9 +137,7 @@ export function Login() {
       <div className="lg:p-8">
         <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
           <div className="flex flex-col space-y-2 text-center">
-            <h1 className="font-semibold text-2xl tracking-tight">
-              Welcome back
-            </h1>
+            <h1 className="text-2xl font-semibold tracking-tight">Welcome back</h1>
             <p className="text-muted-foreground text-sm">
               Enter your email to sign in to your account
             </p>
@@ -150,19 +145,13 @@ export function Login() {
 
           <LoginForm />
 
-          <p className="px-8 text-center text-muted-foreground text-sm">
+          <p className="text-muted-foreground px-8 text-center text-sm">
             By clicking continue, you agree to our{" "}
-            <Link
-              href="#terms"
-              className="underline underline-offset-4 hover:text-primary"
-            >
+            <Link href="#terms" className="hover:text-primary underline underline-offset-4">
               Terms of Service
             </Link>{" "}
             and{" "}
-            <Link
-              href="#privacy"
-              className="underline underline-offset-4 hover:text-primary"
-            >
+            <Link href="#privacy" className="hover:text-primary underline underline-offset-4">
               Privacy Policy
             </Link>
             .

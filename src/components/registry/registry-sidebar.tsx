@@ -1,15 +1,6 @@
 "use client";
 
-import {
-  Blocks,
-  ChevronDown,
-  Component,
-  Home,
-  Menu,
-  Search,
-  ToyBrick,
-  X,
-} from "lucide-react";
+import { Blocks, ChevronDown, Component, Home, Menu, Search, ToyBrick, X } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -17,11 +8,7 @@ import { useEffect, useState } from "react";
 import { RegistryLogo } from "@/components/registry/registry-logo";
 import { ModeToggle } from "@/components/registry/theme-toggle";
 import { Button } from "@/components/ui/button";
-import {
-  Collapsible,
-  CollapsibleContent,
-  CollapsibleTrigger,
-} from "@/components/ui/collapsible";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
@@ -73,9 +60,7 @@ export function RegistrySidebar() {
   useEffect(() => {
     if (searchTerm) {
       setFilteredUiItems(
-        uiItems.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
+        uiItems.filter((item) => item.title.toLowerCase().includes(searchTerm.toLowerCase())),
       );
       setFilteredComponents(
         componentItems.filter((item) =>
@@ -83,9 +68,7 @@ export function RegistrySidebar() {
         ),
       );
       setFilteredBlocks(
-        blockItems.filter((item) =>
-          item.title.toLowerCase().includes(searchTerm.toLowerCase()),
-        ),
+        blockItems.filter((item) => item.title.toLowerCase().includes(searchTerm.toLowerCase())),
       );
     } else {
       setFilteredUiItems(uiItems);
@@ -102,17 +85,13 @@ export function RegistrySidebar() {
             <RegistryLogo />
           </Link>
 
-          <Button
-            variant="ghost"
-            className="md:hidden"
-            onClick={() => setOpenMobile(false)}
-          >
+          <Button variant="ghost" className="md:hidden" onClick={() => setOpenMobile(false)}>
             <X />
           </Button>
         </div>
         <div className="px-2 py-2 opacity-100 transition-all duration-200">
           <div className="relative">
-            <Search className="absolute top-2.5 left-2.5 size-4 text-muted-foreground" />
+            <Search className="text-muted-foreground absolute top-2.5 left-2.5 size-4" />
             <Input
               type="search"
               placeholder="Search..."
@@ -145,14 +124,8 @@ export function RegistrySidebar() {
                   <SidebarMenu>
                     {gettingStartedItems.map((item) => (
                       <SidebarMenuItem key={item.path}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.path}
-                        >
-                          <Link
-                            onClick={() => setOpenMobile(false)}
-                            href={item.path}
-                          >
+                        <SidebarMenuButton asChild isActive={pathname === item.path}>
+                          <Link onClick={() => setOpenMobile(false)} href={item.path}>
                             {item.title}
                           </Link>
                         </SidebarMenuButton>
@@ -170,9 +143,7 @@ export function RegistrySidebar() {
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
                     <Blocks className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      Blocks
-                    </span>
+                    <span className="ml-2 transition-all duration-200">Blocks</span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
                 </SidebarGroupLabel>
@@ -183,10 +154,7 @@ export function RegistrySidebar() {
                   <SidebarMenu>
                     {filteredBlocks.map((item) => (
                       <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.name}
-                        >
+                        <SidebarMenuButton asChild isActive={pathname === item.name}>
                           <Link
                             onClick={() => setOpenMobile(false)}
                             href={`/registry/${item.name}`}
@@ -208,9 +176,7 @@ export function RegistrySidebar() {
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
                     <Component className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      Components
-                    </span>
+                    <span className="ml-2 transition-all duration-200">Components</span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
                 </SidebarGroupLabel>
@@ -221,10 +187,7 @@ export function RegistrySidebar() {
                   <SidebarMenu>
                     {filteredComponents.map((item) => (
                       <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.name}
-                        >
+                        <SidebarMenuButton asChild isActive={pathname === item.name}>
                           <Link
                             onClick={() => setOpenMobile(false)}
                             href={`/registry/${item.name}`}
@@ -246,9 +209,7 @@ export function RegistrySidebar() {
                 <SidebarGroupLabel className="flex cursor-pointer items-center justify-between">
                   <div className="flex min-w-0 items-center">
                     <ToyBrick className="size-4 flex-shrink-0" />
-                    <span className="ml-2 transition-all duration-200">
-                      UI Primitives
-                    </span>
+                    <span className="ml-2 transition-all duration-200">UI Primitives</span>
                   </div>
                   <ChevronDown className="size-4 flex-shrink-0 transition-all duration-200 group-data-[state=open]/collapsible:rotate-180" />
                 </SidebarGroupLabel>
@@ -258,10 +219,7 @@ export function RegistrySidebar() {
                   <SidebarMenu>
                     {filteredUiItems.map((item) => (
                       <SidebarMenuItem key={item.name}>
-                        <SidebarMenuButton
-                          asChild
-                          isActive={pathname === item.name}
-                        >
+                        <SidebarMenuButton asChild isActive={pathname === item.name}>
                           <Link
                             onClick={() => setOpenMobile(false)}
                             href={`/registry/${item.name}`}
