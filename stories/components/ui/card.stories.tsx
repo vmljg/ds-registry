@@ -8,10 +8,12 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { MoreVertical } from "lucide-react";
 
 // Card component story with comprehensive examples
 const meta: Meta<typeof Card> = {
-  title: "Components/Card",
+  title: "Components/UI/Card",
   component: Card,
   argTypes: {
     className: {
@@ -48,9 +50,7 @@ export const Complete: Story = {
           This is a description that provides additional context about the card content.
         </CardDescription>
         <CardAction>
-          <button className="bg-primary text-primary-foreground rounded px-3 py-1 text-sm">
-            Action
-          </button>
+          <Button size="sm">Action</Button>
         </CardAction>
       </CardHeader>
       <CardContent>
@@ -60,10 +60,8 @@ export const Complete: Story = {
         </p>
       </CardContent>
       <CardFooter>
-        <button className="rounded border px-4 py-2 text-sm">Cancel</button>
-        <button className="bg-primary text-primary-foreground ml-auto rounded px-4 py-2 text-sm">
-          Save
-        </button>
+        <Button variant="outline">Cancel</Button>
+        <Button className="ml-auto">Save</Button>
       </CardFooter>
     </Card>
   ),
@@ -97,16 +95,9 @@ export const WithHeaderAction: Story = {
         <CardTitle>Settings</CardTitle>
         <CardDescription>Manage your account settings and preferences.</CardDescription>
         <CardAction>
-          <button className="hover:bg-muted rounded-full p-2">
-            <svg className="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M12 5v.01M12 12v.01M12 19v.01M12 6a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2zm0 7a1 1 0 110-2 1 1 0 010 2z"
-              />
-            </svg>
-          </button>
+          <Button variant="ghost" size="icon">
+            <MoreVertical className="size-4" />
+          </Button>
         </CardAction>
       </CardHeader>
       <CardContent>
@@ -141,10 +132,10 @@ export const WithFooter: Story = {
         </p>
       </CardContent>
       <CardFooter>
-        <button className="hover:bg-muted rounded border px-4 py-2 text-sm">Cancel</button>
-        <button className="bg-destructive text-destructive-foreground hover:bg-destructive/90 ml-auto rounded px-4 py-2 text-sm">
+        <Button variant="outline">Cancel</Button>
+        <Button variant="destructive" className="ml-auto">
           Delete
-        </button>
+        </Button>
       </CardFooter>
     </Card>
   ),
