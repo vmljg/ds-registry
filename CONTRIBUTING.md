@@ -70,6 +70,11 @@ Why this matters:
 - Enables semantic versioning and changelogs if/when automated tooling is introduced
 
 
+## Code Style Requirements
+
+See `docs/style/README.md` for our code style guidelines.
+
+
 ## Pull Request Checklist
 
 Before requesting a review, ensure the following locally:

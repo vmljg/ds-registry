@@ -29,6 +29,14 @@
 
 Please read the contribution guidelines and branching strategy in [CONTRIBUTING.md](CONTRIBUTING.md).
 
+## Code Style
+
+Refer to the modular style guide at [docs/style/README.md](docs/style/README.md).
+
+MUST highlights:
+- Use semantic HTML elements (e.g., `article`, `header`, `section`, `footer`, `h1–h6`, `p`, `nav`, `figure/figcaption`).
+- Include `width` and `height` on `<img>` to prevent layout shifts; add `loading="lazy"` for below-the-fold images.
+
 ## AI First-Steps
 
 ### Onboarding Workflows
@@ -68,6 +76,7 @@ Below is a reference list of all available Windsurf workflows and rules in this 
   - Summary: Create a new reusable UI component following mobile-first, accessibility, and styling rules.
   - When to use: When introducing a new UI primitive or composite component to the registry.
   - File: `.windsurf/workflows/create-component.md`
+  - Example: Run `/create-component` with a prompt like: "Create a `Badge` component in `src/components/ui/badge.tsx` with variants: `default | secondary | destructive`; props: `variant`, `children`; add stories under `stories/components/ui/badge.stories.tsx` and a demo in `app/demo/badge/components`."
 
 - **/create-storybook-story**
   - Summary: Generate Storybook stories by analyzing a component’s TypeScript props to build argTypes and controls.
