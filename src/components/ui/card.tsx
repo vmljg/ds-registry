@@ -30,11 +30,7 @@ function CardHeader({ className, ...props }: React.ComponentProps<"header">) {
 
 function CardTitle({ className, ...props }: React.ComponentProps<"h3">) {
   return (
-    <h3
-      data-slot="card-title"
-      className={cn("leading-none font-semibold", className)}
-      {...props}
-    />
+    <h3 data-slot="card-title" className={cn("leading-none font-semibold", className)} {...props} />
   );
 }
 

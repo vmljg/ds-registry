@@ -4,7 +4,6 @@ This document formalizes the branching strategy, naming conventions, pull reques
 
 The goals are to maintain a clean, linear git history, enforce quality via automated checks, and make releases predictable.
 
-
 ## Branching Strategy
 
 - **Main branch**: `main`
@@ -22,7 +21,6 @@ The goals are to maintain a clean, linear git history, enforce quality via autom
 - **Protected merges**
   - Open a PR from your feature branch into `main`.
   - Require passing checks and at least one review before merging (project setting; if not yet enabled, follow the process below regardless).
-
 
 ## Branch Naming
 
@@ -43,7 +41,6 @@ Examples:
 - `fix/card-shadow-bleed`
 - `docs/readme-storybook-section`
 - `chore/update-prettier`
-
 
 ## Commit Messages
 
@@ -69,11 +66,9 @@ Why this matters:
 - Easier to scan history
 - Enables semantic versioning and changelogs if/when automated tooling is introduced
 
-
 ## Code Style Requirements
 
 See `docs/style/README.md` for our code style guidelines.
-
 
 ## Pull Request Checklist
 
@@ -102,7 +97,6 @@ Merging:
 - Prefer "Rebase and merge" to keep history linear
 - Resolve any outstanding comments or explicitly defer with follow-up issues
 
-
 ## Release Flow
 
 This project primarily deploys from `main`. Use semantic versioning when publishing releases and tags.
@@ -127,7 +121,6 @@ This project primarily deploys from `main`. Use semantic versioning when publish
    - Storybook is built and deployed to GitHub Pages automatically on push to `main` when relevant paths change (`stories/**`, `.storybook/**`).
    - Application deployments (e.g., Vercel) follow the project’s platform settings. If applicable, ensure environment variables are set in the platform dashboard.
 
-
 ## CI Expectations
 
 While CI policy can evolve, the minimal expected checks for PRs are:
@@ -140,7 +133,6 @@ While CI policy can evolve, the minimal expected checks for PRs are:
 - Build Storybook when story files changed
 
 If these are not yet enforced in GitHub branch protection rules, treat them as required locally before requesting review.
-
 
 ## Getting Help
 

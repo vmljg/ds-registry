@@ -5,4 +5,3 @@
 - MAY: Use git hooks for pre-commit checks.
 - MAY: Follow conventional commits specification.
 - MAY: Use semantic versioning for releases.
-

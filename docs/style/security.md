@@ -12,6 +12,7 @@
 - MAY:Use security.txt for security policy.
 
 ## Examples
+
 ```typescript
 // Input sanitization
 import DOMPurify from 'dompurify';

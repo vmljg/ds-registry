@@ -12,20 +12,21 @@
 - MAY: Implement retry logic for transient failures.
 
 ## Examples
+
 ```typescript
 class ApiError extends Error {
   constructor(
     public status: number,
     message: string,
-    public details?: unknown
+    public details?: unknown,
   ) {
     super(message);
-    this.name = 'ApiError';
+    this.name = "ApiError";
   }
 }
 
 // Usage
-throw new ApiError(404, 'User not found', { userId });
+throw new ApiError(404, "User not found", { userId });
 
 // In JSDoc
 /**

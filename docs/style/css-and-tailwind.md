@@ -18,6 +18,7 @@
 - MAY: Create custom plugins for project-specific utilities.
 
 ## Examples
+
 ```css
 /* Logical properties */
 .element {

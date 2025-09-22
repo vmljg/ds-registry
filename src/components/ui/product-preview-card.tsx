@@ -64,7 +64,7 @@ export function ProductPreviewCard({
   return (
     <Card
       className={cn(
-        "overflow-hidden max-w-[22rem] sm:max-w-none sm:grid sm:grid-cols-2 p-0 gap-0",
+        "max-w-[22rem] gap-0 overflow-hidden p-0 sm:grid sm:max-w-none sm:grid-cols-2",
         className,
       )}
     >
@@ -95,9 +95,15 @@ export function ProductPreviewCard({
 
         <CardContent className="mt-auto">
           <div className="flex items-center gap-4">
-            <div className="text-3xl font-semibold">{currency}{price}</div>
+            <div className="text-3xl font-semibold">
+              {currency}
+              {price}
+            </div>
             {originalPrice ? (
-              <div className="text-muted-foreground line-through">{currency}{originalPrice}</div>
+              <div className="text-muted-foreground line-through">
+                {currency}
+                {originalPrice}
+              </div>
             ) : null}
           </div>
         </CardContent>

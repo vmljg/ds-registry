@@ -7,10 +7,11 @@
 - MAY: Use web vitals for performance monitoring.
 
 ## Examples
-```tsx
-import { lazy, Suspense } from 'react';
 
-const HeavyComponent = lazy(() => import('./HeavyComponent'));
+```tsx
+import { lazy, Suspense } from "react";
+
+const HeavyComponent = lazy(() => import("./HeavyComponent"));
 
 function App() {
   return (

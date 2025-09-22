@@ -19,7 +19,6 @@ Follow these rules and then perform the self-verification checklist before retur
 9. Error Handling – Handle failures gracefully with meaningful error messages and logging.
 10. Output Format – Provide the complete code in one block, ready to run, with no omitted sections. If multiple files are needed, clearly label each file and its path.
 
-
 ## Self-Verification Checklist (Run Before Output)
 
 Before you return your answer, verify the following:

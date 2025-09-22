@@ -34,6 +34,7 @@ Please read the contribution guidelines and branching strategy in [CONTRIBUTING.
 Refer to the modular style guide at [docs/style/README.md](docs/style/README.md).
 
 MUST highlights:
+
 - Use semantic HTML elements (e.g., `article`, `header`, `section`, `footer`, `h1–h6`, `p`, `nav`, `figure/figcaption`).
 - Include `width` and `height` on `<img>` to prevent layout shifts; add `loading="lazy"` for below-the-fold images.
 
@@ -54,7 +55,6 @@ Run one of the following workflows in your IDE to get started as a designer or d
 
 - [/designer-onboarding](.github/prompts/designer-onboarding.prompt.md)
 - [/developer-onboarding](.github/prompts/developer-onboarding.prompt.md)
-
 
 ## All Windsurf Workflows and Rules
 
@@ -142,6 +142,7 @@ Below is a reference list of all available Windsurf workflows and rules in this 
 - **Served at**: http://localhost:6006 (Storybook will choose a different port if 6006 is in use; see terminal output for the exact URL.)
 - **Stories location**: `stories/` directory (e.g., `stories/components/ui/*.stories.tsx`).
   - Supported patterns typically include `**/*.stories.@(tsx|mdx)`.
+
 ### Test Prompts
 
 Try the following prompts to get started. Include the workflow name trigger in the prompts.

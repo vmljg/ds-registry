@@ -22,6 +22,7 @@
 - MAY: Create helper functions for repeated code patterns.
 
 ## Examples
+
 ```typescript
 // Early returns
 function processUser(user: User | null) {
@@ -30,7 +31,5 @@ function processUser(user: User | null) {
 }
 
 // Array functions
-const activeUsers = users
-  .filter(user => user.isActive)
-  .map(user => user.name);
+const activeUsers = users.filter((user) => user.isActive).map((user) => user.name);
 ```

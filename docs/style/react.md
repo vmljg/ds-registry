@@ -12,23 +12,17 @@
 - MAY: Use React.memo for performance optimization.
 
 ## Examples
+
 ```tsx
 interface ButtonProps {
-  variant?: 'primary' | 'secondary';
+  variant?: "primary" | "secondary";
   onClick: () => void;
   children: React.ReactNode;
 }
 
-export function Button({ 
-  variant = 'primary', 
-  onClick, 
-  children 
-}: ButtonProps) {
+export function Button({ variant = "primary", onClick, children }: ButtonProps) {
   return (
-    <button 
-      className={`btn ${variant}`}
-      onClick={onClick}
-    >
+    <button className={`btn ${variant}`} onClick={onClick}>
       {children}
     </button>
   );

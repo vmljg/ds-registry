@@ -12,23 +12,24 @@
 - MAY: Add skip links for keyboard users.
 
 ## Examples
+
 ```tsx
 function Toggle({ label, isOn, onChange }) {
   return (
     <label>
       <span className="visually-hidden">{label}</span>
-      <div 
+      <div
         role="switch"
         aria-checked={isOn}
         tabIndex={0}
         onKeyDown={(e) => {
-          if (e.key === ' ' || e.key === 'Enter') {
+          if (e.key === " " || e.key === "Enter") {
             e.preventDefault();
             onChange(!isOn);
           }
         }}
         onClick={() => onChange(!isOn)}
-        className={`toggle ${isOn ? 'on' : 'off'}`}
+        className={`toggle ${isOn ? "on" : "off"}`}
       >
         <span className="toggle-handle" />
       </div>

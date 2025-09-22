@@ -7,13 +7,14 @@
 - MAY: Leverage mapped and conditional types for advanced patterns.
 
 ## Examples
+
 ```typescript
 // Branded types
-type Email = string & { readonly __brand: 'Email' };
+type Email = string & { readonly __brand: "Email" };
 
 // Type assertions
 const colors = {
-  primary: '#007bff',
-  secondary: '#6c757d',
+  primary: "#007bff",
+  secondary: "#6c757d",
 } satisfies Record<string, `#${string}`>;
 ```
