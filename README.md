@@ -38,6 +38,26 @@ MUST highlights:
 - Use semantic HTML elements (e.g., `article`, `header`, `section`, `footer`, `h1–h6`, `p`, `nav`, `figure/figcaption`).
 - Include `width` and `height` on `<img>` to prevent layout shifts; add `loading="lazy"` for below-the-fold images.
 
+### Formatting (Prettier)
+
+Run Prettier manually using the provided scripts:
+
+```bash
+# Check formatting (no writes)
+pnpm lint
+
+# Write formatting changes to files
+pnpm format
+
+# Alternative write alias
+pnpm lint:fix
+
+# If you prefer npx directly
+npx prettier --write .
+```
+
+Tip: In VS Code, enable “Format on Save” and select “Prettier” as the default formatter.
+
 ## AI First-Steps
 
 ### Onboarding Workflows
