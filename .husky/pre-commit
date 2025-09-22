@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+# Husky pre-commit hook - formats staged files with Prettier via lint-staged
+set -e
+
+pnpm lint-staged
