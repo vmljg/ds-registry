@@ -58,37 +58,6 @@ npx prettier --write .
 
 Tip: In VS Code, enable “Format on Save” and select “Prettier” as the default formatter.
 
-### Pre-commit Hooks
-
-This repo uses Husky + lint-staged to format changed files before each commit.
-
-- What runs: `prettier --write` on staged files (unrecognized files are ignored)
-- Hook file: `.husky/pre-commit`
-- Config: `"lint-staged"` in `package.json`
-
-Initial setup (done once per clone):
-
-```bash
-pnpm install
-pnpm exec husky install
-chmod +x .husky/pre-commit
-```
-
-Common commands:
-
-```bash
-# Dry-run lint (no writes)
-pnpm lint
-
-# Format all files
-pnpm format
-
-# Commit skipping hooks (use sparingly)
-git commit -m "msg" --no-verify
-```
-
-To adjust which files are formatted on commit, edit `lint-staged` in `package.json`.
-
 ## AI First-Steps
 
 ### Onboarding Workflows
