@@ -347,6 +347,23 @@
       ]
     },
     {
+      "name": "product-preview-card",
+      "type": "registry:component",
+      "title": "Product Preview Card",
+      "description": "A mobile-first, accessible product preview card composed of existing primitives.",
+      "registryDependencies": [
+        "button",
+        "card",
+        "https://registry-starter.vercel.app/r/theme.json"
+      ],
+      "files": [
+        {
+          "path": "src/components/ui/product-preview-card.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
       "name": "accordion",
       "type": "registry:ui",
       "title": "Accordion",

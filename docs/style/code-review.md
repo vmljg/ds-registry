@@ -1,0 +1,32 @@
+# Code Review
+
+- MUST: Review for security vulnerabilities; performance issues; accessibility; and maintainability.
+- MUST: Review for code quality; documentation; and testing.
+- MUST: Review for adherence to the style guide.
+- MUST: Review for adherence to the architecture.
+- MUST: Review for adherence to the design system.
+- MUST: Review for adherence to the project's branching strategy and version control strategy.
+- MUST: Review for adherence to the project's monitoring strategy.
+- MUST: Review for adherence to the project's performance strategy.
+- MUST: Review for adherence to the project's testing strategy.
+- MUST: Review for adherence to the project's documentation strategy.
+- MUST: Review for adherence to the project's dependencies strategy.
+- MUST: Review for adherence to the project's i18n strategy.
+- MUST: Review for adherence to the project's code review strategy.
+- SHOULD: Provide constructive feedback.
+- SHOULD: Suggest alternative solutions.
+- SHOULD: Suggest refactoring opportunities.
+- SHOULD: Suggest performance optimizations.
+- SHOULD: Suggest accessibility improvements.
+- SHOULD: Suggest security improvements.
+- SHOULD: Suggest documentation improvements.
+- SHOULD: Suggest testing improvements.
+- SHOULD: Suggest dependencies improvements.
+- SHOULD: Suggest i18n improvements.
+- SHOULD: Suggest monitoring improvements.
+- SHOULD: Keep reviews constructive and focused.
+- MAY: Suggest additional features or improvements.
+- MAY: Use automated code review tools.
+- MAY: Use code review tools to enforce style guide and architecture.
+- MAY: Track code review metrics.
+- MAY: Track technical debt.
