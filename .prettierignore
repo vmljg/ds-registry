@@ -8,3 +8,5 @@ components/ui
 dist
 build
 storybook-static
+*.lock
+pnpm-lock.yaml
