@@ -102,9 +102,6 @@
     "vitest": "^3.2.4"
   },
   "packageManager": "pnpm@9.15.2",
-  "engines": {
-    "node": ">=22"
-  },
   "overrides": {
     "react-is": "^19.0.0-rc-69d4b800-20241021"
   }
