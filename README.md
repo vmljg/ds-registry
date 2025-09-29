@@ -17,6 +17,8 @@
   - [Figma](https://help.figma.com/hc/en-us/articles/32132100833559-Guide-to-the-Dev-Mode-MCP-Server)
   - [shadcn/ui](https://ui.shadcn.com/docs/mcp)
   - [Vercel](https://vercel.com/docs/mcp/vercel-mcp#vs-code-with-copilot)
+  - [Chrome DevTools](https://github.com/ChromeDevTools/chrome-devtools-mcp)
+  - [GitHub MCP](https://github.com/github/github-mcp-server)
   - [Fetch](https://modelcontextprotocol.io/servers/fetch) — generic HTTP fetch MCP server
 
 ## Customize
