@@ -185,11 +185,9 @@ export function getThemeColors(theme: string): IRegistryItem["cssVars"] {
     const colorRegEx = /oklch|oklab|lab|lch|hsl|rgb|rgba|#([0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})/;
     
     for (const theme of ["light", "dark"] as const) {
-        if (!vars?.[theme]) {
-            continue;
-        }
-        
-        for (const [key, value] of Object.entries(vars[theme])) {
+        const entries = Object.entries(vars?.[theme] ?? {});
+
+        for (const [key, value] of entries) {
             if (value.match(colorRegEx)) {
                 colors[theme]![key] = value;
             }
