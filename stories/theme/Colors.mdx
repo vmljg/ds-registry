@@ -6,23 +6,15 @@ import { colorPalette } from '../registry';
 # Light
 
 <ColorPalette>
-    {Object.entries(colorPalette.light).map(([key, value]) => (
-        <ColorItem
-            key={key}
-            title={key}
-            colors={{ [key]: value }}
-        />
-    ))}
+  {Object.entries(colorPalette.light).map(([key, value]) => (
+    <ColorItem key={key} title={key} colors={{ [key]: value }} />
+  ))}
 </ColorPalette>
 
 # Dark
 
 <ColorPalette>
-    {Object.entries(colorPalette.dark).map(([key, value]) => (
-        <ColorItem
-            key={key}
-            title={key}
-            colors={{ [key]: value }}
-        />
-    ))}
+  {Object.entries(colorPalette.dark).map(([key, value]) => (
+    <ColorItem key={key} title={key} colors={{ [key]: value }} />
+  ))}
 </ColorPalette>
