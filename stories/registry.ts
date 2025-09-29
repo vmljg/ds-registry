@@ -166,19 +166,18 @@ export async function getRegistryItem(name: string): Promise<IRegistryItem> {
   };
 }
 
-export function getThemeVars(theme: string): IRegistryItem["cssVars"] {
+export function getThemeVars(): IRegistryItem["cssVars"] {
   return (
-    registry.items?.find(
-      ({ type, name, title }) => type === "registry:theme" && name === "theme" && title === theme,
-    )?.cssVars ?? {
+    registry.items?.find(({ type, name }) => type === "registry:theme" && name === "theme")
+      ?.cssVars ?? {
       light: {},
       dark: {},
     }
   );
 }
 
-export function getThemeColors(theme: string): IRegistryItem["cssVars"] {
-  const vars = getThemeVars(theme);
+export function getThemeColors(): IRegistryItem["cssVars"] {
+  const vars = getThemeVars();
 
   // Extract any oklch, hsl, rgb or hex values from the cssVars themes
   const colors: IRegistryItem["cssVars"] = {
@@ -202,10 +201,8 @@ export function getThemeColors(theme: string): IRegistryItem["cssVars"] {
   return colors;
 }
 
-// TODO: Do not hardcode theme name
 const colorPalette = {
-  light: getThemeColors("Nature Theme")?.light,
-  dark: getThemeColors("Nature Theme")?.dark,
+  ...getThemeColors(),
 };
 
 export { colorPalette };
