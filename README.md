@@ -8,7 +8,7 @@
 
 ### Required
 
-- [`pnpm`](https://pnpm.io/installation) is required (even when not used as the package manager).
+- [Bun](https://bun.sh)
 - [Windsurf](https://windsurf.com/) or [VS Code](https://code.visualstudio.com/)
 
 ### Recommended
@@ -44,16 +44,16 @@ Run Prettier manually using the provided scripts:
 
 ```bash
 # Check formatting (no writes)
-pnpm lint
+bun run lint
 
 # Write formatting changes to files
-pnpm format
+bun run format
 
 # Alternative write alias
-pnpm lint:fix
+bun run lint:fix
 
-# If you prefer npx directly
-npx prettier --write .
+# If you prefer npx/bunx directly
+bunx prettier --write .
 ```
 
 Tip: In VS Code, enable “Format on Save” and select “Prettier” as the default formatter.
@@ -114,7 +114,7 @@ Below is a reference list of all available Windsurf workflows and rules in this 
   - File: `.windsurf/workflows/developer-onboarding.md`
 
 - **/fix-it**
-  - Summary: Plan and resolve errors/issues; validate against docs and verify changes via Playwright on localhost.
+  - Summary: Plan and resolve errors/issues; validate againspt docs and verify changes via Playwright on localhost.
   - When to use: When bugs or CI failures occur and you need a structured remediation plan.
   - File: `.windsurf/workflows/fix-it.md`
 
@@ -157,7 +157,7 @@ Below is a reference list of all available Windsurf workflows and rules in this 
 
 ### Storybook
 
-- **Start**: `pnpm storybook`
+- **Start**: `bun run storybook`
 - **Stop**: Press `Ctrl + C` in the terminal running Storybook
 - **Served at**: http://localhost:6006 (Storybook will choose a different port if 6006 is in use; see terminal output for the exact URL.)
 - **Stories location**: `stories/` directory (e.g., `stories/components/ui/*.stories.tsx`).
