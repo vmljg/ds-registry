@@ -4,21 +4,22 @@ This project is a shadcn/ui registry template.
 
 ## Tech Stack
 
-- Next.js
+- Bun for package management and running Node.js
+- Next.js 15 (App Router)
 - shadcn/ui
 - TailwindCSS v4.1
 - Prettier
 
 ## Dev Setup
 
-- Prefer `pnpm` over `npm`
+- Prefer `bun` over `npm`, `yarn`, or `pnpm`
 - Use Conventional Commits for git commit messages
 
 To start the development server, run:
 
 ```bash
-pnpm install
-pnpm dev
+bun install
+bun run dev
 ```
 
 The registry app should now be running on [localhost:3000](http://localhost:3000).
