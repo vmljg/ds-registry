@@ -5,7 +5,8 @@ This document formalizes the branching strategy, naming conventions, pull reques
 The goals are to maintain a clean, linear git history, enforce quality via automated checks, and make releases predictable.
 
 ## Contributing back to template
-Add the original template repository as a remote named "upstream": 
+
+Add the original template repository as a remote named "upstream":
 `git remote add upstream https://github.com/vmljg/ds-registry`
 
 Verify the remotes.
