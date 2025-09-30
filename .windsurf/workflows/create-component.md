@@ -105,6 +105,6 @@ DO NOT: Use ad-hoc gradients
 1. Add new components to `src/components`
 2. Add any new design tokens to `global.css`, as well as document them in a block like `color-block.tsx` or `font-block.tsx`, etc.
 3. Add a demo for the new component to the `src/app/demo/[name]/components` directory.
-4. Run `pnpm registry:build` upon completion. Stop if any errors occur and ask about how to proceed.
+4. Run `bun run registry:build` upon completion. Stop if any errors occur and ask about how to proceed.
 5. Create a file for Storybook stories under `stories/components/ui` (or update existing file).
 6. Create complete, verbose Storybook stories for all variations of the component.

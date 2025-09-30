@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "@storybook/test";
 import { Button } from "@/components/ui/button";
 
 const meta = {
@@ -48,6 +49,17 @@ export const Default: Story = {
     variant: "default",
     children: "Default Button",
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /default button/i });
+
+    // Verify button is rendered
+    await expect(button).toBeInTheDocument();
+
+    // Verify button is clickable
+    await userEvent.click(button);
+    await expect(button).toBeEnabled();
+  },
 };
 
 export const Destructive: Story = {
@@ -55,12 +67,30 @@ export const Destructive: Story = {
     variant: "destructive",
     children: "Delete Account",
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /delete account/i });
+
+    // Verify destructive button is rendered
+    await expect(button).toBeInTheDocument();
+
+    // Test click interaction
+    await userEvent.click(button);
+  },
 };
 
 export const Outline: Story = {
   args: {
     variant: "outline",
     children: "Outline Button",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /outline button/i });
+
+    // Verify button renders with outline variant
+    await expect(button).toBeInTheDocument();
+    await userEvent.hover(button);
   },
 };
 
@@ -112,6 +142,14 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     children: "Disabled Button",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /disabled button/i });
+
+    // Verify button is disabled
+    await expect(button).toBeInTheDocument();
+    await expect(button).toBeDisabled();
   },
 };
 
@@ -176,6 +214,18 @@ export const WithAriaLabel: Story = {
     size: "icon",
     children: "×",
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /close dialog/i });
+
+    // Verify aria-label is correctly applied
+    await expect(button).toBeInTheDocument();
+    await expect(button).toHaveAccessibleName("Close dialog");
+
+    // Test keyboard interaction
+    await userEvent.tab();
+    await expect(button).toHaveFocus();
+  },
 };
 
 export const WithAriaDescribedBy: Story = {
@@ -193,6 +243,16 @@ export const WithAriaDescribedBy: Story = {
       </div>
     ),
   ],
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button", { name: /submit form/i });
+    const description = canvas.getByText(/this will submit the form/i);
+
+    // Verify aria-describedby connection
+    await expect(button).toBeInTheDocument();
+    await expect(description).toBeInTheDocument();
+    await expect(button).toHaveAttribute("aria-describedby", "button-description");
+  },
 };
 
 // Visual Regression Testing
@@ -237,5 +297,30 @@ export const AllVariants: Story = {
   ),
   parameters: {
     layout: "fullscreen",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Verify all size variants are rendered
+    const smallButton = canvas.getByRole("button", { name: /small/i });
+    const defaultButton = canvas.getByRole("button", { name: /^default$/i });
+    const largeButton = canvas.getByRole("button", { name: /large/i });
+
+    await expect(smallButton).toBeInTheDocument();
+    await expect(defaultButton).toBeInTheDocument();
+    await expect(largeButton).toBeInTheDocument();
+
+    // Verify all style variants are rendered
+    const destructiveButton = canvas.getByRole("button", { name: /destructive/i });
+    const outlineButton = canvas.getByRole("button", { name: /outline/i });
+    const secondaryButton = canvas.getByRole("button", { name: /secondary/i });
+
+    await expect(destructiveButton).toBeInTheDocument();
+    await expect(outlineButton).toBeInTheDocument();
+    await expect(secondaryButton).toBeInTheDocument();
+
+    // Test interaction on enabled button
+    await userEvent.click(smallButton);
+    await expect(smallButton).toBeEnabled();
   },
 };
