@@ -1,0 +1,22 @@
+# Dependencies
+
+- MUST: Use code comments to document complex business logic, explain non-obvious code, document edge cases, and keep documentation up to date.
+- SHOULD: Include examples in documentation.
+- SHOULD: Use JSDoc for public APIs.
+- SHOULD: Document known issues and limitations
+- MAY: Document API interactions, state management, and component interactions.
+- MAY: Document error handling and edge cases.
+- MAY: Document dependencies and their versions.
+- MAY: Document testing strategies and tools.
+- MAY: Document deployment and monitoring strategies.
+- MAY: Document performance optimization strategies.
+- MAY: Document accessibility and security best practices.
+- MAY: Document version control and release processes.
+- MAY: Document third-party integrations and their usage.
+- MAY: Document configuration and environment variables.
+- MAY: Document data models and relationships.
+- MAY: Document database schema and relationships.
+- MAY: Document API endpoints and their usage.
+- MAY: Document authentication and authorization strategies.
+- MAY: Document logging and monitoring strategies.
+- MAY: Document deployment and maintenance strategies.
