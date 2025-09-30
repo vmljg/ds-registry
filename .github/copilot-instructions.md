@@ -7,7 +7,6 @@ Purpose
 Quick facts
 
 - Framework: Next.js 15 (app router). See `package.json`.
-- Package manager: pnpm (project declares pnpm in `package.json`). Node >=22 required.
 - UI: shadcn components + Tailwind v4. shadcn CLI used to generate UI (`shadcn` / `npx shadcn@latest build`).
 - Data surface: `registry.json` (built into `public/r/registry.json` by `npm run registry:build`). See `src/lib/registry.ts` which imports `@/registry`.
 - MCP: This project exposes Model Context Protocol (MCP) artifacts (see `src/app/(registry)/page.tsx` and `src/components/registry/mcp-tabs.tsx`).
@@ -25,13 +24,13 @@ Important repo-specific patterns and examples
 - Sidebar/search uses client-side filtering in `src/app/layout.tsx` (`RegistrySidebar`) — avoid introducing heavy server-side work for small search changes.
 - shadcn build step: `npm run registry:build` runs `npx shadcn@latest build` and copies `registry.json` into the public folder. If adding or removing components created with shadcn, run this.
 
-Build / dev / test commands (use pnpm or npm as project scripts expect)
+Build / dev / test commands
 
-- Dev with turbopack (recommended): npm run dev
-- Build: npm run build
-- Start production server: npm run start
-- Rebuild shadcn/registry artifacts: npm run registry:build
-- Lint: npm run lint (uses Biome)
+- Dev with turbopack (recommended): bun run dev
+- Build: bun run build
+- Start production server: bun run start
+- Rebuild shadcn/registry artifacts: bun run registry:build
+- Lint: bun run lint (uses Biome)
 
 Conventions and style
 

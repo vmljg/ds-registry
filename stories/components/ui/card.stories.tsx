@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "@storybook/test";
 import {
   Card,
   CardHeader,
@@ -65,6 +66,26 @@ export const Complete: Story = {
       </CardFooter>
     </Card>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    
+    // Verify card structure elements are rendered
+    const cardTitle = canvas.getByText("Card Title");
+    const cardDescription = canvas.getByText(/provides additional context/i);
+    const actionButton = canvas.getByRole("button", { name: /action/i });
+    const cancelButton = canvas.getByRole("button", { name: /cancel/i });
+    const saveButton = canvas.getByRole("button", { name: /save/i });
+    
+    await expect(cardTitle).toBeInTheDocument();
+    await expect(cardDescription).toBeInTheDocument();
+    await expect(actionButton).toBeInTheDocument();
+    await expect(cancelButton).toBeInTheDocument();
+    await expect(saveButton).toBeInTheDocument();
+    
+    // Test button interactions
+    await userEvent.click(actionButton);
+    await userEvent.click(saveButton);
+  },
 };
 
 // Card with header and content only
@@ -85,6 +106,18 @@ export const HeaderAndContent: Story = {
       </CardContent>
     </Card>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    
+    // Verify header and content are rendered
+    const title = canvas.getByText("Simple Card");
+    const description = canvas.getByText(/A card with just header/i);
+    const content = canvas.getByText(/Main content goes here/i);
+    
+    await expect(title).toBeInTheDocument();
+    await expect(description).toBeInTheDocument();
+    await expect(content).toBeInTheDocument();
+  },
 };
 
 // Card with action button in header
@@ -95,7 +128,7 @@ export const WithHeaderAction: Story = {
         <CardTitle>Settings</CardTitle>
         <CardDescription>Manage your account settings and preferences.</CardDescription>
         <CardAction>
-          <Button variant="ghost" size="icon">
+          <Button variant="ghost" size="icon" aria-label="More options">
             <MoreVertical className="size-4" />
           </Button>
         </CardAction>
@@ -104,16 +137,38 @@ export const WithHeaderAction: Story = {
         <div className="space-y-4">
           <div className="flex items-center justify-between">
             <span>Email notifications</span>
-            <input type="checkbox" defaultChecked />
+            <input type="checkbox" defaultChecked aria-label="Email notifications" />
           </div>
           <div className="flex items-center justify-between">
             <span>Push notifications</span>
-            <input type="checkbox" />
+            <input type="checkbox" aria-label="Push notifications" />
           </div>
         </div>
       </CardContent>
     </Card>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    
+    // Verify card elements
+    const title = canvas.getByText("Settings");
+    const moreButton = canvas.getByRole("button", { name: /more options/i });
+    const emailCheckbox = canvas.getByLabelText(/email notifications/i);
+    const pushCheckbox = canvas.getByLabelText(/push notifications/i);
+    
+    await expect(title).toBeInTheDocument();
+    await expect(moreButton).toBeInTheDocument();
+    
+    // Test checkbox interactions
+    await expect(emailCheckbox).toBeChecked();
+    await expect(pushCheckbox).not.toBeChecked();
+    
+    await userEvent.click(pushCheckbox);
+    await expect(pushCheckbox).toBeChecked();
+    
+    // Test action button hover
+    await userEvent.hover(moreButton);
+  },
 };
 
 // Card with footer actions
@@ -139,6 +194,28 @@ export const WithFooter: Story = {
       </CardFooter>
     </Card>
   ),
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    
+    // Verify card elements
+    const title = canvas.getByText("Confirm Action");
+    const cancelButton = canvas.getByRole("button", { name: /cancel/i });
+    const deleteButton = canvas.getByRole("button", { name: /delete/i });
+    
+    await expect(title).toBeInTheDocument();
+    await expect(cancelButton).toBeInTheDocument();
+    await expect(deleteButton).toBeInTheDocument();
+    
+    // Test button focus and interactions
+    await userEvent.tab();
+    await expect(cancelButton).toHaveFocus();
+    
+    await userEvent.tab();
+    await expect(deleteButton).toHaveFocus();
+    
+    // Test click on cancel button
+    await userEvent.click(cancelButton);
+  },
 };
 
 // Minimal card with just content

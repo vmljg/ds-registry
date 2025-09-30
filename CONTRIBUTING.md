@@ -75,15 +75,15 @@ See `docs/style/README.md` for our code style guidelines.
 Before requesting a review, ensure the following locally:
 
 - Lint and format
-  - `pnpm lint` (check) and `pnpm format` (write) as needed
+  - `bun run lint` (check) and `bun run format` (write) as needed
 - Type-check
-  - `pnpm -s tsc -p tsconfig.json --noEmit`
+  - `bun run type-check`
 - Build the app
-  - `pnpm build` (this also runs the registry build step)
+  - `bun run build` (this also runs the registry build step)
 - Tests
-  - `pnpm test` (and `pnpm test:coverage` if relevant)
+  - `bun run test` (and `bun run test:coverage` if relevant)
 - Storybook (when stories/components changed)
-  - `pnpm build-storybook` or run locally with `pnpm storybook`
+  - `bun run build-storybook` or run locally with `bun run storybook`
 
 PR requirements:
 

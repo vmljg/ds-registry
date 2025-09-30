@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { expect, userEvent, within } from "@storybook/test";
 import { ProductPreviewCard } from "@/components/ui/product-preview-card";
 
 const meta: Meta<typeof ProductPreviewCard> = {
@@ -42,6 +43,30 @@ export const Default: Story = {
     imageHeight: 600,
     ctaLabel: "Add to Cart",
   },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Verify product card elements are rendered
+    const category = canvas.getByText(/perfume/i);
+    const title = canvas.getByText(/gabrielle essence/i);
+    const description = canvas.getByText(/floral, solar and voluptuous/i);
+    const price = canvas.getByText(/149.99/i);
+    const originalPrice = canvas.getByText(/169.99/i);
+    const ctaButton = canvas.getByRole("button", { name: /add to cart/i });
+    const image = canvas.getByRole("img", { name: /bottle of perfume/i });
+
+    await expect(category).toBeInTheDocument();
+    await expect(title).toBeInTheDocument();
+    await expect(description).toBeInTheDocument();
+    await expect(price).toBeInTheDocument();
+    await expect(originalPrice).toBeInTheDocument();
+    await expect(ctaButton).toBeInTheDocument();
+    await expect(image).toBeInTheDocument();
+
+    // Test button interaction
+    await userEvent.hover(ctaButton);
+    await userEvent.click(ctaButton);
+  },
 };
 
 export const NoOriginalPrice: Story = {
@@ -56,6 +81,25 @@ export const NoOriginalPrice: Story = {
     imageWidth: 600,
     imageHeight: 600,
     ctaLabel: "Add to Cart",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Verify product elements
+    const title = canvas.getByText(/zx99 wireless headphones/i);
+    const price = canvas.getByText(/299/i);
+    const ctaButton = canvas.getByRole("button", { name: /add to cart/i });
+
+    await expect(title).toBeInTheDocument();
+    await expect(price).toBeInTheDocument();
+    await expect(ctaButton).toBeInTheDocument();
+
+    // Verify no original price is shown (should only have one price element)
+    const allPriceElements = canvas.getAllByText(/299/i);
+    await expect(allPriceElements).toHaveLength(1);
+
+    // Test interaction
+    await userEvent.click(ctaButton);
   },
 };
 
@@ -72,5 +116,73 @@ export const CustomCurrency: Story = {
     imageWidth: 600,
     imageHeight: 600,
     ctaLabel: "Add to Cart",
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    // Verify product elements with custom currency
+    const title = canvas.getByText(/single-origin beans/i);
+    const price = canvas.getByText(/18.5/i);
+    const originalPrice = canvas.getByText(/22/i);
+    const ctaButton = canvas.getByRole("button", { name: /add to cart/i });
+    const image = canvas.getByRole("img", { name: /bag of coffee beans/i });
+
+    await expect(title).toBeInTheDocument();
+    await expect(price).toBeInTheDocument();
+    await expect(originalPrice).toBeInTheDocument();
+    await expect(ctaButton).toBeInTheDocument();
+    await expect(image).toBeInTheDocument();
+
+    // Verify currency symbol is present
+    const priceWithCurrency = canvas.getByText(/€/i);
+    await expect(priceWithCurrency).toBeInTheDocument();
+
+    // Test keyboard navigation and interaction
+    await userEvent.tab();
+    await expect(ctaButton).toHaveFocus();
+    await userEvent.keyboard("{Enter}");
+  },
+};
+
+export const Test: Story = {
+  args: {
+    category: "Coffee",
+    title: "Single-Origin Beans",
+    description: "Freshly roasted Ethiopian single-origin beans.",
+    price: 18.5,
+    originalPrice: "123",
+    currency: "€",
+    imageSrc: "https://picsum.photos/seed/coffee/600/600",
+    imageAlt: "Bag of coffee beans",
+    imageWidth: 600,
+    imageHeight: 600,
+    ctaLabel: "Add to Cart",
+  },
+
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+
+    const title = canvas.getByText(/single-origin beans/i);
+    const price = canvas.getByText(/18.5/i);
+    const originalPrice = canvas.getByText(/22/i);
+    const ctaButton = canvas.getByRole("button", {
+      name: /add to cart/i,
+    });
+    const image = canvas.getByRole("img", {
+      name: /bag of coffee beans/i,
+    });
+
+    await expect(title).toBeInTheDocument();
+    await expect(price).toBeInTheDocument();
+    await expect(originalPrice).toBeInTheDocument();
+    await expect(ctaButton).toBeInTheDocument();
+    await expect(image).toBeInTheDocument();
+
+    const priceWithCurrency = canvas.getByText(/€/i);
+    await expect(priceWithCurrency).toBeInTheDocument();
+
+    await userEvent.tab();
+    await expect(ctaButton).toHaveFocus();
+    await userEvent.keyboard("{Enter}");
   },
 };
