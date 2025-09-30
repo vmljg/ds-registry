@@ -68,20 +68,20 @@ export const Complete: Story = {
   ),
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify card structure elements are rendered
     const cardTitle = canvas.getByText("Card Title");
     const cardDescription = canvas.getByText(/provides additional context/i);
     const actionButton = canvas.getByRole("button", { name: /action/i });
     const cancelButton = canvas.getByRole("button", { name: /cancel/i });
     const saveButton = canvas.getByRole("button", { name: /save/i });
-    
+
     await expect(cardTitle).toBeInTheDocument();
     await expect(cardDescription).toBeInTheDocument();
     await expect(actionButton).toBeInTheDocument();
     await expect(cancelButton).toBeInTheDocument();
     await expect(saveButton).toBeInTheDocument();
-    
+
     // Test button interactions
     await userEvent.click(actionButton);
     await userEvent.click(saveButton);
@@ -108,12 +108,12 @@ export const HeaderAndContent: Story = {
   ),
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify header and content are rendered
     const title = canvas.getByText("Simple Card");
     const description = canvas.getByText(/A card with just header/i);
     const content = canvas.getByText(/Main content goes here/i);
-    
+
     await expect(title).toBeInTheDocument();
     await expect(description).toBeInTheDocument();
     await expect(content).toBeInTheDocument();
@@ -149,23 +149,23 @@ export const WithHeaderAction: Story = {
   ),
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify card elements
     const title = canvas.getByText("Settings");
     const moreButton = canvas.getByRole("button", { name: /more options/i });
     const emailCheckbox = canvas.getByLabelText(/email notifications/i);
     const pushCheckbox = canvas.getByLabelText(/push notifications/i);
-    
+
     await expect(title).toBeInTheDocument();
     await expect(moreButton).toBeInTheDocument();
-    
+
     // Test checkbox interactions
     await expect(emailCheckbox).toBeChecked();
     await expect(pushCheckbox).not.toBeChecked();
-    
+
     await userEvent.click(pushCheckbox);
     await expect(pushCheckbox).toBeChecked();
-    
+
     // Test action button hover
     await userEvent.hover(moreButton);
   },
@@ -196,23 +196,23 @@ export const WithFooter: Story = {
   ),
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify card elements
     const title = canvas.getByText("Confirm Action");
     const cancelButton = canvas.getByRole("button", { name: /cancel/i });
     const deleteButton = canvas.getByRole("button", { name: /delete/i });
-    
+
     await expect(title).toBeInTheDocument();
     await expect(cancelButton).toBeInTheDocument();
     await expect(deleteButton).toBeInTheDocument();
-    
+
     // Test button focus and interactions
     await userEvent.tab();
     await expect(cancelButton).toHaveFocus();
-    
+
     await userEvent.tab();
     await expect(deleteButton).toHaveFocus();
-    
+
     // Test click on cancel button
     await userEvent.click(cancelButton);
   },

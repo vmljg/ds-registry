@@ -51,113 +51,113 @@ import { Button } from "@/components/ui/button";
 
 // Automatically generated argTypes from ButtonProps
 const meta: Meta<typeof Button> = {
-title: "Components/Button",
-component: Button,
-argTypes: {
-  variant: {
-    control: { type: "select" },
-    options: ["default", "outline", "ghost", "link"],
+  title: "Components/Button",
+  component: Button,
+  argTypes: {
+    variant: {
+      control: { type: "select" },
+      options: ["default", "outline", "ghost", "link"],
+    },
+    size: {
+      control: { type: "select" },
+      options: ["sm", "md", "lg"],
+    },
+    disabled: { control: "boolean" },
+    children: { control: "text" },
+    onClick: { action: "clicked" },
   },
-  size: {
-    control: { type: "select" },
-    options: ["sm", "md", "lg"],
-  },
-  disabled: { control: "boolean" },
-  children: { control: "text" },
-  onClick: { action: "clicked" },
-},
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
-args: {
-  children: "Click me",
-  variant: "default",
-  size: "md",
-},
+  args: {
+    children: "Click me",
+    variant: "default",
+    size: "md",
+  },
 };
 
 export const Outline: Story = {
-args: {
-  children: "Outline Button",
-  variant: "outline",
-},
+  args: {
+    children: "Outline Button",
+    variant: "outline",
+  },
 };
 
 export const Large: Story = {
-args: {
-  children: "Large Button",
-  size: "lg",
-},
+  args: {
+    children: "Large Button",
+    size: "lg",
+  },
 };
 
 // Interactive story with play function for testing user interactions
 export const Interactive: Story = {
-args: {
-  children: "Interactive Button",
-  variant: "default",
-},
-play: async ({ canvasElement, args }) => {
-  const canvas = within(canvasElement);
+  args: {
+    children: "Interactive Button",
+    variant: "default",
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
 
-  // Find the button by its accessible role
-  const button = canvas.getByRole("button", { name: /interactive button/i });
+    // Find the button by its accessible role
+    const button = canvas.getByRole("button", { name: /interactive button/i });
 
-  // Test that button is visible and enabled
-  expect(button).toBeInTheDocument();
-  expect(button).toBeEnabled();
+    // Test that button is visible and enabled
+    expect(button).toBeInTheDocument();
+    expect(button).toBeEnabled();
 
-  // Simulate user click interaction
-  await userEvent.click(button);
+    // Simulate user click interaction
+    await userEvent.click(button);
 
-  // Verify onClick callback was called (if using action)
-  expect(args.onClick).toHaveBeenCalled();
-},
+    // Verify onClick callback was called (if using action)
+    expect(args.onClick).toHaveBeenCalled();
+  },
 };
 
 // Test disabled state interactions
 export const DisabledInteraction: Story = {
-args: {
-  children: "Disabled Button",
-  disabled: true,
-},
-play: async ({ canvasElement }) => {
-  const canvas = within(canvasElement);
-  const button = canvas.getByRole("button");
+  args: {
+    children: "Disabled Button",
+    disabled: true,
+  },
+  play: async ({ canvasElement }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
 
-  // Test that disabled button cannot be clicked
-  expect(button).toBeDisabled();
+    // Test that disabled button cannot be clicked
+    expect(button).toBeDisabled();
 
-  // Attempt to click should not trigger any action
-  await userEvent.click(button);
-  // Button should remain disabled after click attempt
-  expect(button).toBeDisabled();
-},
+    // Attempt to click should not trigger any action
+    await userEvent.click(button);
+    // Button should remain disabled after click attempt
+    expect(button).toBeDisabled();
+  },
 };
 
 // Test keyboard interactions
 export const KeyboardInteraction: Story = {
-args: {
-  children: "Keyboard Button",
-},
-play: async ({ canvasElement, args }) => {
-  const canvas = within(canvasElement);
-  const button = canvas.getByRole("button");
+  args: {
+    children: "Keyboard Button",
+  },
+  play: async ({ canvasElement, args }) => {
+    const canvas = within(canvasElement);
+    const button = canvas.getByRole("button");
 
-  // Test focus behavior
-  await userEvent.tab(); // Focus on button
-  expect(button).toHaveFocus();
+    // Test focus behavior
+    await userEvent.tab(); // Focus on button
+    expect(button).toHaveFocus();
 
-  // Test Enter key activation
-  await userEvent.keyboard("{Enter}");
-  expect(args.onClick).toHaveBeenCalled();
+    // Test Enter key activation
+    await userEvent.keyboard("{Enter}");
+    expect(args.onClick).toHaveBeenCalled();
 
-  // Test Space key activation
-  await userEvent.keyboard(" ");
-  expect(args.onClick).toHaveBeenCalledTimes(2);
-},
+    // Test Space key activation
+    await userEvent.keyboard(" ");
+    expect(args.onClick).toHaveBeenCalledTimes(2);
+  },
 };
 ```
 
