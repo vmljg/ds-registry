@@ -24,7 +24,8 @@ const meta = {
     },
     closeDelay: {
       control: { type: "number" },
-      description: "The duration from when the mouse leaves the trigger until the hover card closes",
+      description:
+        "The duration from when the mouse leaves the trigger until the hover card closes",
     },
   },
 } satisfies Meta<typeof HoverCard>;
@@ -126,7 +127,7 @@ export const InlineText: Story = {
     <div className="text-sm">
       Hover over{" "}
       <HoverCard>
-        <HoverCardTrigger className="underline cursor-pointer">this link</HoverCardTrigger>
+        <HoverCardTrigger className="cursor-pointer underline">this link</HoverCardTrigger>
         <HoverCardContent>
           <p className="text-sm">Additional information appears here when you hover.</p>
         </HoverCardContent>
@@ -147,7 +148,7 @@ export const RichContent: Story = {
         <div className="space-y-2">
           <h4 className="text-sm font-semibold">Premium Plan</h4>
           <p className="text-sm">Get access to all premium features including:</p>
-          <ul className="text-sm list-disc list-inside space-y-1">
+          <ul className="list-inside list-disc space-y-1 text-sm">
             <li>Unlimited projects</li>
             <li>Advanced analytics</li>
             <li>Priority support</li>

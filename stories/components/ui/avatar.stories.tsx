@@ -63,19 +63,19 @@ export const Small: Story = {
 export const Group: Story = {
   render: () => (
     <div className="flex -space-x-4">
-      <Avatar className="border-2 border-background">
+      <Avatar className="border-background border-2">
         <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
         <AvatarFallback>CN</AvatarFallback>
       </Avatar>
-      <Avatar className="border-2 border-background">
+      <Avatar className="border-background border-2">
         <AvatarImage src="https://github.com/vercel.png" alt="@vercel" />
         <AvatarFallback>VC</AvatarFallback>
       </Avatar>
-      <Avatar className="border-2 border-background">
+      <Avatar className="border-background border-2">
         <AvatarImage src="https://github.com/nextjs.png" alt="@nextjs" />
         <AvatarFallback>NX</AvatarFallback>
       </Avatar>
-      <Avatar className="border-2 border-background">
+      <Avatar className="border-background border-2">
         <AvatarFallback>+3</AvatarFallback>
       </Avatar>
     </div>
@@ -156,19 +156,19 @@ export const AllVariants: Story = {
       <div className="space-y-2">
         <h3 className="text-sm font-medium">Avatar Group</h3>
         <div className="flex -space-x-4">
-          <Avatar className="border-2 border-background">
+          <Avatar className="border-background border-2">
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
             <AvatarFallback>CN</AvatarFallback>
           </Avatar>
-          <Avatar className="border-2 border-background">
+          <Avatar className="border-background border-2">
             <AvatarImage src="https://github.com/vercel.png" alt="@vercel" />
             <AvatarFallback>VC</AvatarFallback>
           </Avatar>
-          <Avatar className="border-2 border-background">
+          <Avatar className="border-background border-2">
             <AvatarImage src="https://github.com/nextjs.png" alt="@nextjs" />
             <AvatarFallback>NX</AvatarFallback>
           </Avatar>
-          <Avatar className="border-2 border-background">
+          <Avatar className="border-background border-2">
             <AvatarFallback>+5</AvatarFallback>
           </Avatar>
         </div>

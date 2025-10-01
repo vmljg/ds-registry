@@ -42,7 +42,7 @@ export const Default: Story = {
       <PopoverContent>
         <div className="grid gap-4">
           <div className="space-y-2">
-            <h4 className="font-medium leading-none">Dimensions</h4>
+            <h4 className="leading-none font-medium">Dimensions</h4>
             <p className="text-muted-foreground text-sm">Set the dimensions for the layer.</p>
           </div>
           <div className="grid gap-2">
@@ -78,7 +78,7 @@ export const SimpleText: Story = {
       </PopoverTrigger>
       <PopoverContent>
         <div className="space-y-2">
-          <h4 className="font-medium leading-none">Popover Title</h4>
+          <h4 className="leading-none font-medium">Popover Title</h4>
           <p className="text-muted-foreground text-sm">
             This is a simple popover with text content.
           </p>
@@ -98,7 +98,7 @@ export const WithForm: Story = {
       <PopoverContent className="w-80">
         <div className="grid gap-4">
           <div className="space-y-2">
-            <h4 className="font-medium leading-none">Settings</h4>
+            <h4 className="leading-none font-medium">Settings</h4>
             <p className="text-muted-foreground text-sm">Configure your preferences.</p>
           </div>
           <div className="grid gap-2">
@@ -126,7 +126,7 @@ export const CustomWidth: Story = {
       </PopoverTrigger>
       <PopoverContent className="w-96">
         <div className="space-y-2">
-          <h4 className="font-medium leading-none">Wide Content</h4>
+          <h4 className="leading-none font-medium">Wide Content</h4>
           <p className="text-muted-foreground text-sm">
             This popover has a custom width to accommodate more content. You can adjust the width
             using Tailwind CSS classes.
@@ -181,7 +181,7 @@ export const WithActions: Story = {
       <PopoverContent>
         <div className="grid gap-4">
           <div className="space-y-2">
-            <h4 className="font-medium leading-none">Confirmation</h4>
+            <h4 className="leading-none font-medium">Confirmation</h4>
             <p className="text-muted-foreground text-sm">Are you sure you want to proceed?</p>
           </div>
           <div className="flex gap-2">
@@ -204,7 +204,7 @@ export const InlineTrigger: Story = {
     <div className="text-sm">
       Click{" "}
       <Popover>
-        <PopoverTrigger className="underline cursor-pointer">here</PopoverTrigger>
+        <PopoverTrigger className="cursor-pointer underline">here</PopoverTrigger>
         <PopoverContent>
           <p className="text-sm">Additional information appears in this popover.</p>
         </PopoverContent>
@@ -226,7 +226,7 @@ export const AllVariants: Story = {
           </PopoverTrigger>
           <PopoverContent>
             <div className="space-y-2">
-              <h4 className="font-medium leading-none">Title</h4>
+              <h4 className="leading-none font-medium">Title</h4>
               <p className="text-muted-foreground text-sm">Content goes here</p>
             </div>
           </PopoverContent>

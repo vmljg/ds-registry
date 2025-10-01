@@ -59,7 +59,7 @@ export const Default: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify calendar is rendered
     const calendar = canvas.getByRole("application");
     await expect(calendar).toBeInTheDocument();
@@ -99,11 +99,11 @@ export const DropdownCaption: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify dropdown controls exist
     const monthDropdown = canvas.getByRole("combobox", { name: /month/i });
     const yearDropdown = canvas.getByRole("combobox", { name: /year/i });
-    
+
     await expect(monthDropdown).toBeInTheDocument();
     await expect(yearDropdown).toBeInTheDocument();
   },
@@ -155,7 +155,7 @@ export const RangeSelection: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify range calendar is rendered
     const calendar = canvas.getByRole("application");
     await expect(calendar).toBeInTheDocument();
@@ -221,12 +221,12 @@ export const DisabledPastDates: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Find disabled dates (past dates)
-    const disabledButtons = canvas.getAllByRole("button").filter((button) =>
-      button.hasAttribute("disabled")
-    );
-    
+    const disabledButtons = canvas
+      .getAllByRole("button")
+      .filter((button) => button.hasAttribute("disabled"));
+
     // Verify some dates are disabled
     expect(disabledButtons.length).toBeGreaterThan(0);
   },
@@ -236,12 +236,7 @@ export const DisabledFutureDates: Story = {
   render: () => {
     const [date, setDate] = useState<Date | undefined>(new Date());
     return (
-      <Calendar
-        mode="single"
-        selected={date}
-        onSelect={setDate}
-        disabled={{ after: new Date() }}
-      />
+      <Calendar mode="single" selected={date} onSelect={setDate} disabled={{ after: new Date() }} />
     );
   },
 };
@@ -252,20 +247,14 @@ export const DisabledWeekends: Story = {
     const disableWeekends = (date: Date) => {
       return date.getDay() === 0 || date.getDay() === 6;
     };
-    return (
-      <Calendar mode="single" selected={date} onSelect={setDate} disabled={disableWeekends} />
-    );
+    return <Calendar mode="single" selected={date} onSelect={setDate} disabled={disableWeekends} />;
   },
 };
 
 export const DisabledSpecificDates: Story = {
   render: () => {
     const [date, setDate] = useState<Date | undefined>(new Date());
-    const disabledDates = [
-      new Date(2024, 0, 1),
-      new Date(2024, 0, 15),
-      new Date(2024, 0, 25),
-    ];
+    const disabledDates = [new Date(2024, 0, 1), new Date(2024, 0, 15), new Date(2024, 0, 25)];
     return <Calendar mode="single" selected={date} onSelect={setDate} disabled={disabledDates} />;
   },
 };
@@ -277,12 +266,12 @@ export const FullyDisabled: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify all day buttons are disabled
-    const dayButtons = canvas.getAllByRole("button").filter((button) =>
-      button.getAttribute("data-day")
-    );
-    
+    const dayButtons = canvas
+      .getAllByRole("button")
+      .filter((button) => button.getAttribute("data-day"));
+
     for (const button of dayButtons) {
       await expect(button).toBeDisabled();
     }
@@ -300,9 +289,7 @@ export const OutlineButtons: Story = {
 export const SecondaryButtons: Story = {
   render: () => {
     const [date, setDate] = useState<Date | undefined>(new Date());
-    return (
-      <Calendar mode="single" selected={date} onSelect={setDate} buttonVariant="secondary" />
-    );
+    return <Calendar mode="single" selected={date} onSelect={setDate} buttonVariant="secondary" />;
   },
 };
 
@@ -314,7 +301,7 @@ export const WithWeekNumbers: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify week numbers are displayed
     const weekNumbers = canvas.getAllByText(/^\d{1,2}$/);
     await expect(weekNumbers.length).toBeGreaterThan(0);
@@ -339,7 +326,7 @@ export const KeyboardNavigation: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Test keyboard navigation
     const calendar = canvas.getByRole("application");
     await expect(calendar).toBeInTheDocument();
@@ -368,7 +355,7 @@ export const WithAriaLabels: Story = {
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    
+
     // Verify aria-label is applied
     const calendar = canvas.getByRole("application");
     await expect(calendar).toHaveAccessibleName("Select a date for your appointment");

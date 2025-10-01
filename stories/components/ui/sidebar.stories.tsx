@@ -83,13 +83,11 @@ export const Default: Story = {
           </SidebarFooter>
         </Sidebar>
         <main className="flex-1 p-4">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="mb-4 flex items-center gap-2">
             <SidebarTrigger />
             <h1 className="text-2xl font-bold">Main Content</h1>
           </div>
-          <p className="text-muted-foreground">
-            Click the toggle button to show/hide the sidebar.
-          </p>
+          <p className="text-muted-foreground">Click the toggle button to show/hide the sidebar.</p>
         </main>
       </div>
     </SidebarProvider>
@@ -149,7 +147,7 @@ export const MultipleGroups: Story = {
           </SidebarContent>
         </Sidebar>
         <main className="flex-1 p-4">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="mb-4 flex items-center gap-2">
             <SidebarTrigger />
             <h1 className="text-2xl font-bold">Content Area</h1>
           </div>
@@ -198,7 +196,7 @@ export const Collapsible: Story = {
           </SidebarContent>
         </Sidebar>
         <main className="flex-1 p-4">
-          <div className="flex items-center gap-2 mb-4">
+          <div className="mb-4 flex items-center gap-2">
             <SidebarTrigger />
             <h1 className="text-2xl font-bold">Main Content</h1>
           </div>
@@ -217,8 +215,8 @@ export const RightSide: Story = {
     <SidebarProvider>
       <div className="flex h-screen w-full">
         <main className="flex-1 p-4">
-          <div className="flex items-center justify-end gap-2 mb-4">
-            <h1 className="text-2xl font-bold mr-auto">Main Content</h1>
+          <div className="mb-4 flex items-center justify-end gap-2">
+            <h1 className="mr-auto text-2xl font-bold">Main Content</h1>
             <SidebarTrigger />
           </div>
           <p className="text-muted-foreground">Sidebar is on the right side.</p>
@@ -261,7 +259,7 @@ export const AllVariants: Story = {
     <div className="space-y-4 p-4">
       <div className="space-y-2">
         <h3 className="text-sm font-medium">Default Sidebar</h3>
-        <div className="border rounded-lg overflow-hidden" style={{ height: "400px" }}>
+        <div className="overflow-hidden rounded-lg border" style={{ height: "400px" }}>
           <SidebarProvider>
             <div className="flex h-full w-full">
               <Sidebar>

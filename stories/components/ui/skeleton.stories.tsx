@@ -72,8 +72,8 @@ export const Profile: Story = {
     <div className="flex flex-col items-center space-y-4">
       <Skeleton className="size-24 rounded-full" />
       <div className="space-y-2 text-center">
-        <Skeleton className="h-6 w-32 mx-auto" />
-        <Skeleton className="h-4 w-48 mx-auto" />
+        <Skeleton className="mx-auto h-6 w-32" />
+        <Skeleton className="mx-auto h-4 w-48" />
       </div>
       <div className="flex gap-2">
         <Skeleton className="h-10 w-24" />
@@ -133,7 +133,7 @@ export const AllVariants: Story = {
 
       <div className="space-y-2">
         <h3 className="text-sm font-medium">List</h3>
-        <div className="space-y-2 w-[300px]">
+        <div className="w-[300px] space-y-2">
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-full" />
           <Skeleton className="h-4 w-3/4" />
@@ -154,8 +154,8 @@ export const AllVariants: Story = {
         <div className="flex flex-col items-center space-y-4">
           <Skeleton className="size-20 rounded-full" />
           <div className="space-y-2">
-            <Skeleton className="h-4 w-32 mx-auto" />
-            <Skeleton className="h-4 w-48 mx-auto" />
+            <Skeleton className="mx-auto h-4 w-32" />
+            <Skeleton className="mx-auto h-4 w-48" />
           </div>
         </div>
       </div>

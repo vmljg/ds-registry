@@ -87,7 +87,7 @@ export const LeftSide: Story = {
           <SheetTitle>Navigation</SheetTitle>
           <SheetDescription>Navigate through the application.</SheetDescription>
         </SheetHeader>
-        <div className="py-4 space-y-2">
+        <div className="space-y-2 py-4">
           <Button variant="ghost" className="w-full justify-start">
             Home
           </Button>
@@ -224,7 +224,7 @@ export const SettingsExample: Story = {
           <SheetTitle>Settings</SheetTitle>
           <SheetDescription>Configure your application preferences.</SheetDescription>
         </SheetHeader>
-        <div className="py-4 space-y-4">
+        <div className="space-y-4 py-4">
           <div className="space-y-2">
             <h4 className="text-sm font-medium">Appearance</h4>
             <div className="space-y-2">

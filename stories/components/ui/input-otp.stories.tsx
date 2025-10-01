@@ -163,9 +163,7 @@ export const WithLabel: Story = {
           <InputOTPSlot index={5} />
         </InputOTPGroup>
       </InputOTP>
-      <p className="text-muted-foreground text-sm">
-        Enter the 6-digit code sent to your email.
-      </p>
+      <p className="text-muted-foreground text-sm">Enter the 6-digit code sent to your email.</p>
     </div>
   ),
 };

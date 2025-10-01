@@ -218,8 +218,8 @@ export const ScrollableContent: Story = {
               ea commodo consequat.
             </p>
             <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+              nulla pariatur.
             </p>
             <p>
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt

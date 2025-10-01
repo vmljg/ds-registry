@@ -123,7 +123,7 @@ export const LoadingSimulation: Story = {
     return (
       <div className="w-[400px] space-y-2">
         <Progress value={progress} />
-        <p className="text-center text-sm text-muted-foreground">{progress}%</p>
+        <p className="text-muted-foreground text-center text-sm">{progress}%</p>
       </div>
     );
   },
@@ -206,23 +206,23 @@ export const AllVariants: Story = {
         <h3 className="text-sm font-medium">Progress Values</h3>
         <div className="w-[400px] space-y-4">
           <div className="space-y-1">
-            <p className="text-xs text-muted-foreground">0%</p>
+            <p className="text-muted-foreground text-xs">0%</p>
             <Progress value={0} />
           </div>
           <div className="space-y-1">
-            <p className="text-xs text-muted-foreground">25%</p>
+            <p className="text-muted-foreground text-xs">25%</p>
             <Progress value={25} />
           </div>
           <div className="space-y-1">
-            <p className="text-xs text-muted-foreground">50%</p>
+            <p className="text-muted-foreground text-xs">50%</p>
             <Progress value={50} />
           </div>
           <div className="space-y-1">
-            <p className="text-xs text-muted-foreground">75%</p>
+            <p className="text-muted-foreground text-xs">75%</p>
             <Progress value={75} />
           </div>
           <div className="space-y-1">
-            <p className="text-xs text-muted-foreground">100%</p>
+            <p className="text-muted-foreground text-xs">100%</p>
             <Progress value={100} />
           </div>
         </div>

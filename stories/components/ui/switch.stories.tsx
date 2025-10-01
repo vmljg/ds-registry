@@ -174,14 +174,14 @@ export const SettingsPanel: Story = {
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
               <Label htmlFor="email-notif">Email notifications</Label>
-              <p className="text-sm text-muted-foreground">Receive emails about your activity</p>
+              <p className="text-muted-foreground text-sm">Receive emails about your activity</p>
             </div>
             <Switch id="email-notif" defaultChecked />
           </div>
           <div className="flex items-center justify-between">
             <div className="space-y-0.5">
               <Label htmlFor="push-notif">Push notifications</Label>
-              <p className="text-sm text-muted-foreground">Receive push notifications</p>
+              <p className="text-muted-foreground text-sm">Receive push notifications</p>
             </div>
             <Switch id="push-notif" />
           </div>

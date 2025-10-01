@@ -114,9 +114,9 @@ export const StatusBadges: Story = {
 export const CustomSizes: Story = {
   render: () => (
     <div className="flex items-center gap-2">
-      <Badge className="text-[10px] px-1.5 py-0">Small</Badge>
+      <Badge className="px-1.5 py-0 text-[10px]">Small</Badge>
       <Badge>Default</Badge>
-      <Badge className="text-sm px-3 py-1">Large</Badge>
+      <Badge className="px-3 py-1 text-sm">Large</Badge>
     </div>
   ),
 };
@@ -170,10 +170,10 @@ export const AllVariants: Story = {
       <div className="space-y-2">
         <h3 className="text-sm font-medium">Custom Sizes</h3>
         <div className="flex items-center gap-2">
-          <Badge className="text-[10px] px-1.5 py-0">XS</Badge>
+          <Badge className="px-1.5 py-0 text-[10px]">XS</Badge>
           <Badge className="text-xs">SM</Badge>
           <Badge>MD</Badge>
-          <Badge className="text-sm px-3 py-1">LG</Badge>
+          <Badge className="px-3 py-1 text-sm">LG</Badge>
         </div>
       </div>
 
