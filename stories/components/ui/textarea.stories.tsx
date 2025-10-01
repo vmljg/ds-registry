@@ -72,7 +72,9 @@ export const WithText: Story = {
     <div className="grid w-full max-w-sm items-center gap-1.5">
       <Label htmlFor="message-2">Your message</Label>
       <Textarea placeholder="Type your message here." id="message-2" />
-      <p className="text-muted-foreground text-sm">Your message will be copied to the support team.</p>
+      <p className="text-muted-foreground text-sm">
+        Your message will be copied to the support team.
+      </p>
     </div>
   ),
 };
@@ -151,7 +153,7 @@ export const CharacterCounter: Story = {
           onChange={(e) => setValue(e.target.value)}
           maxLength={maxLength}
         />
-        <p className="text-muted-foreground text-sm text-right">
+        <p className="text-muted-foreground text-right text-sm">
           {value.length}/{maxLength}
         </p>
       </div>

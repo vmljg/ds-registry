@@ -1,6 +1,13 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -38,12 +45,12 @@ export const Default: Story = {
         <TabsTrigger value="password">Password</TabsTrigger>
       </TabsList>
       <TabsContent value="account">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           Make changes to your account here. Click save when you're done.
         </p>
       </TabsContent>
       <TabsContent value="password">
-        <p className="text-sm text-muted-foreground">
+        <p className="text-muted-foreground text-sm">
           Change your password here. After saving, you'll be logged out.
         </p>
       </TabsContent>
@@ -119,13 +126,13 @@ export const ThreeTabs: Story = {
         <TabsTrigger value="reports">Reports</TabsTrigger>
       </TabsList>
       <TabsContent value="overview">
-        <p className="text-sm text-muted-foreground">Overview content goes here.</p>
+        <p className="text-muted-foreground text-sm">Overview content goes here.</p>
       </TabsContent>
       <TabsContent value="analytics">
-        <p className="text-sm text-muted-foreground">Analytics content goes here.</p>
+        <p className="text-muted-foreground text-sm">Analytics content goes here.</p>
       </TabsContent>
       <TabsContent value="reports">
-        <p className="text-sm text-muted-foreground">Reports content goes here.</p>
+        <p className="text-muted-foreground text-sm">Reports content goes here.</p>
       </TabsContent>
     </Tabs>
   ),
@@ -143,13 +150,13 @@ export const DisabledTab: Story = {
         <TabsTrigger value="tab3">Available</TabsTrigger>
       </TabsList>
       <TabsContent value="tab1">
-        <p className="text-sm text-muted-foreground">First tab content.</p>
+        <p className="text-muted-foreground text-sm">First tab content.</p>
       </TabsContent>
       <TabsContent value="tab2">
-        <p className="text-sm text-muted-foreground">Second tab content (disabled).</p>
+        <p className="text-muted-foreground text-sm">Second tab content (disabled).</p>
       </TabsContent>
       <TabsContent value="tab3">
-        <p className="text-sm text-muted-foreground">Third tab content.</p>
+        <p className="text-muted-foreground text-sm">Third tab content.</p>
       </TabsContent>
     </Tabs>
   ),
@@ -165,13 +172,13 @@ export const FullWidth: Story = {
         <TabsTrigger value="tab3">Tab 3</TabsTrigger>
       </TabsList>
       <TabsContent value="tab1">
-        <p className="text-sm text-muted-foreground">Content for tab 1.</p>
+        <p className="text-muted-foreground text-sm">Content for tab 1.</p>
       </TabsContent>
       <TabsContent value="tab2">
-        <p className="text-sm text-muted-foreground">Content for tab 2.</p>
+        <p className="text-muted-foreground text-sm">Content for tab 2.</p>
       </TabsContent>
       <TabsContent value="tab3">
-        <p className="text-sm text-muted-foreground">Content for tab 3.</p>
+        <p className="text-muted-foreground text-sm">Content for tab 3.</p>
       </TabsContent>
     </Tabs>
   ),
@@ -190,22 +197,22 @@ export const ManyTabs: Story = {
         <TabsTrigger value="tab6">Tab 6</TabsTrigger>
       </TabsList>
       <TabsContent value="tab1">
-        <p className="text-sm text-muted-foreground">Content 1</p>
+        <p className="text-muted-foreground text-sm">Content 1</p>
       </TabsContent>
       <TabsContent value="tab2">
-        <p className="text-sm text-muted-foreground">Content 2</p>
+        <p className="text-muted-foreground text-sm">Content 2</p>
       </TabsContent>
       <TabsContent value="tab3">
-        <p className="text-sm text-muted-foreground">Content 3</p>
+        <p className="text-muted-foreground text-sm">Content 3</p>
       </TabsContent>
       <TabsContent value="tab4">
-        <p className="text-sm text-muted-foreground">Content 4</p>
+        <p className="text-muted-foreground text-sm">Content 4</p>
       </TabsContent>
       <TabsContent value="tab5">
-        <p className="text-sm text-muted-foreground">Content 5</p>
+        <p className="text-muted-foreground text-sm">Content 5</p>
       </TabsContent>
       <TabsContent value="tab6">
-        <p className="text-sm text-muted-foreground">Content 6</p>
+        <p className="text-muted-foreground text-sm">Content 6</p>
       </TabsContent>
     </Tabs>
   ),
@@ -223,10 +230,10 @@ export const AllVariants: Story = {
             <TabsTrigger value="tab2">Tab 2</TabsTrigger>
           </TabsList>
           <TabsContent value="tab1">
-            <p className="text-sm text-muted-foreground">Content 1</p>
+            <p className="text-muted-foreground text-sm">Content 1</p>
           </TabsContent>
           <TabsContent value="tab2">
-            <p className="text-sm text-muted-foreground">Content 2</p>
+            <p className="text-muted-foreground text-sm">Content 2</p>
           </TabsContent>
         </Tabs>
       </div>
@@ -240,13 +247,13 @@ export const AllVariants: Story = {
             <TabsTrigger value="tab3">Tab 3</TabsTrigger>
           </TabsList>
           <TabsContent value="tab1">
-            <p className="text-sm text-muted-foreground">Content 1</p>
+            <p className="text-muted-foreground text-sm">Content 1</p>
           </TabsContent>
           <TabsContent value="tab2">
-            <p className="text-sm text-muted-foreground">Content 2</p>
+            <p className="text-muted-foreground text-sm">Content 2</p>
           </TabsContent>
           <TabsContent value="tab3">
-            <p className="text-sm text-muted-foreground">Content 3</p>
+            <p className="text-muted-foreground text-sm">Content 3</p>
           </TabsContent>
         </Tabs>
       </div>
@@ -260,13 +267,13 @@ export const AllVariants: Story = {
             <TabsTrigger value="tab3">Tab 3</TabsTrigger>
           </TabsList>
           <TabsContent value="tab1">
-            <p className="text-sm text-muted-foreground">Content 1</p>
+            <p className="text-muted-foreground text-sm">Content 1</p>
           </TabsContent>
           <TabsContent value="tab2">
-            <p className="text-sm text-muted-foreground">Content 2</p>
+            <p className="text-muted-foreground text-sm">Content 2</p>
           </TabsContent>
           <TabsContent value="tab3">
-            <p className="text-sm text-muted-foreground">Content 3</p>
+            <p className="text-muted-foreground text-sm">Content 3</p>
           </TabsContent>
         </Tabs>
       </div>
@@ -282,10 +289,10 @@ export const AllVariants: Story = {
             <TabsTrigger value="tab3">Active</TabsTrigger>
           </TabsList>
           <TabsContent value="tab1">
-            <p className="text-sm text-muted-foreground">Content 1</p>
+            <p className="text-muted-foreground text-sm">Content 1</p>
           </TabsContent>
           <TabsContent value="tab3">
-            <p className="text-sm text-muted-foreground">Content 3</p>
+            <p className="text-muted-foreground text-sm">Content 3</p>
           </TabsContent>
         </Tabs>
       </div>

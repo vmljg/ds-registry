@@ -126,7 +126,7 @@ export const WithCustomContent: Story = {
   render: (args) => (
     <div className="w-[450px]">
       <AspectRatio {...args}>
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 flex size-full items-center justify-center rounded-md">
+        <div className="flex size-full items-center justify-center rounded-md bg-gradient-to-br from-blue-500 to-purple-600">
           <div className="text-center text-white">
             <h3 className="text-2xl font-bold">16:9 Aspect Ratio</h3>
             <p className="text-sm opacity-90">Custom content inside aspect ratio container</p>

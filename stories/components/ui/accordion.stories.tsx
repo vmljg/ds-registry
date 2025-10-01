@@ -28,7 +28,8 @@ const meta = {
     },
     collapsible: {
       control: { type: "boolean" },
-      description: "When type is 'single', allows closing content when clicking trigger for an open item",
+      description:
+        "When type is 'single', allows closing content when clicking trigger for an open item",
     },
     disabled: {
       control: { type: "boolean" },

@@ -52,10 +52,10 @@ export const Default: Story = {
             </Button>
           </CollapsibleTrigger>
         </div>
-        <div className="rounded-md border px-4 py-2 text-sm font-mono">@radix-ui/primitives</div>
+        <div className="rounded-md border px-4 py-2 font-mono text-sm">@radix-ui/primitives</div>
         <CollapsibleContent className="space-y-2">
-          <div className="rounded-md border px-4 py-2 text-sm font-mono">@radix-ui/colors</div>
-          <div className="rounded-md border px-4 py-2 text-sm font-mono">@stitches/react</div>
+          <div className="rounded-md border px-4 py-2 font-mono text-sm">@radix-ui/colors</div>
+          <div className="rounded-md border px-4 py-2 font-mono text-sm">@stitches/react</div>
         </CollapsibleContent>
       </Collapsible>
     );
@@ -90,7 +90,7 @@ export const Disabled: Story = {
   render: () => (
     <Collapsible disabled className="w-[350px] space-y-2">
       <div className="flex items-center justify-between space-x-4 px-4">
-        <h4 className="text-sm font-semibold text-muted-foreground">Disabled collapsible</h4>
+        <h4 className="text-muted-foreground text-sm font-semibold">Disabled collapsible</h4>
         <CollapsibleTrigger asChild>
           <Button variant="ghost" size="sm" disabled>
             <ChevronsUpDown className="size-4" />
@@ -144,7 +144,7 @@ export const NestedContent: Story = {
         </CollapsibleTrigger>
       </div>
       <CollapsibleContent className="space-y-2">
-        <div className="rounded-md border p-4 space-y-2">
+        <div className="space-y-2 rounded-md border p-4">
           <div className="flex items-center justify-between">
             <span className="text-sm">Notifications</span>
             <Button variant="outline" size="sm">
@@ -213,7 +213,7 @@ export const AllVariants: Story = {
         <h3 className="text-sm font-medium">Disabled</h3>
         <Collapsible disabled className="w-[350px] space-y-2">
           <div className="flex items-center justify-between space-x-4 px-4">
-            <h4 className="text-sm font-semibold text-muted-foreground">Disabled</h4>
+            <h4 className="text-muted-foreground text-sm font-semibold">Disabled</h4>
             <CollapsibleTrigger asChild>
               <Button variant="ghost" size="sm" disabled>
                 <ChevronsUpDown className="size-4" />

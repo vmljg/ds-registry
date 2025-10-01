@@ -40,12 +40,12 @@ export const Default: Story = {
     <div className="w-full max-w-md space-y-4">
       <div>
         <h4 className="text-sm font-medium">Section 1</h4>
-        <p className="text-sm text-muted-foreground">Content for the first section.</p>
+        <p className="text-muted-foreground text-sm">Content for the first section.</p>
       </div>
       <Separator />
       <div>
         <h4 className="text-sm font-medium">Section 2</h4>
-        <p className="text-sm text-muted-foreground">Content for the second section.</p>
+        <p className="text-muted-foreground text-sm">Content for the second section.</p>
       </div>
     </div>
   ),
@@ -69,8 +69,8 @@ export const InList: Story = {
   render: () => (
     <div className="w-full max-w-md">
       <div className="space-y-1">
-        <h4 className="text-sm font-medium leading-none">Radix Primitives</h4>
-        <p className="text-sm text-muted-foreground">An open-source UI component library.</p>
+        <h4 className="text-sm leading-none font-medium">Radix Primitives</h4>
+        <p className="text-muted-foreground text-sm">An open-source UI component library.</p>
       </div>
       <Separator className="my-4" />
       <div className="flex h-5 items-center space-x-4 text-sm">
@@ -113,21 +113,21 @@ export const ContentSections: Story = {
     <div className="w-full max-w-md space-y-4">
       <div>
         <h3 className="text-lg font-semibold">Introduction</h3>
-        <p className="text-sm text-muted-foreground mt-2">
+        <p className="text-muted-foreground mt-2 text-sm">
           This is the introduction section with some content.
         </p>
       </div>
       <Separator />
       <div>
         <h3 className="text-lg font-semibold">Features</h3>
-        <p className="text-sm text-muted-foreground mt-2">
+        <p className="text-muted-foreground mt-2 text-sm">
           Here are the main features of the product.
         </p>
       </div>
       <Separator />
       <div>
         <h3 className="text-lg font-semibold">Conclusion</h3>
-        <p className="text-sm text-muted-foreground mt-2">Final thoughts and summary.</p>
+        <p className="text-muted-foreground mt-2 text-sm">Final thoughts and summary.</p>
       </div>
     </div>
   ),
@@ -137,13 +137,13 @@ export const ContentSections: Story = {
 export const Toolbar: Story = {
   render: () => (
     <div className="flex items-center space-x-2">
-      <button className="px-3 py-1 text-sm hover:bg-accent rounded">Bold</button>
-      <button className="px-3 py-1 text-sm hover:bg-accent rounded">Italic</button>
-      <button className="px-3 py-1 text-sm hover:bg-accent rounded">Underline</button>
+      <button className="hover:bg-accent rounded px-3 py-1 text-sm">Bold</button>
+      <button className="hover:bg-accent rounded px-3 py-1 text-sm">Italic</button>
+      <button className="hover:bg-accent rounded px-3 py-1 text-sm">Underline</button>
       <Separator orientation="vertical" className="h-6" />
-      <button className="px-3 py-1 text-sm hover:bg-accent rounded">Left</button>
-      <button className="px-3 py-1 text-sm hover:bg-accent rounded">Center</button>
-      <button className="px-3 py-1 text-sm hover:bg-accent rounded">Right</button>
+      <button className="hover:bg-accent rounded px-3 py-1 text-sm">Left</button>
+      <button className="hover:bg-accent rounded px-3 py-1 text-sm">Center</button>
+      <button className="hover:bg-accent rounded px-3 py-1 text-sm">Right</button>
     </div>
   ),
 };
@@ -154,7 +154,7 @@ export const CardSections: Story = {
     <div className="w-full max-w-sm rounded-lg border p-4">
       <div className="space-y-1">
         <h4 className="text-sm font-medium">Account Settings</h4>
-        <p className="text-sm text-muted-foreground">Manage your account preferences.</p>
+        <p className="text-muted-foreground text-sm">Manage your account preferences.</p>
       </div>
       <Separator className="my-4" />
       <div className="space-y-2">
@@ -211,12 +211,12 @@ export const AllVariants: Story = {
         <div className="w-full max-w-md space-y-4">
           <div>
             <h4 className="text-sm font-medium">Section 1</h4>
-            <p className="text-sm text-muted-foreground">Content here</p>
+            <p className="text-muted-foreground text-sm">Content here</p>
           </div>
           <Separator />
           <div>
             <h4 className="text-sm font-medium">Section 2</h4>
-            <p className="text-sm text-muted-foreground">More content</p>
+            <p className="text-muted-foreground text-sm">More content</p>
           </div>
         </div>
       </div>

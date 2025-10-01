@@ -67,7 +67,7 @@ export const WithLabel: Story = {
       <div className="w-[300px] space-y-4">
         <div className="flex justify-between">
           <Label>Volume</Label>
-          <span className="text-sm text-muted-foreground">{value[0]}%</span>
+          <span className="text-muted-foreground text-sm">{value[0]}%</span>
         </div>
         <Slider value={value} onValueChange={setValue} max={100} step={1} />
       </div>
@@ -84,7 +84,7 @@ export const Range: Story = {
       <div className="w-[300px] space-y-4">
         <div className="flex justify-between">
           <Label>Price Range</Label>
-          <span className="text-sm text-muted-foreground">
+          <span className="text-muted-foreground text-sm">
             ${value[0]} - ${value[1]}
           </span>
         </div>
@@ -100,7 +100,7 @@ export const WithSteps: Story = {
     <div className="w-[300px] space-y-2">
       <Label>Rating</Label>
       <Slider defaultValue={[3]} max={5} step={1} />
-      <div className="flex justify-between text-xs text-muted-foreground">
+      <div className="text-muted-foreground flex justify-between text-xs">
         <span>1</span>
         <span>2</span>
         <span>3</span>
@@ -158,10 +158,10 @@ export const CustomRange: Story = {
       <div className="w-[300px] space-y-4">
         <div className="flex justify-between">
           <Label>Temperature</Label>
-          <span className="text-sm text-muted-foreground">{value[0]}°C</span>
+          <span className="text-muted-foreground text-sm">{value[0]}°C</span>
         </div>
         <Slider value={value} onValueChange={setValue} min={-10} max={40} step={1} />
-        <div className="flex justify-between text-xs text-muted-foreground">
+        <div className="text-muted-foreground flex justify-between text-xs">
           <span>-10°C</span>
           <span>40°C</span>
         </div>
@@ -182,21 +182,21 @@ export const MultipleSliders: Story = {
         <div className="space-y-2">
           <div className="flex justify-between">
             <Label>Volume</Label>
-            <span className="text-sm text-muted-foreground">{volume[0]}%</span>
+            <span className="text-muted-foreground text-sm">{volume[0]}%</span>
           </div>
           <Slider value={volume} onValueChange={setVolume} max={100} step={1} />
         </div>
         <div className="space-y-2">
           <div className="flex justify-between">
             <Label>Brightness</Label>
-            <span className="text-sm text-muted-foreground">{brightness[0]}%</span>
+            <span className="text-muted-foreground text-sm">{brightness[0]}%</span>
           </div>
           <Slider value={brightness} onValueChange={setBrightness} max={100} step={1} />
         </div>
         <div className="space-y-2">
           <div className="flex justify-between">
             <Label>Contrast</Label>
-            <span className="text-sm text-muted-foreground">{contrast[0]}%</span>
+            <span className="text-muted-foreground text-sm">{contrast[0]}%</span>
           </div>
           <Slider value={contrast} onValueChange={setContrast} max={100} step={1} />
         </div>
@@ -221,7 +221,7 @@ export const AllVariants: Story = {
         <div className="w-[300px] space-y-2">
           <div className="flex justify-between">
             <Label>Value</Label>
-            <span className="text-sm text-muted-foreground">50%</span>
+            <span className="text-muted-foreground text-sm">50%</span>
           </div>
           <Slider defaultValue={[50]} max={100} step={1} />
         </div>
@@ -232,7 +232,7 @@ export const AllVariants: Story = {
         <div className="w-[300px] space-y-2">
           <div className="flex justify-between">
             <Label>Range</Label>
-            <span className="text-sm text-muted-foreground">25 - 75</span>
+            <span className="text-muted-foreground text-sm">25 - 75</span>
           </div>
           <Slider defaultValue={[25, 75]} max={100} step={1} />
         </div>

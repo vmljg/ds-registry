@@ -29,7 +29,10 @@ type Story = StoryObj<typeof meta>;
 // Default horizontal layout
 export const Default: Story = {
   render: () => (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[200px] max-w-md rounded-lg border">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[200px] max-w-md rounded-lg border"
+    >
       <ResizablePanel defaultSize={50}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">One</span>
@@ -48,7 +51,10 @@ export const Default: Story = {
 // With handle
 export const WithHandle: Story = {
   render: () => (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[200px] max-w-md rounded-lg border">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[200px] max-w-md rounded-lg border"
+    >
       <ResizablePanel defaultSize={50}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">Sidebar</span>
@@ -86,7 +92,10 @@ export const Vertical: Story = {
 // Three panels
 export const ThreePanels: Story = {
   render: () => (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[200px] max-w-md rounded-lg border">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[200px] max-w-md rounded-lg border"
+    >
       <ResizablePanel defaultSize={25}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">One</span>
@@ -111,7 +120,10 @@ export const ThreePanels: Story = {
 // Nested panels
 export const NestedPanels: Story = {
   render: () => (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[400px] max-w-md rounded-lg border">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[400px] max-w-md rounded-lg border"
+    >
       <ResizablePanel defaultSize={50}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">Sidebar</span>
@@ -140,7 +152,10 @@ export const NestedPanels: Story = {
 // With min/max sizes
 export const WithConstraints: Story = {
   render: () => (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[200px] max-w-md rounded-lg border">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[200px] max-w-md rounded-lg border"
+    >
       <ResizablePanel defaultSize={30} minSize={20} maxSize={40}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">Min: 20% Max: 40%</span>
@@ -159,7 +174,10 @@ export const WithConstraints: Story = {
 // Complex layout
 export const ComplexLayout: Story = {
   render: () => (
-    <ResizablePanelGroup direction="horizontal" className="min-h-[400px] max-w-2xl rounded-lg border">
+    <ResizablePanelGroup
+      direction="horizontal"
+      className="min-h-[400px] max-w-2xl rounded-lg border"
+    >
       <ResizablePanel defaultSize={25} minSize={15}>
         <div className="flex h-full items-center justify-center p-6">
           <span className="font-semibold">Sidebar</span>
