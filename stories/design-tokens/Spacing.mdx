@@ -1,0 +1,271 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Design Tokens/Spacing" />
+
+# Spacing & Layout Tokens
+
+Spacing tokens provide a consistent scale for margins, padding, gaps, and other layout properties throughout the design system.
+
+## Border Radius
+
+Border radius tokens control the roundness of corners for UI elements.
+
+<div className="my-8 space-y-6">
+  <div className="space-y-4">
+    <div className="flex items-center gap-4 border-b pb-4">
+      <div className="w-32 text-sm text-muted-foreground">Small</div>
+      <div className="flex items-center gap-4">
+        <div className="h-16 w-16 bg-primary rounded-sm" />
+        <div className="flex-1">
+          <code className="text-sm">--radius-sm: calc(var(--radius) - 4px)</code>
+          <p className="text-xs text-muted-foreground mt-1">≈ 4px (0.25rem)</p>
+          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-sm</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div className="flex items-center gap-4 border-b pb-4">
+      <div className="w-32 text-sm text-muted-foreground">Medium</div>
+      <div className="flex items-center gap-4">
+        <div className="h-16 w-16 bg-primary rounded-md" />
+        <div className="flex-1">
+          <code className="text-sm">--radius-md: calc(var(--radius) - 2px)</code>
+          <p className="text-xs text-muted-foreground mt-1">≈ 6px (0.375rem)</p>
+          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-md</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div className="flex items-center gap-4 border-b pb-4">
+      <div className="w-32 text-sm text-muted-foreground">Large (Default)</div>
+      <div className="flex items-center gap-4">
+        <div className="h-16 w-16 bg-primary rounded-lg" />
+        <div className="flex-1">
+          <code className="text-sm">--radius-lg: var(--radius)</code>
+          <p className="text-xs text-muted-foreground mt-1">8px (0.5rem)</p>
+          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-lg</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div className="flex items-center gap-4 border-b pb-4">
+      <div className="w-32 text-sm text-muted-foreground">Extra Large</div>
+      <div className="flex items-center gap-4">
+        <div className="h-16 w-16 bg-primary rounded-xl" />
+        <div className="flex-1">
+          <code className="text-sm">--radius-xl: calc(var(--radius) + 4px)</code>
+          <p className="text-xs text-muted-foreground mt-1">≈ 12px (0.75rem)</p>
+          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-xl</code></p>
+        </div>
+      </div>
+    </div>
+
+    <div className="flex items-center gap-4 border-b pb-4">
+      <div className="w-32 text-sm text-muted-foreground">Full</div>
+      <div className="flex items-center gap-4">
+        <div className="h-16 w-16 bg-primary rounded-full" />
+        <div className="flex-1">
+          <code className="text-sm">border-radius: 9999px</code>
+          <p className="text-xs text-muted-foreground mt-1">Fully rounded (circles/pills)</p>
+          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-full</code></p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+## Spacing Scale
+
+The spacing scale follows a consistent progression for margins, padding, and gaps.
+
+<div className="my-8">
+  <div className="space-y-2">
+    <div className="flex items-center gap-4 border-b pb-2">
+      <div className="w-16 text-xs text-muted-foreground">Token</div>
+      <div className="w-20 text-xs text-muted-foreground">Pixels</div>
+      <div className="w-20 text-xs text-muted-foreground">Rem</div>
+      <div className="flex-1 text-xs text-muted-foreground">Visual</div>
+      <div className="w-24 text-xs text-muted-foreground">Class</div>
+    </div>
+
+    {[
+      { token: '0', px: '0px', rem: '0rem', class: 'p-0' },
+      { token: '0.5', px: '2px', rem: '0.125rem', class: 'p-0.5' },
+      { token: '1', px: '4px', rem: '0.25rem', class: 'p-1' },
+      { token: '1.5', px: '6px', rem: '0.375rem', class: 'p-1.5' },
+      { token: '2', px: '8px', rem: '0.5rem', class: 'p-2' },
+      { token: '2.5', px: '10px', rem: '0.625rem', class: 'p-2.5' },
+      { token: '3', px: '12px', rem: '0.75rem', class: 'p-3' },
+      { token: '3.5', px: '14px', rem: '0.875rem', class: 'p-3.5' },
+      { token: '4', px: '16px', rem: '1rem', class: 'p-4' },
+      { token: '5', px: '20px', rem: '1.25rem', class: 'p-5' },
+      { token: '6', px: '24px', rem: '1.5rem', class: 'p-6' },
+      { token: '7', px: '28px', rem: '1.75rem', class: 'p-7' },
+      { token: '8', px: '32px', rem: '2rem', class: 'p-8' },
+      { token: '10', px: '40px', rem: '2.5rem', class: 'p-10' },
+      { token: '12', px: '48px', rem: '3rem', class: 'p-12' },
+      { token: '16', px: '64px', rem: '4rem', class: 'p-16' },
+      { token: '20', px: '80px', rem: '5rem', class: 'p-20' },
+      { token: '24', px: '96px', rem: '6rem', class: 'p-24' },
+    ].map(({ token, px, rem, class: className }) => (
+      <div key={token} className="flex items-center gap-4 border-b pb-2">
+        <div className="w-16 text-xs font-mono">{token}</div>
+        <div className="w-20 text-xs">{px}</div>
+        <div className="w-20 text-xs font-mono">{rem}</div>
+        <div className="flex-1">
+          <div className="h-4 bg-primary" style={{ width: px }} />
+        </div>
+        <div className="w-24 text-xs">
+          <code>{className}</code>
+        </div>
+      </div>
+    ))}
+
+  </div>
+</div>
+
+## Usage Examples
+
+### Border Radius
+
+```tsx
+// Cards and containers
+<div className="rounded-lg border p-4">
+  Card with large radius
+</div>
+
+// Buttons
+<button className="rounded-md px-4 py-2">
+  Button with medium radius
+</button>
+
+// Pills and badges
+<span className="rounded-full px-3 py-1">
+  Badge
+</span>
+
+// Images
+<img className="rounded-xl" src="..." alt="..." />
+```
+
+### Padding
+
+```tsx
+// Component padding
+<div className="p-4">Small padding</div>
+<div className="p-6">Medium padding</div>
+<div className="p-8">Large padding</div>
+
+// Directional padding
+<div className="px-4 py-2">Horizontal and vertical</div>
+<div className="pt-8 pb-4">Top and bottom</div>
+```
+
+### Margin
+
+```tsx
+// Spacing between elements
+<div className="mb-4">Element with bottom margin</div>
+<div className="mt-8">Element with top margin</div>
+
+// Negative margins
+<div className="-mt-4">Negative top margin</div>
+```
+
+### Gap
+
+```tsx
+// Flex gap
+<div className="flex gap-4">
+  <div>Item 1</div>
+  <div>Item 2</div>
+</div>
+
+// Grid gap
+<div className="grid grid-cols-3 gap-6">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+```
+
+### Space Between
+
+```tsx
+// Vertical spacing
+<div className="space-y-4">
+  <div>Item 1</div>
+  <div>Item 2</div>
+  <div>Item 3</div>
+</div>
+
+// Horizontal spacing
+<div className="flex space-x-2">
+  <button>Button 1</button>
+  <button>Button 2</button>
+</div>
+```
+
+## CSS Variables
+
+```css
+/* Border radius */
+.custom-card {
+  border-radius: var(--radius-lg);
+}
+
+.custom-button {
+  border-radius: var(--radius-md);
+}
+
+/* Using Tailwind spacing scale */
+.custom-container {
+  padding: theme("spacing.4"); /* 16px */
+  margin-bottom: theme("spacing.6"); /* 24px */
+}
+```
+
+## Best Practices
+
+1. **Use consistent spacing**: Stick to the spacing scale for all layout decisions
+2. **Prefer gap over margin**: Use `gap` in flex/grid layouts instead of margins when possible
+3. **Use space utilities**: Use `space-x-*` and `space-y-*` for consistent spacing between children
+4. **Match radius to size**: Larger elements can use larger border radius values
+5. **Consider touch targets**: Ensure interactive elements have adequate padding (minimum 44x44px)
+6. **Responsive spacing**: Adjust spacing for different breakpoints when needed
+
+## Common Patterns
+
+### Card Spacing
+
+```tsx
+<div className="space-y-4 rounded-lg border p-6">
+  <h3 className="text-lg font-semibold">Card Title</h3>
+  <p className="text-muted-foreground text-sm">Card content</p>
+</div>
+```
+
+### Button Spacing
+
+```tsx
+<button className="rounded-md px-4 py-2">
+  Button Text
+</button>
+
+<button className="rounded-md px-3 py-1.5 text-sm">
+  Small Button
+</button>
+```
+
+### Form Spacing
+
+```tsx
+<form className="space-y-6">
+  <div className="space-y-2">
+    <label>Label</label>
+    <input className="rounded-md px-3 py-2" />
+  </div>
+  <button className="rounded-md px-4 py-2">Submit</button>
+</form>
+```

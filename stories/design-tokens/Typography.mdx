@@ -1,0 +1,283 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Design Tokens/Typography" />
+
+# Typography Tokens
+
+Typography tokens define the font families, sizes, weights, and other text-related properties used throughout the design system.
+
+## Font Families
+
+The design system uses system font stacks for optimal performance and native feel across different platforms.
+
+### Sans Serif (Default)
+
+The primary font family used for most UI elements and body text.
+
+<div className="my-8 space-y-6">
+  <div className="space-y-4 rounded-lg border p-6">
+    <div className="space-y-2">
+      <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
+      <p className="font-sans text-4xl">The quick brown fox jumps over the lazy dog</p>
+      <p className="font-sans text-2xl">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+      <p className="font-sans text-2xl">abcdefghijklmnopqrstuvwxyz</p>
+      <p className="font-sans text-2xl">0123456789</p>
+    </div>
+    <div className="space-y-1 border-t pt-4">
+      <p className="text-sm">
+        <strong>Variable:</strong> <code>--font-sans</code>
+      </p>
+      <p className="text-sm">
+        <strong>Tailwind Class:</strong> <code>font-sans</code>
+      </p>
+      <p className="text-sm">
+        <strong>Stack:</strong>{" "}
+        <code>
+          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI
+          Symbol", "Noto Color Emoji"
+        </code>
+      </p>
+    </div>
+  </div>
+</div>
+
+### Serif
+
+Used for headings or special emphasis when a more traditional look is needed.
+
+<div className="my-8 space-y-6">
+  <div className="space-y-4 rounded-lg border p-6">
+    <div className="space-y-2">
+      <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
+      <p className="font-serif text-4xl">The quick brown fox jumps over the lazy dog</p>
+      <p className="font-serif text-2xl">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+      <p className="font-serif text-2xl">abcdefghijklmnopqrstuvwxyz</p>
+      <p className="font-serif text-2xl">0123456789</p>
+    </div>
+    <div className="space-y-1 border-t pt-4">
+      <p className="text-sm">
+        <strong>Variable:</strong> <code>--font-serif</code>
+      </p>
+      <p className="text-sm">
+        <strong>Tailwind Class:</strong> <code>font-serif</code>
+      </p>
+      <p className="text-sm">
+        <strong>Stack:</strong>{" "}
+        <code>ui-serif, Georgia, Cambria, "Times New Roman", Times, serif</code>
+      </p>
+    </div>
+  </div>
+</div>
+
+### Monospace
+
+Used for code snippets, technical content, and data displays.
+
+<div className="my-8 space-y-6">
+  <div className="space-y-4 rounded-lg border p-6">
+    <div className="space-y-2">
+      <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
+      <p className="font-mono text-4xl">The quick brown fox jumps over the lazy dog</p>
+      <p className="font-mono text-2xl">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
+      <p className="font-mono text-2xl">abcdefghijklmnopqrstuvwxyz</p>
+      <p className="font-mono text-2xl">0123456789 !@#$%^&*()</p>
+    </div>
+    <div className="space-y-1 border-t pt-4">
+      <p className="text-sm">
+        <strong>Variable:</strong> <code>--font-mono</code>
+      </p>
+      <p className="text-sm">
+        <strong>Tailwind Class:</strong> <code>font-mono</code>
+      </p>
+      <p className="text-sm">
+        <strong>Stack:</strong>{" "}
+        <code>
+          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
+          monospace
+        </code>
+      </p>
+    </div>
+  </div>
+</div>
+
+## Font Sizes
+
+The type scale provides a harmonious range of font sizes for different hierarchy levels.
+
+<div className="my-8 space-y-4">
+  <div className="flex items-baseline gap-4 border-b pb-4">
+    <div className="w-24 text-sm text-muted-foreground">xs</div>
+    <div className="flex-1 text-xs">The quick brown fox jumps over the lazy dog</div>
+    <code className="text-xs text-muted-foreground">0.75rem / 12px</code>
+  </div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">sm</div>
+  <div className="flex-1 text-sm">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">0.875rem / 14px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">base</div>
+  <div className="flex-1 text-base">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">1rem / 16px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">lg</div>
+  <div className="flex-1 text-lg">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">1.125rem / 18px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">xl</div>
+  <div className="flex-1 text-xl">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">1.25rem / 20px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">2xl</div>
+  <div className="flex-1 text-2xl">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">1.5rem / 24px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">3xl</div>
+  <div className="flex-1 text-3xl">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">1.875rem / 30px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">4xl</div>
+  <div className="flex-1 text-4xl">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">2.25rem / 36px</code>
+</div>
+
+<div className="flex items-baseline gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-24 text-sm">5xl</div>
+  <div className="flex-1 text-5xl">The quick brown fox</div>
+  <code className="text-muted-foreground text-xs">3rem / 48px</code>
+</div>
+
+  <div className="flex items-baseline gap-4 border-b pb-4">
+    <div className="w-24 text-sm text-muted-foreground">6xl</div>
+    <div className="flex-1 text-6xl">The quick brown</div>
+    <code className="text-xs text-muted-foreground">3.75rem / 60px</code>
+  </div>
+</div>
+
+## Font Weights
+
+Different weights for creating hierarchy and emphasis.
+
+<div className="my-8 space-y-4">
+  <div className="flex items-center gap-4 border-b pb-4">
+    <div className="w-32 text-sm text-muted-foreground">Light</div>
+    <div className="flex-1 text-xl font-light">The quick brown fox jumps over the lazy dog</div>
+    <code className="text-xs text-muted-foreground">300</code>
+  </div>
+
+<div className="flex items-center gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-32 text-sm">Normal</div>
+  <div className="flex-1 text-xl font-normal">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">400</code>
+</div>
+
+<div className="flex items-center gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-32 text-sm">Medium</div>
+  <div className="flex-1 text-xl font-medium">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">500</code>
+</div>
+
+<div className="flex items-center gap-4 border-b pb-4">
+  <div className="text-muted-foreground w-32 text-sm">Semibold</div>
+  <div className="flex-1 text-xl font-semibold">The quick brown fox jumps over the lazy dog</div>
+  <code className="text-muted-foreground text-xs">600</code>
+</div>
+
+  <div className="flex items-center gap-4 border-b pb-4">
+    <div className="w-32 text-sm text-muted-foreground">Bold</div>
+    <div className="flex-1 text-xl font-bold">The quick brown fox jumps over the lazy dog</div>
+    <code className="text-xs text-muted-foreground">700</code>
+  </div>
+</div>
+
+## Usage Examples
+
+### Headings
+
+```tsx
+<h1 className="font-sans text-4xl font-bold">
+  Page Title
+</h1>
+
+<h2 className="font-sans text-3xl font-semibold">
+  Section Heading
+</h2>
+
+<h3 className="font-sans text-2xl font-semibold">
+  Subsection Heading
+</h3>
+```
+
+### Body Text
+
+```tsx
+<p className="font-sans text-base font-normal">
+  Regular body text for paragraphs and content.
+</p>
+
+<p className="font-sans text-sm text-muted-foreground">
+  Secondary or helper text.
+</p>
+```
+
+### Code
+
+```tsx
+<code className="font-mono text-sm">
+  const example = "code snippet";
+</code>
+
+<pre className="font-mono text-xs">
+  function hello() {
+    return "world";
+  }
+</pre>
+```
+
+### Labels and UI Text
+
+```tsx
+<label className="font-sans text-sm font-medium">
+  Form Label
+</label>
+
+<span className="font-sans text-xs text-muted-foreground">
+  Helper text
+</span>
+```
+
+## CSS Variables
+
+```css
+/* Font families */
+.element {
+  font-family: var(--font-sans);
+  font-family: var(--font-serif);
+  font-family: var(--font-mono);
+}
+
+/* Using Tailwind classes is recommended */
+.heading {
+  @apply font-sans text-2xl font-bold;
+}
+```
+
+## Best Practices
+
+1. **Use semantic HTML**: Use appropriate heading tags (`h1`-`h6`) for proper document structure
+2. **Maintain hierarchy**: Use consistent font sizes and weights to establish clear visual hierarchy
+3. **Limit font weights**: Stick to 2-3 font weights per project for consistency
+4. **Consider readability**: Use appropriate line heights and letter spacing for body text
+5. **Test across devices**: Ensure typography scales well on different screen sizes

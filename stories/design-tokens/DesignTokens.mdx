@@ -1,0 +1,79 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Design Tokens/Overview" />
+
+# Design Tokens
+
+A comprehensive overview of all design tokens used in the design system. These tokens ensure consistency across the application and make it easy to maintain and scale the design.
+
+## What are Design Tokens?
+
+Design tokens are the visual design atoms of the design system — specifically, they are named entities that store visual design attributes. We use them in place of hard-coded values (such as hex values for color or pixel values for spacing) in order to maintain a scalable and consistent visual system.
+
+## Token Categories
+
+### [Colors](/docs/design-tokens-colors--docs)
+
+All color tokens including primary, secondary, accent, semantic colors, and their foreground variants. Includes both light and dark mode values.
+
+### [Typography](/docs/design-tokens-typography--docs)
+
+Font families, font sizes, font weights, line heights, and letter spacing values used throughout the application.
+
+### [Spacing](/docs/design-tokens-spacing--docs)
+
+Spacing scale and layout tokens including radius values for consistent spacing and border radius.
+
+## Usage
+
+All design tokens are defined as CSS custom properties (variables) and can be accessed using Tailwind CSS utility classes or directly via CSS variables.
+
+### Example: Using Color Tokens
+
+```tsx
+// Using Tailwind classes
+<div className="bg-primary text-primary-foreground">
+  Primary button
+</div>
+
+// Using CSS variables
+<div style={{ backgroundColor: 'var(--color-primary)' }}>
+  Custom component
+</div>
+```
+
+### Example: Using Typography Tokens
+
+```tsx
+// Using Tailwind classes
+<h1 className="font-sans text-4xl font-bold">
+  Heading
+</h1>
+
+// Using CSS variables
+<p style={{ fontFamily: 'var(--font-sans)' }}>
+  Body text
+</p>
+```
+
+## Token Structure
+
+Our tokens follow a consistent naming convention:
+
+- **Semantic tokens**: Named by their purpose (e.g., `primary`, `secondary`, `destructive`)
+- **Component tokens**: Scoped to specific components (e.g., `sidebar-primary`, `card-foreground`)
+- **State tokens**: Indicate interactive states (e.g., `muted`, `accent`)
+
+## Light & Dark Modes
+
+All color tokens automatically adapt to the current theme. The system uses CSS custom properties that change based on the `.dark` class on the root element.
+
+```css
+:root {
+  --primary: oklch(0.45 0.15 285);
+}
+
+.dark {
+  --primary: oklch(0.55 0.15 285);
+}
+```
