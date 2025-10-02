@@ -17,7 +17,7 @@ export function BorderRadiusRow({
     <div className="flex items-center gap-4 border-b pb-4">
       <div className="text-muted-foreground w-32 text-sm">{name}</div>
       <div className="flex items-center gap-4">
-        <div className={`h-16 w-16 bg-primary ${className}`} />
+        <div className={`bg-primary h-16 w-16 ${className}`} />
         <div className="flex-1">
           <code className="text-sm">{variable}</code>
           <p className="text-muted-foreground mt-1 text-xs">{value}</p>
@@ -37,19 +37,14 @@ interface SpacingScaleRowProps {
   className: string;
 }
 
-export function SpacingScaleRow({
-  token,
-  px,
-  rem,
-  className,
-}: SpacingScaleRowProps) {
+export function SpacingScaleRow({ token, px, rem, className }: SpacingScaleRowProps) {
   return (
     <div className="flex items-center gap-4 border-b pb-2">
       <div className="w-16 font-mono text-xs">{token}</div>
       <div className="w-20 text-xs">{px}</div>
       <div className="w-20 font-mono text-xs">{rem}</div>
       <div className="flex-1">
-        <div className="h-4 bg-primary" style={{ width: px }} />
+        <div className="bg-primary h-4" style={{ width: px }} />
       </div>
       <div className="w-24 text-xs">
         <code>{className}</code>

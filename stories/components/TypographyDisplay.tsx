@@ -17,12 +17,8 @@ export function FontFamilyDisplay({
     <div className="my-8 space-y-6">
       <div className="space-y-4 rounded-lg border p-6">
         <div className="space-y-2">
-          <h3 className="text-muted-foreground text-sm font-semibold">
-            FONT FAMILY
-          </h3>
-          <p className={`text-4xl ${className}`}>
-            The quick brown fox jumps over the lazy dog
-          </p>
+          <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
+          <p className={`text-4xl ${className}`}>The quick brown fox jumps over the lazy dog</p>
           <p className={`text-2xl ${className}`}>ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
           <p className={`text-2xl ${className}`}>abcdefghijklmnopqrstuvwxyz</p>
           <p className={`text-2xl ${className}`}>
@@ -55,9 +51,7 @@ export function FontSizeRow({ size, className, value }: FontSizeRowProps) {
   return (
     <div className="flex items-baseline gap-4 border-b pb-4">
       <div className="text-muted-foreground w-24 text-sm">{size}</div>
-      <div className={`flex-1 ${className}`}>
-        The quick brown fox jumps over the lazy dog
-      </div>
+      <div className={`flex-1 ${className}`}>The quick brown fox jumps over the lazy dog</div>
       <code className="text-muted-foreground text-xs">{value}</code>
     </div>
   );

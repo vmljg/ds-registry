@@ -1,9 +1,5 @@
 import { Meta } from "@storybook/addon-docs/blocks";
-import {
-  BorderRadiusRow,
-  SpacingScaleHeader,
-  SpacingScaleRow,
-} from "../components/SpacingDisplay";
+import { BorderRadiusRow, SpacingScaleHeader, SpacingScaleRow } from "../components/SpacingDisplay";
 
 <Meta title="Design Tokens/Spacing" />
 
@@ -24,29 +20,29 @@ Border radius tokens control the roundness of corners for UI elements.
     className="rounded-sm"
   />
 
-  <BorderRadiusRow
-    name="Medium"
-    variable="--radius-md: calc(var(--radius) - 2px)"
-    value="≈ 6px (0.375rem)"
-    tailwindClass="rounded-md"
-    className="rounded-md"
-  />
+<BorderRadiusRow
+  name="Medium"
+  variable="--radius-md: calc(var(--radius) - 2px)"
+  value="≈ 6px (0.375rem)"
+  tailwindClass="rounded-md"
+  className="rounded-md"
+/>
 
-  <BorderRadiusRow
-    name="Large (Default)"
-    variable="--radius-lg: var(--radius)"
-    value="8px (0.5rem)"
-    tailwindClass="rounded-lg"
-    className="rounded-lg"
-  />
+<BorderRadiusRow
+  name="Large (Default)"
+  variable="--radius-lg: var(--radius)"
+  value="8px (0.5rem)"
+  tailwindClass="rounded-lg"
+  className="rounded-lg"
+/>
 
-  <BorderRadiusRow
-    name="Extra Large"
-    variable="--radius-xl: calc(var(--radius) + 4px)"
-    value="≈ 12px (0.75rem)"
-    tailwindClass="rounded-xl"
-    className="rounded-xl"
-  />
+<BorderRadiusRow
+  name="Extra Large"
+  variable="--radius-xl: calc(var(--radius) + 4px)"
+  value="≈ 12px (0.75rem)"
+  tailwindClass="rounded-xl"
+  className="rounded-xl"
+/>
 
   <BorderRadiusRow
     name="Full"
@@ -83,6 +79,7 @@ The spacing scale follows a consistent progression for margins, padding, and gap
     <SpacingScaleRow token="16" px="64px" rem="4rem" className="p-16" />
     <SpacingScaleRow token="20" px="80px" rem="5rem" className="p-20" />
     <SpacingScaleRow token="24" px="96px" rem="6rem" className="p-24" />
+
   </div>
 </div>
 
