@@ -1,4 +1,10 @@
-import { Meta } from "@storybook/blocks";
+import { Meta } from "@storybook/addon-docs/blocks";
+import {
+  ColorTokenDisplay,
+  ColorTokenRow,
+  BorderTokenRow,
+  RingTokenRow,
+} from "../components/ColorTokenDisplay";
 
 <Meta title="Design Tokens/Colors" />
 
@@ -10,299 +16,149 @@ All color tokens used in the design system. Colors are defined using OKLCH color
 
 Foundation colors for backgrounds and text throughout the application.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-3">
-    <div>
-      <h3 className="font-semibold mb-2">Background</h3>
-      <p className="text-sm text-muted-foreground mb-3">Default page background</p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(1 0 0)' }} />
-        <code className="text-xs block">oklch(1 0 0)</code>
-      </div>
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.1 0 0)' }} />
-        <code className="text-xs block">oklch(0.1 0 0)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <ColorTokenDisplay
+    name="Background"
+    description="Default page background"
+    lightValue="oklch(1 0 0)"
+    darkValue="oklch(0.1 0 0)"
+  />
 
-  <div className="space-y-3">
-    <div>
-      <h3 className="font-semibold mb-2">Foreground</h3>
-      <p className="text-sm text-muted-foreground mb-3">Default text color</p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
-        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(0.2 0 0)' }} />
-        <code className="text-xs block">oklch(0.2 0 0)</code>
-      </div>
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.95 0 0)' }} />
-        <code className="text-xs block">oklch(0.95 0 0)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenDisplay
+    name="Foreground"
+    description="Default text color"
+    lightValue="oklch(0.2 0 0)"
+    darkValue="oklch(0.95 0 0)"
+  />
 </div>
 
 ## Primary Theme
 
 The core colors that define the brand identity and primary interactive elements.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-3">
-    <div>
-      <h3 className="font-semibold mb-2">Primary</h3>
-      <p className="text-sm text-muted-foreground mb-3">Main brand color for primary actions</p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.45 0.15 285)' }} />
-        <code className="text-xs block">oklch(0.45 0.15 285)</code>
-      </div>
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.55 0.15 285)' }} />
-        <code className="text-xs block">oklch(0.55 0.15 285)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <ColorTokenDisplay
+    name="Primary"
+    description="Main brand color for primary actions"
+    lightValue="oklch(0.45 0.15 285)"
+    darkValue="oklch(0.55 0.15 285)"
+  />
 
-  <div className="space-y-3">
-    <div>
-      <h3 className="font-semibold mb-2">Primary Foreground</h3>
-      <p className="text-sm text-muted-foreground mb-3">Text color on primary backgrounds</p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
-        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(1 0 0)' }} />
-        <code className="text-xs block">oklch(1 0 0)</code>
-      </div>
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
-        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(1 0 0)' }} />
-        <code className="text-xs block">oklch(1 0 0)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenDisplay
+    name="Primary Foreground"
+    description="Text color on primary backgrounds"
+    lightValue="oklch(1 0 0)"
+    darkValue="oklch(1 0 0)"
+  />
 </div>
 
 ## Secondary & Accent
 
 Colors used for secondary actions and accent elements throughout the interface.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-3">
-    <div>
-      <h3 className="font-semibold mb-2">Secondary</h3>
-      <p className="text-sm text-muted-foreground mb-3">Secondary actions and elements</p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.75 0.15 240)' }} />
-        <code className="text-xs block">oklch(0.75 0.15 240)</code>
-      </div>
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.8 0.15 240)' }} />
-        <code className="text-xs block">oklch(0.8 0.15 240)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <ColorTokenDisplay
+    name="Secondary"
+    description="Secondary actions and elements"
+    lightValue="oklch(0.75 0.15 240)"
+    darkValue="oklch(0.8 0.15 240)"
+  />
 
-<div className="space-y-3">
-  <div>
-    <h3 className="mb-2 font-semibold">Secondary Foreground</h3>
-    <p className="text-muted-foreground mb-3 text-sm">Text color on secondary backgrounds</p>
-  </div>
-  <div className="grid grid-cols-2 gap-4">
-    <div className="space-y-2">
-      <div className="text-muted-foreground text-xs font-medium">Light Mode</div>
-      <div
-        className="h-20 w-full rounded-lg border bg-white"
-        style={{ backgroundColor: "oklch(0.2 0 0)" }}
-      />
-      <code className="block text-xs">oklch(0.2 0 0)</code>
-    </div>
-    <div className="space-y-2">
-      <div className="text-muted-foreground text-xs font-medium">Dark Mode</div>
-      <div
-        className="h-20 w-full rounded-lg border"
-        style={{ backgroundColor: "oklch(0.1 0 0)" }}
-      />
-      <code className="block text-xs">oklch(0.1 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenDisplay
+    name="Secondary Foreground"
+    description="Text color on secondary backgrounds"
+    lightValue="oklch(0.2 0 0)"
+    darkValue="oklch(0.1 0 0)"
+  />
 
-<div className="space-y-3">
-  <div>
-    <h3 className="mb-2 font-semibold">Accent</h3>
-    <p className="text-muted-foreground mb-3 text-sm">Accent highlights and hover states</p>
-  </div>
-  <div className="grid grid-cols-2 gap-4">
-    <div className="space-y-2">
-      <div className="text-muted-foreground text-xs font-medium">Light Mode</div>
-      <div
-        className="h-20 w-full rounded-lg border"
-        style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
-      />
-      <code className="block text-xs">oklch(0.9 0.15 85)</code>
-    </div>
-    <div className="space-y-2">
-      <div className="text-muted-foreground text-xs font-medium">Dark Mode</div>
-      <div
-        className="h-20 w-full rounded-lg border"
-        style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
-      />
-      <code className="block text-xs">oklch(0.9 0.15 85)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenDisplay
+    name="Accent"
+    description="Accent highlights and hover states"
+    lightValue="oklch(0.9 0.15 85)"
+    darkValue="oklch(0.9 0.15 85)"
+  />
 
-  <div className="space-y-3">
-    <div>
-      <h3 className="font-semibold mb-2">Accent Foreground</h3>
-      <p className="text-sm text-muted-foreground mb-3">Text color on accent backgrounds</p>
-    </div>
-    <div className="grid grid-cols-2 gap-4">
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
-        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(0.2 0 0)' }} />
-        <code className="text-xs block">oklch(0.2 0 0)</code>
-      </div>
-      <div className="space-y-2">
-        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
-        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.1 0 0)' }} />
-        <code className="text-xs block">oklch(0.1 0 0)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenDisplay
+    name="Accent Foreground"
+    description="Text color on accent backgrounds"
+    lightValue="oklch(0.2 0 0)"
+    darkValue="oklch(0.1 0 0)"
+  />
 </div>
 
 ## UI Component Colors
 
 Colors specific to UI components like cards, popovers, and other surfaces.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(1 0 0)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Card</h3>
-        <p className="text-sm text-muted-foreground">Background for card components</p>
-        <code className="text-xs">--card: oklch(1 0 0)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <ColorTokenRow
+    name="Card"
+    description="Background for card components"
+    value="oklch(1 0 0)"
+    variable="--card: oklch(1 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border bg-white"
-      style={{ backgroundColor: "oklch(0.2 0 0)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Card Foreground</h3>
-      <p className="text-muted-foreground text-sm">Text color on card backgrounds</p>
-      <code className="text-xs">--card-foreground: oklch(0.2 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Card Foreground"
+    description="Text color on card backgrounds"
+    value="oklch(0.2 0 0)"
+    variable="--card-foreground: oklch(0.2 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(1 0 0)" }} />
-    <div className="flex-1">
-      <h3 className="font-semibold">Popover</h3>
-      <p className="text-muted-foreground text-sm">Background for popover components</p>
-      <code className="text-xs">--popover: oklch(1 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Popover"
+    description="Background for popover components"
+    value="oklch(1 0 0)"
+    variable="--popover: oklch(1 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border bg-white"
-      style={{ backgroundColor: "oklch(0.2 0 0)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Popover Foreground</h3>
-      <p className="text-muted-foreground text-sm">Text color on popover backgrounds</p>
-      <code className="text-xs">--popover-foreground: oklch(0.2 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Popover Foreground"
+    description="Text color on popover backgrounds"
+    value="oklch(0.2 0 0)"
+    variable="--popover-foreground: oklch(0.2 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(0.3 0 0)" }} />
-    <div className="flex-1">
-      <h3 className="font-semibold">Muted</h3>
-      <p className="text-muted-foreground text-sm">Muted backgrounds and disabled states</p>
-      <code className="text-xs">--muted: oklch(0.3 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Muted"
+    description="Muted backgrounds and disabled states"
+    value="oklch(0.3 0 0)"
+    variable="--muted: oklch(0.3 0 0)"
+  />
 
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.6 0 0)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Muted Foreground</h3>
-        <p className="text-sm text-muted-foreground">Subtle text and secondary content</p>
-        <code className="text-xs">--muted-foreground: oklch(0.6 0 0)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenRow
+    name="Muted Foreground"
+    description="Subtle text and secondary content"
+    value="oklch(0.6 0 0)"
+    variable="--muted-foreground: oklch(0.6 0 0)"
+  />
 </div>
 
 ## Utility & Form Colors
 
 Colors used for borders, inputs, and other utility elements.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg" style={{ border: '4px solid oklch(0.9 0 0)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Border</h3>
-        <p className="text-sm text-muted-foreground">Default border color</p>
-        <code className="text-xs">--border: oklch(0.9 0 0)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <BorderTokenRow
+    name="Border"
+    description="Default border color"
+    value="oklch(0.9 0 0)"
+    variable="--border: oklch(0.9 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(0.9 0 0)" }} />
-    <div className="flex-1">
-      <h3 className="font-semibold">Input</h3>
-      <p className="text-muted-foreground text-sm">Input field backgrounds</p>
-      <code className="text-xs">--input: oklch(0.9 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Input"
+    description="Input field backgrounds"
+    value="oklch(0.9 0 0)"
+    variable="--input: oklch(0.9 0 0)"
+  />
 
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg" style={{ border: '4px solid oklch(0.45 0.15 285)', outline: '2px solid oklch(0.45 0.15 285)', outlineOffset: '2px' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Ring</h3>
-        <p className="text-sm text-muted-foreground">Focus ring color</p>
-        <code className="text-xs">--ring: oklch(0.45 0.15 285)</code>
-      </div>
-    </div>
-  </div>
+  <RingTokenRow
+    name="Ring"
+    description="Focus ring color"
+    value="oklch(0.45 0.15 285)"
+    variable="--ring: oklch(0.45 0.15 285)"
+  />
 </div>
 
 ## Status & Feedback Colors
@@ -310,201 +166,117 @@ Colors used for borders, inputs, and other utility elements.
 Colors used to indicate different states and provide user feedback.
 
 <div className="my-8 grid gap-6">
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div
-        className="h-24 w-24 rounded-lg border"
-        style={{ backgroundColor: "oklch(0.65 0.2 25)" }}
-      />
-      <div className="flex-1">
-        <h3 className="font-semibold">Destructive</h3>
-        <p className="text-muted-foreground text-sm">Error states and destructive actions</p>
-        <code className="text-xs">--destructive: oklch(0.65 0.2 25)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenRow
+    name="Destructive"
+    description="Error states and destructive actions"
+    value="oklch(0.65 0.2 25)"
+    variable="--destructive: oklch(0.65 0.2 25)"
+  />
 
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(1 0 0)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Destructive Foreground</h3>
-        <p className="text-muted-foreground text-sm">Text color on destructive backgrounds</p>
-        <code className="text-xs">--destructive-foreground: oklch(1 0 0)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenRow
+    name="Destructive Foreground"
+    description="Text color on destructive backgrounds"
+    value="oklch(1 0 0)"
+    variable="--destructive-foreground: oklch(1 0 0)"
+  />
 </div>
 
 ## Chart & Visualization Colors
 
 Colors specifically designed for data visualization and charts.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.75 0.15 240)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Chart 1</h3>
-        <code className="text-xs">--chart-1: oklch(0.75 0.15 240)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <ColorTokenRow
+    name="Chart 1"
+    value="oklch(0.75 0.15 240)"
+    variable="--chart-1: oklch(0.75 0.15 240)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border"
-      style={{ backgroundColor: "oklch(0.8 0.2 330)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Chart 2</h3>
-      <code className="text-xs">--chart-2: oklch(0.8 0.2 330)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Chart 2"
+    value="oklch(0.8 0.2 330)"
+    variable="--chart-2: oklch(0.8 0.2 330)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(0.7 0.2 25)" }} />
-    <div className="flex-1">
-      <h3 className="font-semibold">Chart 3</h3>
-      <code className="text-xs">--chart-3: oklch(0.7 0.2 25)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Chart 3"
+    value="oklch(0.7 0.2 25)"
+    variable="--chart-3: oklch(0.7 0.2 25)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border"
-      style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Chart 4</h3>
-      <code className="text-xs">--chart-4: oklch(0.9 0.15 85)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Chart 4"
+    value="oklch(0.9 0.15 85)"
+    variable="--chart-4: oklch(0.9 0.15 85)"
+  />
 
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.45 0.15 285)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Chart 5</h3>
-        <code className="text-xs">--chart-5: oklch(0.45 0.15 285)</code>
-      </div>
-    </div>
-  </div>
+  <ColorTokenRow
+    name="Chart 5"
+    value="oklch(0.45 0.15 285)"
+    variable="--chart-5: oklch(0.45 0.15 285)"
+  />
 </div>
 
 ## Sidebar & Navigation Colors
 
 Colors specific to sidebar and navigation components.
 
-<div className="grid gap-6 my-8">
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.95 0 0)' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Sidebar</h3>
-        <p className="text-sm text-muted-foreground">Sidebar background</p>
-        <code className="text-xs">--sidebar: oklch(0.95 0 0)</code>
-      </div>
-    </div>
-  </div>
+<div className="my-8 grid gap-6">
+  <ColorTokenRow
+    name="Sidebar"
+    description="Sidebar background"
+    value="oklch(0.95 0 0)"
+    variable="--sidebar: oklch(0.95 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border bg-white"
-      style={{ backgroundColor: "oklch(0.2 0 0)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Sidebar Foreground</h3>
-      <p className="text-muted-foreground text-sm">Text color on sidebar backgrounds</p>
-      <code className="text-xs">--sidebar-foreground: oklch(0.2 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Sidebar Foreground"
+    description="Text color on sidebar backgrounds"
+    value="oklch(0.2 0 0)"
+    variable="--sidebar-foreground: oklch(0.2 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border"
-      style={{ backgroundColor: "oklch(0.45 0.15 285)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Sidebar Primary</h3>
-      <p className="text-muted-foreground text-sm">Primary sidebar elements</p>
-      <code className="text-xs">--sidebar-primary: oklch(0.45 0.15 285)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Sidebar Primary"
+    description="Primary sidebar elements"
+    value="oklch(0.45 0.15 285)"
+    variable="--sidebar-primary: oklch(0.45 0.15 285)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border bg-white"
-      style={{ backgroundColor: "oklch(1 0 0)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Sidebar Primary Foreground</h3>
-      <p className="text-muted-foreground text-sm">Text color on sidebar primary backgrounds</p>
-      <code className="text-xs">--sidebar-primary-foreground: oklch(1 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Sidebar Primary Foreground"
+    description="Text color on sidebar primary backgrounds"
+    value="oklch(1 0 0)"
+    variable="--sidebar-primary-foreground: oklch(1 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border"
-      style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Sidebar Accent</h3>
-      <p className="text-muted-foreground text-sm">Sidebar accent and hover states</p>
-      <code className="text-xs">--sidebar-accent: oklch(0.9 0.15 85)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Sidebar Accent"
+    description="Sidebar accent and hover states"
+    value="oklch(0.9 0.15 85)"
+    variable="--sidebar-accent: oklch(0.9 0.15 85)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div
-      className="h-24 w-24 rounded-lg border bg-white"
-      style={{ backgroundColor: "oklch(0.2 0 0)" }}
-    />
-    <div className="flex-1">
-      <h3 className="font-semibold">Sidebar Accent Foreground</h3>
-      <p className="text-muted-foreground text-sm">Text color on sidebar accent backgrounds</p>
-      <code className="text-xs">--sidebar-accent-foreground: oklch(0.2 0 0)</code>
-    </div>
-  </div>
-</div>
+  <ColorTokenRow
+    name="Sidebar Accent Foreground"
+    description="Text color on sidebar accent backgrounds"
+    value="oklch(0.2 0 0)"
+    variable="--sidebar-accent-foreground: oklch(0.2 0 0)"
+  />
 
-<div className="space-y-2">
-  <div className="flex items-center gap-4">
-    <div className="h-24 w-24 rounded-lg" style={{ border: "4px solid oklch(0.9 0 0)" }} />
-    <div className="flex-1">
-      <h3 className="font-semibold">Sidebar Border</h3>
-      <p className="text-muted-foreground text-sm">Border color for sidebar elements</p>
-      <code className="text-xs">--sidebar-border: oklch(0.9 0 0)</code>
-    </div>
-  </div>
-</div>
+  <BorderTokenRow
+    name="Sidebar Border"
+    description="Border color for sidebar elements"
+    value="oklch(0.9 0 0)"
+    variable="--sidebar-border: oklch(0.9 0 0)"
+  />
 
-  <div className="space-y-2">
-    <div className="flex items-center gap-4">
-      <div className="w-24 h-24 rounded-lg" style={{ border: '4px solid oklch(0.45 0.15 285)', outline: '2px solid oklch(0.45 0.15 285)', outlineOffset: '2px' }} />
-      <div className="flex-1">
-        <h3 className="font-semibold">Sidebar Ring</h3>
-        <p className="text-sm text-muted-foreground">Focus ring color for sidebar elements</p>
-        <code className="text-xs">--sidebar-ring: oklch(0.45 0.15 285)</code>
-      </div>
-    </div>
-  </div>
+  <RingTokenRow
+    name="Sidebar Ring"
+    description="Focus ring color for sidebar elements"
+    value="oklch(0.45 0.15 285)"
+    variable="--sidebar-ring: oklch(0.45 0.15 285)"
+  />
 </div>
 
 ## Usage Examples

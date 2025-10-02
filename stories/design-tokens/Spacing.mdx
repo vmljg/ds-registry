@@ -1,4 +1,9 @@
-import { Meta } from "@storybook/blocks";
+import { Meta } from "@storybook/addon-docs/blocks";
+import {
+  BorderRadiusRow,
+  SpacingScaleHeader,
+  SpacingScaleRow,
+} from "../components/SpacingDisplay";
 
 <Meta title="Design Tokens/Spacing" />
 
@@ -10,69 +15,46 @@ Spacing tokens provide a consistent scale for margins, padding, gaps, and other 
 
 Border radius tokens control the roundness of corners for UI elements.
 
-<div className="my-8 space-y-6">
-  <div className="space-y-4">
-    <div className="flex items-center gap-4 border-b pb-4">
-      <div className="w-32 text-sm text-muted-foreground">Small</div>
-      <div className="flex items-center gap-4">
-        <div className="h-16 w-16 bg-primary rounded-sm" />
-        <div className="flex-1">
-          <code className="text-sm">--radius-sm: calc(var(--radius) - 4px)</code>
-          <p className="text-xs text-muted-foreground mt-1">≈ 4px (0.25rem)</p>
-          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-sm</code></p>
-        </div>
-      </div>
-    </div>
+<div className="my-8 space-y-4">
+  <BorderRadiusRow
+    name="Small"
+    variable="--radius-sm: calc(var(--radius) - 4px)"
+    value="≈ 4px (0.25rem)"
+    tailwindClass="rounded-sm"
+    className="rounded-sm"
+  />
 
-    <div className="flex items-center gap-4 border-b pb-4">
-      <div className="w-32 text-sm text-muted-foreground">Medium</div>
-      <div className="flex items-center gap-4">
-        <div className="h-16 w-16 bg-primary rounded-md" />
-        <div className="flex-1">
-          <code className="text-sm">--radius-md: calc(var(--radius) - 2px)</code>
-          <p className="text-xs text-muted-foreground mt-1">≈ 6px (0.375rem)</p>
-          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-md</code></p>
-        </div>
-      </div>
-    </div>
+  <BorderRadiusRow
+    name="Medium"
+    variable="--radius-md: calc(var(--radius) - 2px)"
+    value="≈ 6px (0.375rem)"
+    tailwindClass="rounded-md"
+    className="rounded-md"
+  />
 
-    <div className="flex items-center gap-4 border-b pb-4">
-      <div className="w-32 text-sm text-muted-foreground">Large (Default)</div>
-      <div className="flex items-center gap-4">
-        <div className="h-16 w-16 bg-primary rounded-lg" />
-        <div className="flex-1">
-          <code className="text-sm">--radius-lg: var(--radius)</code>
-          <p className="text-xs text-muted-foreground mt-1">8px (0.5rem)</p>
-          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-lg</code></p>
-        </div>
-      </div>
-    </div>
+  <BorderRadiusRow
+    name="Large (Default)"
+    variable="--radius-lg: var(--radius)"
+    value="8px (0.5rem)"
+    tailwindClass="rounded-lg"
+    className="rounded-lg"
+  />
 
-    <div className="flex items-center gap-4 border-b pb-4">
-      <div className="w-32 text-sm text-muted-foreground">Extra Large</div>
-      <div className="flex items-center gap-4">
-        <div className="h-16 w-16 bg-primary rounded-xl" />
-        <div className="flex-1">
-          <code className="text-sm">--radius-xl: calc(var(--radius) + 4px)</code>
-          <p className="text-xs text-muted-foreground mt-1">≈ 12px (0.75rem)</p>
-          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-xl</code></p>
-        </div>
-      </div>
-    </div>
+  <BorderRadiusRow
+    name="Extra Large"
+    variable="--radius-xl: calc(var(--radius) + 4px)"
+    value="≈ 12px (0.75rem)"
+    tailwindClass="rounded-xl"
+    className="rounded-xl"
+  />
 
-    <div className="flex items-center gap-4 border-b pb-4">
-      <div className="w-32 text-sm text-muted-foreground">Full</div>
-      <div className="flex items-center gap-4">
-        <div className="h-16 w-16 bg-primary rounded-full" />
-        <div className="flex-1">
-          <code className="text-sm">border-radius: 9999px</code>
-          <p className="text-xs text-muted-foreground mt-1">Fully rounded (circles/pills)</p>
-          <p className="text-xs text-muted-foreground">Tailwind: <code>rounded-full</code></p>
-        </div>
-      </div>
-    </div>
-
-  </div>
+  <BorderRadiusRow
+    name="Full"
+    variable="border-radius: 9999px"
+    value="Fully rounded (circles/pills)"
+    tailwindClass="rounded-full"
+    className="rounded-full"
+  />
 </div>
 
 ## Spacing Scale
@@ -81,47 +63,26 @@ The spacing scale follows a consistent progression for margins, padding, and gap
 
 <div className="my-8">
   <div className="space-y-2">
-    <div className="flex items-center gap-4 border-b pb-2">
-      <div className="w-16 text-xs text-muted-foreground">Token</div>
-      <div className="w-20 text-xs text-muted-foreground">Pixels</div>
-      <div className="w-20 text-xs text-muted-foreground">Rem</div>
-      <div className="flex-1 text-xs text-muted-foreground">Visual</div>
-      <div className="w-24 text-xs text-muted-foreground">Class</div>
-    </div>
+    <SpacingScaleHeader />
 
-    {[
-      { token: '0', px: '0px', rem: '0rem', class: 'p-0' },
-      { token: '0.5', px: '2px', rem: '0.125rem', class: 'p-0.5' },
-      { token: '1', px: '4px', rem: '0.25rem', class: 'p-1' },
-      { token: '1.5', px: '6px', rem: '0.375rem', class: 'p-1.5' },
-      { token: '2', px: '8px', rem: '0.5rem', class: 'p-2' },
-      { token: '2.5', px: '10px', rem: '0.625rem', class: 'p-2.5' },
-      { token: '3', px: '12px', rem: '0.75rem', class: 'p-3' },
-      { token: '3.5', px: '14px', rem: '0.875rem', class: 'p-3.5' },
-      { token: '4', px: '16px', rem: '1rem', class: 'p-4' },
-      { token: '5', px: '20px', rem: '1.25rem', class: 'p-5' },
-      { token: '6', px: '24px', rem: '1.5rem', class: 'p-6' },
-      { token: '7', px: '28px', rem: '1.75rem', class: 'p-7' },
-      { token: '8', px: '32px', rem: '2rem', class: 'p-8' },
-      { token: '10', px: '40px', rem: '2.5rem', class: 'p-10' },
-      { token: '12', px: '48px', rem: '3rem', class: 'p-12' },
-      { token: '16', px: '64px', rem: '4rem', class: 'p-16' },
-      { token: '20', px: '80px', rem: '5rem', class: 'p-20' },
-      { token: '24', px: '96px', rem: '6rem', class: 'p-24' },
-    ].map(({ token, px, rem, class: className }) => (
-      <div key={token} className="flex items-center gap-4 border-b pb-2">
-        <div className="w-16 text-xs font-mono">{token}</div>
-        <div className="w-20 text-xs">{px}</div>
-        <div className="w-20 text-xs font-mono">{rem}</div>
-        <div className="flex-1">
-          <div className="h-4 bg-primary" style={{ width: px }} />
-        </div>
-        <div className="w-24 text-xs">
-          <code>{className}</code>
-        </div>
-      </div>
-    ))}
-
+    <SpacingScaleRow token="0" px="0px" rem="0rem" className="p-0" />
+    <SpacingScaleRow token="0.5" px="2px" rem="0.125rem" className="p-0.5" />
+    <SpacingScaleRow token="1" px="4px" rem="0.25rem" className="p-1" />
+    <SpacingScaleRow token="1.5" px="6px" rem="0.375rem" className="p-1.5" />
+    <SpacingScaleRow token="2" px="8px" rem="0.5rem" className="p-2" />
+    <SpacingScaleRow token="2.5" px="10px" rem="0.625rem" className="p-2.5" />
+    <SpacingScaleRow token="3" px="12px" rem="0.75rem" className="p-3" />
+    <SpacingScaleRow token="3.5" px="14px" rem="0.875rem" className="p-3.5" />
+    <SpacingScaleRow token="4" px="16px" rem="1rem" className="p-4" />
+    <SpacingScaleRow token="5" px="20px" rem="1.25rem" className="p-5" />
+    <SpacingScaleRow token="6" px="24px" rem="1.5rem" className="p-6" />
+    <SpacingScaleRow token="7" px="28px" rem="1.75rem" className="p-7" />
+    <SpacingScaleRow token="8" px="32px" rem="2rem" className="p-8" />
+    <SpacingScaleRow token="10" px="40px" rem="2.5rem" className="p-10" />
+    <SpacingScaleRow token="12" px="48px" rem="3rem" className="p-12" />
+    <SpacingScaleRow token="16" px="64px" rem="4rem" className="p-16" />
+    <SpacingScaleRow token="20" px="80px" rem="5rem" className="p-20" />
+    <SpacingScaleRow token="24" px="96px" rem="6rem" className="p-24" />
   </div>
 </div>
 

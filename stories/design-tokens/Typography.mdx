@@ -1,4 +1,9 @@
-import { Meta } from "@storybook/blocks";
+import { Meta } from "@storybook/addon-docs/blocks";
+import {
+  FontFamilyDisplay,
+  FontSizeRow,
+  FontWeightRow,
+} from "../components/TypographyDisplay";
 
 <Meta title="Design Tokens/Typography" />
 
@@ -14,156 +19,53 @@ The design system uses system font stacks for optimal performance and native fee
 
 The primary font family used for most UI elements and body text.
 
-<div className="my-8 space-y-6">
-  <div className="space-y-4 rounded-lg border p-6">
-    <div className="space-y-2">
-      <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
-      <p className="font-sans text-4xl">The quick brown fox jumps over the lazy dog</p>
-      <p className="font-sans text-2xl">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-      <p className="font-sans text-2xl">abcdefghijklmnopqrstuvwxyz</p>
-      <p className="font-sans text-2xl">0123456789</p>
-    </div>
-    <div className="space-y-1 border-t pt-4">
-      <p className="text-sm">
-        <strong>Variable:</strong> <code>--font-sans</code>
-      </p>
-      <p className="text-sm">
-        <strong>Tailwind Class:</strong> <code>font-sans</code>
-      </p>
-      <p className="text-sm">
-        <strong>Stack:</strong>{" "}
-        <code>
-          ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI
-          Symbol", "Noto Color Emoji"
-        </code>
-      </p>
-    </div>
-  </div>
-</div>
+<FontFamilyDisplay
+  name="Sans Serif"
+  variable="--font-sans"
+  tailwindClass="font-sans"
+  stack='ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"'
+  className="font-sans"
+/>
 
 ### Serif
 
 Used for headings or special emphasis when a more traditional look is needed.
 
-<div className="my-8 space-y-6">
-  <div className="space-y-4 rounded-lg border p-6">
-    <div className="space-y-2">
-      <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
-      <p className="font-serif text-4xl">The quick brown fox jumps over the lazy dog</p>
-      <p className="font-serif text-2xl">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-      <p className="font-serif text-2xl">abcdefghijklmnopqrstuvwxyz</p>
-      <p className="font-serif text-2xl">0123456789</p>
-    </div>
-    <div className="space-y-1 border-t pt-4">
-      <p className="text-sm">
-        <strong>Variable:</strong> <code>--font-serif</code>
-      </p>
-      <p className="text-sm">
-        <strong>Tailwind Class:</strong> <code>font-serif</code>
-      </p>
-      <p className="text-sm">
-        <strong>Stack:</strong>{" "}
-        <code>ui-serif, Georgia, Cambria, "Times New Roman", Times, serif</code>
-      </p>
-    </div>
-  </div>
-</div>
+<FontFamilyDisplay
+  name="Serif"
+  variable="--font-serif"
+  tailwindClass="font-serif"
+  stack='ui-serif, Georgia, Cambria, "Times New Roman", Times, serif'
+  className="font-serif"
+/>
 
 ### Monospace
 
 Used for code snippets, technical content, and data displays.
 
-<div className="my-8 space-y-6">
-  <div className="space-y-4 rounded-lg border p-6">
-    <div className="space-y-2">
-      <h3 className="text-muted-foreground text-sm font-semibold">FONT FAMILY</h3>
-      <p className="font-mono text-4xl">The quick brown fox jumps over the lazy dog</p>
-      <p className="font-mono text-2xl">ABCDEFGHIJKLMNOPQRSTUVWXYZ</p>
-      <p className="font-mono text-2xl">abcdefghijklmnopqrstuvwxyz</p>
-      <p className="font-mono text-2xl">0123456789 !@#$%^&*()</p>
-    </div>
-    <div className="space-y-1 border-t pt-4">
-      <p className="text-sm">
-        <strong>Variable:</strong> <code>--font-mono</code>
-      </p>
-      <p className="text-sm">
-        <strong>Tailwind Class:</strong> <code>font-mono</code>
-      </p>
-      <p className="text-sm">
-        <strong>Stack:</strong>{" "}
-        <code>
-          ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-          monospace
-        </code>
-      </p>
-    </div>
-  </div>
-</div>
+<FontFamilyDisplay
+  name="Monospace"
+  variable="--font-mono"
+  tailwindClass="font-mono"
+  stack='ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace'
+  className="font-mono"
+/>
 
 ## Font Sizes
 
 The type scale provides a harmonious range of font sizes for different hierarchy levels.
 
 <div className="my-8 space-y-4">
-  <div className="flex items-baseline gap-4 border-b pb-4">
-    <div className="w-24 text-sm text-muted-foreground">xs</div>
-    <div className="flex-1 text-xs">The quick brown fox jumps over the lazy dog</div>
-    <code className="text-xs text-muted-foreground">0.75rem / 12px</code>
-  </div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">sm</div>
-  <div className="flex-1 text-sm">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">0.875rem / 14px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">base</div>
-  <div className="flex-1 text-base">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">1rem / 16px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">lg</div>
-  <div className="flex-1 text-lg">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">1.125rem / 18px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">xl</div>
-  <div className="flex-1 text-xl">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">1.25rem / 20px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">2xl</div>
-  <div className="flex-1 text-2xl">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">1.5rem / 24px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">3xl</div>
-  <div className="flex-1 text-3xl">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">1.875rem / 30px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">4xl</div>
-  <div className="flex-1 text-4xl">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">2.25rem / 36px</code>
-</div>
-
-<div className="flex items-baseline gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-24 text-sm">5xl</div>
-  <div className="flex-1 text-5xl">The quick brown fox</div>
-  <code className="text-muted-foreground text-xs">3rem / 48px</code>
-</div>
-
-  <div className="flex items-baseline gap-4 border-b pb-4">
-    <div className="w-24 text-sm text-muted-foreground">6xl</div>
-    <div className="flex-1 text-6xl">The quick brown</div>
-    <code className="text-xs text-muted-foreground">3.75rem / 60px</code>
-  </div>
+  <FontSizeRow size="xs" className="text-xs" value="0.75rem / 12px" />
+  <FontSizeRow size="sm" className="text-sm" value="0.875rem / 14px" />
+  <FontSizeRow size="base" className="text-base" value="1rem / 16px" />
+  <FontSizeRow size="lg" className="text-lg" value="1.125rem / 18px" />
+  <FontSizeRow size="xl" className="text-xl" value="1.25rem / 20px" />
+  <FontSizeRow size="2xl" className="text-2xl" value="1.5rem / 24px" />
+  <FontSizeRow size="3xl" className="text-3xl" value="1.875rem / 30px" />
+  <FontSizeRow size="4xl" className="text-4xl" value="2.25rem / 36px" />
+  <FontSizeRow size="5xl" className="text-5xl" value="3rem / 48px" />
+  <FontSizeRow size="6xl" className="text-6xl" value="3.75rem / 60px" />
 </div>
 
 ## Font Weights
@@ -171,35 +73,11 @@ The type scale provides a harmonious range of font sizes for different hierarchy
 Different weights for creating hierarchy and emphasis.
 
 <div className="my-8 space-y-4">
-  <div className="flex items-center gap-4 border-b pb-4">
-    <div className="w-32 text-sm text-muted-foreground">Light</div>
-    <div className="flex-1 text-xl font-light">The quick brown fox jumps over the lazy dog</div>
-    <code className="text-xs text-muted-foreground">300</code>
-  </div>
-
-<div className="flex items-center gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-32 text-sm">Normal</div>
-  <div className="flex-1 text-xl font-normal">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">400</code>
-</div>
-
-<div className="flex items-center gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-32 text-sm">Medium</div>
-  <div className="flex-1 text-xl font-medium">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">500</code>
-</div>
-
-<div className="flex items-center gap-4 border-b pb-4">
-  <div className="text-muted-foreground w-32 text-sm">Semibold</div>
-  <div className="flex-1 text-xl font-semibold">The quick brown fox jumps over the lazy dog</div>
-  <code className="text-muted-foreground text-xs">600</code>
-</div>
-
-  <div className="flex items-center gap-4 border-b pb-4">
-    <div className="w-32 text-sm text-muted-foreground">Bold</div>
-    <div className="flex-1 text-xl font-bold">The quick brown fox jumps over the lazy dog</div>
-    <code className="text-xs text-muted-foreground">700</code>
-  </div>
+  <FontWeightRow weight="Light" className="font-light" value="300" />
+  <FontWeightRow weight="Normal" className="font-normal" value="400" />
+  <FontWeightRow weight="Medium" className="font-medium" value="500" />
+  <FontWeightRow weight="Semibold" className="font-semibold" value="600" />
+  <FontWeightRow weight="Bold" className="font-bold" value="700" />
 </div>
 
 ## Usage Examples
