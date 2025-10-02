@@ -6,6 +6,8 @@
 
 ## Setup
 
+Fork off the the ds-registory repo if planning to contribute back to template. Otherwise, use the template to provide a moment in time project starter.
+
 ### Required
 
 - [Bun](https://bun.sh)
