@@ -1,0 +1,914 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Design Tokens/Colors" />
+
+# Color Tokens
+
+All color tokens used in the design system. Colors are defined using OKLCH color space for better perceptual uniformity and are automatically adapted for light and dark modes.
+
+## Base Colors
+
+Foundation colors for backgrounds and text throughout the application.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-3">
+    <div>
+      <h3 className="font-semibold mb-2">Background</h3>
+      <p className="text-sm text-muted-foreground mb-3">Default page background</p>
+    </div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(1 0 0)' }} />
+        <code className="text-xs block">oklch(1 0 0)</code>
+      </div>
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.1 0 0)' }} />
+        <code className="text-xs block">oklch(0.1 0 0)</code>
+      </div>
+    </div>
+  </div>
+
+  <div className="space-y-3">
+    <div>
+      <h3 className="font-semibold mb-2">Foreground</h3>
+      <p className="text-sm text-muted-foreground mb-3">Default text color</p>
+    </div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
+        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(0.2 0 0)' }} />
+        <code className="text-xs block">oklch(0.2 0 0)</code>
+      </div>
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.95 0 0)' }} />
+        <code className="text-xs block">oklch(0.95 0 0)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Primary Theme
+
+The core colors that define the brand identity and primary interactive elements.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-3">
+    <div>
+      <h3 className="font-semibold mb-2">Primary</h3>
+      <p className="text-sm text-muted-foreground mb-3">Main brand color for primary actions</p>
+    </div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.45 0.15 285)' }} />
+        <code className="text-xs block">oklch(0.45 0.15 285)</code>
+      </div>
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.55 0.15 285)' }} />
+        <code className="text-xs block">oklch(0.55 0.15 285)</code>
+      </div>
+    </div>
+  </div>
+
+  <div className="space-y-3">
+    <div>
+      <h3 className="font-semibold mb-2">Primary Foreground</h3>
+      <p className="text-sm text-muted-foreground mb-3">Text color on primary backgrounds</p>
+    </div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
+        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(1 0 0)' }} />
+        <code className="text-xs block">oklch(1 0 0)</code>
+      </div>
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
+        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(1 0 0)' }} />
+        <code className="text-xs block">oklch(1 0 0)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Secondary & Accent
+
+Colors used for secondary actions and accent elements throughout the interface.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-3">
+    <div>
+      <h3 className="font-semibold mb-2">Secondary</h3>
+      <p className="text-sm text-muted-foreground mb-3">Secondary actions and elements</p>
+    </div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.75 0.15 240)' }} />
+        <code className="text-xs block">oklch(0.75 0.15 240)</code>
+      </div>
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.8 0.15 240)' }} />
+        <code className="text-xs block">oklch(0.8 0.15 240)</code>
+      </div>
+    </div>
+  </div>
+
+<div className="space-y-3">
+  <div>
+    <h3 className="mb-2 font-semibold">Secondary Foreground</h3>
+    <p className="text-muted-foreground mb-3 text-sm">Text color on secondary backgrounds</p>
+  </div>
+  <div className="grid grid-cols-2 gap-4">
+    <div className="space-y-2">
+      <div className="text-muted-foreground text-xs font-medium">Light Mode</div>
+      <div
+        className="h-20 w-full rounded-lg border bg-white"
+        style={{ backgroundColor: "oklch(0.2 0 0)" }}
+      />
+      <code className="block text-xs">oklch(0.2 0 0)</code>
+    </div>
+    <div className="space-y-2">
+      <div className="text-muted-foreground text-xs font-medium">Dark Mode</div>
+      <div
+        className="h-20 w-full rounded-lg border"
+        style={{ backgroundColor: "oklch(0.1 0 0)" }}
+      />
+      <code className="block text-xs">oklch(0.1 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-3">
+  <div>
+    <h3 className="mb-2 font-semibold">Accent</h3>
+    <p className="text-muted-foreground mb-3 text-sm">Accent highlights and hover states</p>
+  </div>
+  <div className="grid grid-cols-2 gap-4">
+    <div className="space-y-2">
+      <div className="text-muted-foreground text-xs font-medium">Light Mode</div>
+      <div
+        className="h-20 w-full rounded-lg border"
+        style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
+      />
+      <code className="block text-xs">oklch(0.9 0.15 85)</code>
+    </div>
+    <div className="space-y-2">
+      <div className="text-muted-foreground text-xs font-medium">Dark Mode</div>
+      <div
+        className="h-20 w-full rounded-lg border"
+        style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
+      />
+      <code className="block text-xs">oklch(0.9 0.15 85)</code>
+    </div>
+  </div>
+</div>
+
+  <div className="space-y-3">
+    <div>
+      <h3 className="font-semibold mb-2">Accent Foreground</h3>
+      <p className="text-sm text-muted-foreground mb-3">Text color on accent backgrounds</p>
+    </div>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Light Mode</div>
+        <div className="w-full h-20 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(0.2 0 0)' }} />
+        <code className="text-xs block">oklch(0.2 0 0)</code>
+      </div>
+      <div className="space-y-2">
+        <div className="text-xs font-medium text-muted-foreground">Dark Mode</div>
+        <div className="w-full h-20 rounded-lg border" style={{ backgroundColor: 'oklch(0.1 0 0)' }} />
+        <code className="text-xs block">oklch(0.1 0 0)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## UI Component Colors
+
+Colors specific to UI components like cards, popovers, and other surfaces.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(1 0 0)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Card</h3>
+        <p className="text-sm text-muted-foreground">Background for card components</p>
+        <code className="text-xs">--card: oklch(1 0 0)</code>
+      </div>
+    </div>
+  </div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border bg-white"
+      style={{ backgroundColor: "oklch(0.2 0 0)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Card Foreground</h3>
+      <p className="text-muted-foreground text-sm">Text color on card backgrounds</p>
+      <code className="text-xs">--card-foreground: oklch(0.2 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(1 0 0)" }} />
+    <div className="flex-1">
+      <h3 className="font-semibold">Popover</h3>
+      <p className="text-muted-foreground text-sm">Background for popover components</p>
+      <code className="text-xs">--popover: oklch(1 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border bg-white"
+      style={{ backgroundColor: "oklch(0.2 0 0)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Popover Foreground</h3>
+      <p className="text-muted-foreground text-sm">Text color on popover backgrounds</p>
+      <code className="text-xs">--popover-foreground: oklch(0.2 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(0.3 0 0)" }} />
+    <div className="flex-1">
+      <h3 className="font-semibold">Muted</h3>
+      <p className="text-muted-foreground text-sm">Muted backgrounds and disabled states</p>
+      <code className="text-xs">--muted: oklch(0.3 0 0)</code>
+    </div>
+  </div>
+</div>
+
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.6 0 0)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Muted Foreground</h3>
+        <p className="text-sm text-muted-foreground">Subtle text and secondary content</p>
+        <code className="text-xs">--muted-foreground: oklch(0.6 0 0)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Utility & Form Colors
+
+Colors used for borders, inputs, and other utility elements.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg" style={{ border: '4px solid oklch(0.9 0 0)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Border</h3>
+        <p className="text-sm text-muted-foreground">Default border color</p>
+        <code className="text-xs">--border: oklch(0.9 0 0)</code>
+      </div>
+    </div>
+  </div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(0.9 0 0)" }} />
+    <div className="flex-1">
+      <h3 className="font-semibold">Input</h3>
+      <p className="text-muted-foreground text-sm">Input field backgrounds</p>
+      <code className="text-xs">--input: oklch(0.9 0 0)</code>
+    </div>
+  </div>
+</div>
+
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg" style={{ border: '4px solid oklch(0.45 0.15 285)', outline: '2px solid oklch(0.45 0.15 285)', outlineOffset: '2px' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Ring</h3>
+        <p className="text-sm text-muted-foreground">Focus ring color</p>
+        <code className="text-xs">--ring: oklch(0.45 0.15 285)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Status & Feedback Colors
+
+Colors used to indicate different states and provide user feedback.
+
+<div className="my-8 grid gap-6">
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div
+        className="h-24 w-24 rounded-lg border"
+        style={{ backgroundColor: "oklch(0.65 0.2 25)" }}
+      />
+      <div className="flex-1">
+        <h3 className="font-semibold">Destructive</h3>
+        <p className="text-muted-foreground text-sm">Error states and destructive actions</p>
+        <code className="text-xs">--destructive: oklch(0.65 0.2 25)</code>
+      </div>
+    </div>
+  </div>
+
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg border bg-white" style={{ backgroundColor: 'oklch(1 0 0)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Destructive Foreground</h3>
+        <p className="text-muted-foreground text-sm">Text color on destructive backgrounds</p>
+        <code className="text-xs">--destructive-foreground: oklch(1 0 0)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Chart & Visualization Colors
+
+Colors specifically designed for data visualization and charts.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.75 0.15 240)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Chart 1</h3>
+        <code className="text-xs">--chart-1: oklch(0.75 0.15 240)</code>
+      </div>
+    </div>
+  </div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border"
+      style={{ backgroundColor: "oklch(0.8 0.2 330)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Chart 2</h3>
+      <code className="text-xs">--chart-2: oklch(0.8 0.2 330)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div className="h-24 w-24 rounded-lg border" style={{ backgroundColor: "oklch(0.7 0.2 25)" }} />
+    <div className="flex-1">
+      <h3 className="font-semibold">Chart 3</h3>
+      <code className="text-xs">--chart-3: oklch(0.7 0.2 25)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border"
+      style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Chart 4</h3>
+      <code className="text-xs">--chart-4: oklch(0.9 0.15 85)</code>
+    </div>
+  </div>
+</div>
+
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.45 0.15 285)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Chart 5</h3>
+        <code className="text-xs">--chart-5: oklch(0.45 0.15 285)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Sidebar & Navigation Colors
+
+Colors specific to sidebar and navigation components.
+
+<div className="grid gap-6 my-8">
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg border" style={{ backgroundColor: 'oklch(0.95 0 0)' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Sidebar</h3>
+        <p className="text-sm text-muted-foreground">Sidebar background</p>
+        <code className="text-xs">--sidebar: oklch(0.95 0 0)</code>
+      </div>
+    </div>
+  </div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border bg-white"
+      style={{ backgroundColor: "oklch(0.2 0 0)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Sidebar Foreground</h3>
+      <p className="text-muted-foreground text-sm">Text color on sidebar backgrounds</p>
+      <code className="text-xs">--sidebar-foreground: oklch(0.2 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border"
+      style={{ backgroundColor: "oklch(0.45 0.15 285)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Sidebar Primary</h3>
+      <p className="text-muted-foreground text-sm">Primary sidebar elements</p>
+      <code className="text-xs">--sidebar-primary: oklch(0.45 0.15 285)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border bg-white"
+      style={{ backgroundColor: "oklch(1 0 0)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Sidebar Primary Foreground</h3>
+      <p className="text-muted-foreground text-sm">Text color on sidebar primary backgrounds</p>
+      <code className="text-xs">--sidebar-primary-foreground: oklch(1 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border"
+      style={{ backgroundColor: "oklch(0.9 0.15 85)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Sidebar Accent</h3>
+      <p className="text-muted-foreground text-sm">Sidebar accent and hover states</p>
+      <code className="text-xs">--sidebar-accent: oklch(0.9 0.15 85)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div
+      className="h-24 w-24 rounded-lg border bg-white"
+      style={{ backgroundColor: "oklch(0.2 0 0)" }}
+    />
+    <div className="flex-1">
+      <h3 className="font-semibold">Sidebar Accent Foreground</h3>
+      <p className="text-muted-foreground text-sm">Text color on sidebar accent backgrounds</p>
+      <code className="text-xs">--sidebar-accent-foreground: oklch(0.2 0 0)</code>
+    </div>
+  </div>
+</div>
+
+<div className="space-y-2">
+  <div className="flex items-center gap-4">
+    <div className="h-24 w-24 rounded-lg" style={{ border: "4px solid oklch(0.9 0 0)" }} />
+    <div className="flex-1">
+      <h3 className="font-semibold">Sidebar Border</h3>
+      <p className="text-muted-foreground text-sm">Border color for sidebar elements</p>
+      <code className="text-xs">--sidebar-border: oklch(0.9 0 0)</code>
+    </div>
+  </div>
+</div>
+
+  <div className="space-y-2">
+    <div className="flex items-center gap-4">
+      <div className="w-24 h-24 rounded-lg" style={{ border: '4px solid oklch(0.45 0.15 285)', outline: '2px solid oklch(0.45 0.15 285)', outlineOffset: '2px' }} />
+      <div className="flex-1">
+        <h3 className="font-semibold">Sidebar Ring</h3>
+        <p className="text-sm text-muted-foreground">Focus ring color for sidebar elements</p>
+        <code className="text-xs">--sidebar-ring: oklch(0.45 0.15 285)</code>
+      </div>
+    </div>
+  </div>
+</div>
+
+## Usage Examples
+
+### Tailwind CSS Classes
+
+```tsx
+// Background colors
+<div className="bg-primary">Primary background</div>
+<div className="bg-secondary">Secondary background</div>
+<div className="bg-accent">Accent background</div>
+
+// Text colors
+<p className="text-primary">Primary text</p>
+<p className="text-muted-foreground">Muted text</p>
+
+// Border colors
+<div className="border border-border">Bordered element</div>
+```
+
+### CSS Variables
+
+```css
+.custom-element {
+  background-color: var(--color-primary);
+  color: var(--color-primary-foreground);
+  border: 1px solid var(--color-border);
+}
+
+.custom-element:focus {
+  outline: 2px solid var(--color-ring);
+}
+```
+
+## Complete Color Reference
+
+All color values for both light and dark modes:
+
+<div className="my-8 overflow-x-auto">
+  <table className="w-full text-sm">
+    <thead>
+      <tr className="border-b">
+        <th className="p-2 text-left font-semibold">Variable</th>
+        <th className="p-2 text-left font-semibold">Light Mode</th>
+        <th className="p-2 text-left font-semibold">Dark Mode</th>
+      </tr>
+    </thead>
+    <tbody className="divide-y">
+      <tr>
+        <td className="p-2">
+          <code>--background</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.95 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--primary</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.45 0.15 285)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.55 0.15 285)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--primary-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--secondary</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.75 0.15 240)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.8 0.15 240)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--secondary-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--accent</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0.15 85)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0.15 85)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--accent-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--muted</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.3 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.25 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--muted-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.6 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.7 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--card</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.15 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--card-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.95 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--popover</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.15 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--popover-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.95 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--border</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.25 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--input</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.25 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--ring</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.45 0.15 285)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.55 0.15 285)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--destructive</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.65 0.2 25)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.7 0.2 25)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--destructive-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.95 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--chart-1</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.75 0.15 240)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.8 0.15 240)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--chart-2</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.8 0.2 330)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.85 0.2 330)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--chart-3</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.7 0.2 25)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.75 0.2 25)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--chart-4</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0.15 85)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0.15 85)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--chart-5</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.45 0.15 285)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.55 0.15 285)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.95 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.95 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-primary</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.45 0.15 285)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.55 0.15 285)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-primary-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-accent</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0.15 85)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0.15 85)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-accent-foreground</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.2 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.1 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-border</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.9 0 0)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.25 0 0)</code>
+        </td>
+      </tr>
+      <tr>
+        <td className="p-2">
+          <code>--sidebar-ring</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.45 0.15 285)</code>
+        </td>
+        <td className="p-2">
+          <code>oklch(0.55 0.15 285)</code>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+## Theme Switching
+
+All colors automatically adapt when the `.dark` class is present on the root element. The design system handles this automatically based on user preference.
