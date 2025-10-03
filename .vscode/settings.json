@@ -2,5 +2,6 @@
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnSaveMode": "modificationsIfAvailable"
+  "editor.formatOnSaveMode": "modificationsIfAvailable",
+  "typescript.tsdk": "node_modules/typescript/lib"
 }
