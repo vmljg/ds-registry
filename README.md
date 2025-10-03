@@ -1,8 +1,7 @@
 # Design System Registry
 
-###### Based on [Vercel's Next.js Registry Starter Template](https://github.com/vercel/registry-starter)
-
-> [This is not a component library. **It is how you build your component library.**](https://ui.shadcn.com/docs#:~:text=This%20is%20not%20a%20component%20library.%20It%20is%20how%20you%20build%20your%20component%20library.)
+[![Storybook](https://raw.githubusercontent.com/storybooks/brand/master/badge/badge-storybook.svg)](https://vmljg.github.io/ds-registry)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75e40818-6b5a-4f9e-b4b0-51e31d13f365/deploy-status)](https://llmds.netlify.app)
 
 ## Setup
 
