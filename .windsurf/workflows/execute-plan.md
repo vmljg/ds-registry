@@ -69,6 +69,7 @@ When executing a plan file:
 **User**: "Execute the plan in `docs/pdd/on-screen-keyboard.plan.md`"
 
 **Expected Behavior**:
+
 1. Read and parse the plan file
 2. Create a structured execution plan from the TODO list
 3. Begin implementing tasks in order
