@@ -48,7 +48,14 @@ export default function ProductGrid({
         {filteredProducts.map((product) => (
           <Card key={product.id} className="overflow-hidden p-0">
             <Link href={`/products/${product.id}`}>
-              <div className="flex aspect-square items-center justify-center bg-white p-6" />
+              <div className="aspect-square overflow-hidden bg-gray-100">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="h-full w-full object-cover transition-transform hover:scale-105"
+                  loading="lazy"
+                />
+              </div>
             </Link>
 
             <CardContent className="p-4">
