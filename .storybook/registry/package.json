@@ -1,0 +1,71 @@
+{
+  "name": "@storybook/addon-registry",
+  "version": "0.1.0",
+  "description": "A custom Storybook add-on for the DS Registry",
+  "keywords": [
+    "storybook-addons",
+    "design-system",
+    "registry"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-ds-registry"
+  },
+  "type": "module",
+  "author": "Your Name",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./preview": {
+      "types": "./dist/preview.d.ts",
+      "import": "./dist/preview.js",
+      "require": "./dist/preview.cjs"
+    },
+    "./preset": "./dist/preset.cjs",
+    "./manager": "./dist/manager.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md",
+    "*.js",
+    "*.d.ts"
+  ],
+  "scripts": {
+    "build": "bun run build.ts",
+    "dev": "bun run build.ts --watch"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs/blocks": "^8.6.14",
+    "storybook/internal/components": "^8.6.14",
+    "storybook/internal/core-events": "^8.6.14",
+    "storybook/manager-api": "^8.6.14",
+    "storybook/preview-api": "^8.6.14",
+    "storybook/internal/types": "^8.6.14",
+    "@types/bun": "latest",
+    "@types/node": "^22",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "storybook": "^9.1.12",
+    "typescript": "^5.4.5"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0",
+    "storybook": "^8.0.0 || ^9.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "storybook": {
+    "displayName": "DS Registry",
+    "supportedFrameworks": ["react", "nextjs"],
+    "icon": "https://user-images.githubusercontent.com/263385/101991622-48ba7c00-3c7f-11eb-8c46-3b9c0b5e0e5e.png"
+  }
+}

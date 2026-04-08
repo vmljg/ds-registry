@@ -1,0 +1,9 @@
+# Bun configuration for the registry add-on
+
+[install]
+optional = true
+dev = true
+peer = true
+
+[install.cache]
+disable = false

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { Bar, BarChart, Line, LineChart, Pie, PieChart, XAxis, YAxis } from "recharts";
 import {
   ChartContainer,
